@@ -67,3 +67,6 @@ for i in password_list:
     password += i
     #and we print for the last time, now getting our desired result
 print(f"Your password is {password}")
+
+
+
