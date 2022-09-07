@@ -63,7 +63,7 @@ print(password_list)
 password = ""
 #now we need to take the previous password_list, which has the already generated password in a list format and iterate through it
 for i in password_list:
-    #now we append the result of the previous iteration into the empty list
+    #now we append the result of the previous iteration into the variable with empty string
     password += i
     #and we print for the last time, now getting our desired result
 print(f"Your password is {password}")
