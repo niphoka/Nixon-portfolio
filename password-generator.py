@@ -33,7 +33,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #First we need an empty list
 password_list = []
 
-#Now we need to iterate through the input characters via a range (some teachers place:
+#Now we need to iterate through the input characters via a range, some teachers place:
 #for char in range(0, nr_letters)
 #for char in range(1, nr_letters -1)
 #The above are also valid, I just modified it for simplicity
