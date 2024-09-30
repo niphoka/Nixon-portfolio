@@ -88,10 +88,19 @@ namespace thirdApp
             
             Console.WriteLine("Welcome to the cost calculator");
             Console.WriteLine("Please enter the amount of items: ");
-            items = Convert.ToInt32(Console.ReadLine());
+            items = Convert.ToInt32(Console.ReadLine()); /*This conversion is done since Console.ReadLine returns a string, 
+            no matter the data type entered*/
+
+            /* The error message seen, if the conversion is not done, is this:
+
+            ===Cannot implicitly convert type 'string' to 'int'=== */
+
+            /* Note on Convert.ToInt32: Please be aware that numbers that are too high, like adding 5000 items times $50.99 will result in $0
+            this is cause the number is too high to be stored as an integer, and so Convert.ToInt64 is required, but before that, 
+            the Long type number must be converted to double, which is not done on this code for now*/
             
             Console.WriteLine("Please enter the cost per item: ");
-            costPerItem = Convert.ToDouble(Console.ReadLine());
+            costPerItem = Convert.ToDouble(Console.ReadLine());/*Remember to convert from String to the data type you need*/
             
             totalCost = items * costPerItem;
             Console.WriteLine("Please wait a moment............");
