@@ -1,4 +1,4 @@
-// Online C++ compiler to run C++ program online
+// First program
 #include <iostream>
 using namespace std;
 
@@ -33,7 +33,7 @@ int main() {
 
 
 
-
+//Second program
 #include <iostream>
 using namespace std;
 
@@ -56,6 +56,7 @@ int main()
 
 
 
+//Third program
 #include <iostream>
 using namespace std;
 
@@ -64,11 +65,14 @@ int main()
     //Area of a circle
     int radius = 6;
     double numPi = 3.14159;
+    //Pi times radius squared
+    cout << "The area of this circle is " << radius * radius * numPi << endl;
+}
 
 
 
 
-  
+ //Fourth program 
 #include <iostream>
 using namespace std;
 
@@ -87,8 +91,28 @@ int main()
     cout << "The result of the operation is " << sum;
 }
     
-    //Pi times radius squared
-    cout << "The area of this circle is " << radius * radius * numPi << endl;
-}
 
+
+
+//Fifth program
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int items;
+    double costPerItem;
+    double totalCost;
+    char currency = '$';
+    
+    cout << "This is a cost calculator in C++" << endl;
+    cout << "Enter the amount of items: " << "\n";
+    cin >> items;
+    cout << "Now enter the price for each item: " << endl;
+    cin >> costPerItem;
+    cout << "Please wait............" << "\n";
+    totalCost = items * costPerItem;
+    cout << "The total cost for all items is " << currency << totalCost;
+    
+}
 
