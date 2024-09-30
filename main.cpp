@@ -64,6 +64,28 @@ int main()
     //Area of a circle
     int radius = 6;
     double numPi = 3.14159;
+
+
+
+
+  
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x, y;
+    int sum;
+    
+    cout << "This is a basic sum calculator in C++" << "\n\n";
+    cout << "Please enter a decimal number: " << endl;
+    cin >> x;
+    cout << "Now enter another one: " << "\n";
+    cin >> y;
+    cout << "Ok, here we go........................." << endl;
+    sum = x + y;
+    cout << "The result of the operation is " << sum;
+}
     
     //Pi times radius squared
     cout << "The area of this circle is " << radius * radius * numPi << endl;
