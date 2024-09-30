@@ -1,5 +1,5 @@
 using System;
-namespace FirstApp
+namespace firstApp
 { 
     class Program
     {
@@ -38,7 +38,7 @@ namespace FirstApp
 
 using System;
 
-namespace FirstApp
+namespace secondApp
 {
     class Program
     {
@@ -65,6 +65,38 @@ namespace FirstApp
         Console.WriteLine("From double to integer " + Convert.ToInt32(dDouble));
         Console.WriteLine("From boolean to string " + Convert.ToString(dBool));
         
+        }
+    }
+}
+
+
+
+
+using System;
+
+namespace thirdApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Program to calcultate total price
+            int items;
+            double costPerItem;
+            double totalCost;
+            char currency = '$';
+            
+            Console.WriteLine("Welcome to the cost calculator");
+            Console.WriteLine("Please enter the amount of items: ");
+            items = Convert.ToInt32(Console.ReadLine());
+            
+            Console.WriteLine("Please enter the cost per item: ");
+            costPerItem = Convert.ToDouble(Console.ReadLine());
+            
+            totalCost = items * costPerItem;
+            Console.WriteLine("Please wait a moment............");
+            Console.WriteLine("The total cost for all items is: " + currency + totalCost);
+            
         }
     }
 }
