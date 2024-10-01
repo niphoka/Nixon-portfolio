@@ -109,3 +109,59 @@ namespace thirdApp
         }
     }
 }
+
+
+
+
+using System;
+
+namespace fourthApp
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            Console.WriteLine("***Arithmetic operators***");
+            Console.WriteLine("x equals 8 and y equals 4");
+            int x=8;
+            int y=4;
+            Console.WriteLine("Addition of x and y is: " + (x+y));
+            Console.WriteLine("Substraction is: " +  (x-y));
+            Console.WriteLine("Division is: " + (x/y));
+            Console.WriteLine("Modulus is: " + (x%y));
+            Console.WriteLine("Increment is: " + (++x));
+            Console.WriteLine("Decrement is: " + (--y)) ;
+            Console.WriteLine("\n\n");
+
+            Console.WriteLine("***Assignment operators***");
+            int a = 5;
+            int b = 3;
+            Console.WriteLine("a incremented: " + (a+=3));
+            Console.WriteLine("b decremented: " + (b-=1));
+            Console.WriteLine("a modulus: " + (a%=2));
+            
+            int c = 7;
+            int d = 4;
+            Console.WriteLine("Bitwise |= and ^= need to be studied deeper later");
+            Console.WriteLine(c);
+            
+            Console.WriteLine((a |= 4));
+            Console.WriteLine((a ^= 4));
+            Console.WriteLine();
+            
+            Console.WriteLine("***Comparison Operators***");
+            int e=3;
+            int f=6;
+            int g=9;
+            
+            Console.WriteLine("e is greater than g: " + (e>g));
+            Console.WriteLine();
+            Console.WriteLine("***Logical Operators***");
+            Console.WriteLine("f==e && g>f: " + (f==e && g>f));
+            Console.WriteLine("f==e || g>f: " + (f==e || g>f));
+
+            
+            
+        }
+    }
+}
