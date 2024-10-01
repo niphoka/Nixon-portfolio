@@ -116,3 +116,82 @@ int main()
     
 }
 
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    cout << "***Arithmetic operators***" << endl;
+    cout << "Number we will take for operators are 8 and 4" << "\n\n";
+    //Addition
+    int firstNum = 8;
+    int secondNum = 4;
+    int sum = firstNum + secondNum;
+    cout << "Addition is: "<< sum << endl;
+    
+    ///Substraction
+    int subs = firstNum - secondNum;
+    cout << "Substaction is: " << subs << "\n";
+    
+    //Multiplation
+    int multi = firstNum * secondNum;
+    cout << "Multiplication is: " << multi << endl;
+    
+    //Division
+    int divi = firstNum / secondNum;
+    cout << "Division is: " << divi << "\n";
+    
+    //Modulus
+    int mod = firstNum % secondNum;
+    cout << "Modulus is: " << mod << endl;
+    
+    //Increment
+    int inc = ++firstNum;
+    cout << "Increment by 1 is: " << inc << "\n";
+    
+    //Decrement
+    int dec = --secondNum;
+    cout << "Decrement by 1 is: " << dec << "\n\n";
+    
+    
+    cout << "***Assignment operators***" << endl;
+    int x = 5;
+    int y = 3;
+    
+    x += 2;
+    cout << "Addition assignment result is: " << x << endl;
+    
+    y -= 1;
+    cout << "Substraction assignment result is: " << y << endl;
+    
+    x %= 2;
+    cout << "Modules assignment result is: " << y << "\n\n";
+    
+    
+    cout << "***Comparison operators***" << endl;
+    int a = 3;
+    int b = 2;
+    
+    cout << "Returns 1 if True and 0 if False" << "\n";
+    cout << "a greater than b: " << (a>b) << endl;
+    cout << "a lower than b: " << (a<b) << "\n";
+    cout << "a not equal to b: " << (a!=b) << "\n\n";
+    
+    cout << "***Logical operators***" << endl;
+    int n = 5;
+    int p = 6;
+    int o = 5;
+    int r = 2;
+    
+    cout << "Returns 1 if True and 0 if False" << "\n";
+    cout << "n greater than r AND p greater than n: " << (n>r && p>n) << "\n";
+    cout << "p lower than o OR n equals to o: " << (p<o || n==o) << endl;
+    cout << "NOT n equals o: " << !(n==o);"\n";
+    
+}
+
