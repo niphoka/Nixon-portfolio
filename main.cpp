@@ -195,3 +195,26 @@ int main()
     
 }
 
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //Concatenation
+    string firstName = "Jim";
+    string lastName = "Morrison";
+    cout << "The Doors singer was " << firstName + " " + lastName << endl;
+    
+    //Note the extra space after "Michael" since append function does not add it
+    string firstN = "Michael ";
+    string lastN = "Jackson";
+    string fullN = firstN.append(lastN);
+    cout << fullN;
+}
