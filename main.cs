@@ -165,3 +165,47 @@ namespace fourthApp
         }
     }
 }
+
+
+
+
+
+using System;
+
+namespace fifthApp
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            //Math class applying everyting learned and done so far to make program more dynamic
+            
+            int firstNum;
+            int secondNum;
+            Console.WriteLine("***This program shows you the highest number***");
+            Console.WriteLine("Please enter a decimal number: ");
+            firstNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Now enter another decimal number: ");
+            secondNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Between " + firstNum + " " + "and" + " " + secondNum + ", the highest number is: " + Math.Max(firstNum,secondNum));
+            Console.WriteLine("\n\n");
+            
+            
+            int oneNum;
+            int twoNum;
+            Console.WriteLine("***This program shows you the lowest number***");
+            Console.WriteLine("Please enter a decimal number: ");
+            oneNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter another decimal number: ");
+            twoNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Between " + oneNum + " " + "and" + " " + twoNum + ", the lowest number is: " + Math.Min(twoNum,oneNum));
+            Console.WriteLine("\n\n");
+            
+            Console.WriteLine("***This program will show you the square root of any number***");
+            Console.WriteLine("Please enter a decimal number: ");
+            int anyNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The square root of " + anyNum + " is: " + Math.Sqrt(anyNum));
+        }
+    }
+}
+
