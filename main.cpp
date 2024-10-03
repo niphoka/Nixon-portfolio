@@ -216,5 +216,38 @@ int main()
     string firstN = "Michael ";
     string lastN = "Jackson";
     string fullN = firstN.append(lastN);
-    cout << fullN;
+    cout << fullN << "\n\n";
+    
+    ///String lenght
+    string bigString = "This is a big string to be counted by the length or size function\n";
+    cout << bigString << endl;
+    cout << "We will use the lenght function first" << "\n";
+    cout << "The lenght of the above string is: " << + bigString.length() << "\n\n";
+    cout << "Now we will use the size function" << "\n";
+    cout << "The size of the above string is: " << + bigString.size() << "\n\n";
+    
+    //Access strings by index
+    string dog = "Maya";
+    cout << dog << "\n";
+    cout << "Now we will get the letter in position 0: " << dog[0] << endl;
+    cout << "Now the letter in position 3: " << dog[3] << "\n\n";
+    cout << "Another way of doing this is by combining lenght/size with square brackets" << "\n";
+    cout << "Last letter of dog variable is: " << dog[dog.length() -1] << endl;
+    
+    cout << "First letter of dog variable is: " << dog[dog.size() -4] << "\n\n";
+    cout << "Note that the above code will work backwards: it will count from last to first by using minus (-) symbol" << "\n\n";
+    
+    cout << "Now we will substitute letters" << endl;
+    cout << dog << endl;
+    dog[0] = 'B';
+    cout << "Now Maya will be changed to: " + dog << "\n";
+    
+    //At function
+    cout << dog.at(0) << endl;
+    cout << dog.at(2) << endl;
+    cout << dog.at(dog.length() -1) << endl;
+    cout << dog.at(dog.size() -4) << endl;
+    dog.at(0) = 'T';
+    cout << dog << endl;
+    
 }
