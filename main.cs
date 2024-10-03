@@ -205,7 +205,18 @@ namespace fifthApp
             Console.WriteLine("Please enter a decimal number: ");
             int anyNum = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("The square root of " + anyNum + " is: " + Math.Sqrt(anyNum));
+            Console.WriteLine("\n\n");
+            
+            Console.WriteLine("***This program will show you the absolute value (positive) of a number***");
+            Console.WriteLine("Please write a negative number: ");
+            int absNum = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The absolute value of " + absNum + " " + "is: " + Math.Abs(absNum));
+            Console.WriteLine("\n\n");
+            
+            Console.WriteLine("***This program will round any rational number to its closest whole number***");
+            Console.WriteLine("Please enter a rational number (with a dot decimal): ");
+            double ratNum = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("The number " + ratNum + " " + "rounded results in: " + Math.Round(ratNum));
         }
     }
 }
-
