@@ -220,3 +220,28 @@ namespace fifthApp
         }
     }
 }
+
+
+
+
+
+using System;
+
+namespace sixthApp 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //String length
+            string bigText = "This is a very large string used for this lesson";
+            Console.WriteLine(bigText);
+            Console.WriteLine("The above string length is: " + bigText.Length);
+            Console.WriteLine();
+            Console.WriteLine("Now we will swap to upper case: " + bigText.ToUpper());
+            Console.WriteLine();
+            Console.WriteLine("Now to lower case: " + bigText.ToLower());
+            
+        }
+    }
+}
