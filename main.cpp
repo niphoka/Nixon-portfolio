@@ -221,9 +221,9 @@ int main()
     ///String lenght
     string bigString = "This is a big string to be counted by the length or size method\n";
     cout << bigString << endl;
-    cout << "We will use the lenght function first" << "\n";
+    cout << "We will use the lenght method first" << "\n";
     cout << "The lenght of the above string is: " << + bigString.length() << "\n\n";
-    cout << "Now we will use the size function" << "\n";
+    cout << "Now we will use the size method" << "\n";
     cout << "The size of the above string is: " << + bigString.size() << "\n\n";
     
     //Access strings by index
