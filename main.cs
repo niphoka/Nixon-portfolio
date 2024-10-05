@@ -233,46 +233,46 @@ namespace sixthApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("String length");
+            Console.WriteLine("***String length***");
             string bigText = "This is a very large string used for this lesson";
             Console.WriteLine(bigText);
             Console.WriteLine("The above string length is: " + bigText.Length);
             Console.WriteLine();
             
-            Console.WriteLine("String upper and lower");
+            Console.WriteLine("***String upper and lower***");
             Console.WriteLine("Now we will swap to upper case: " + bigText.ToUpper());
             Console.WriteLine();
             Console.WriteLine("Now to lower case: " + bigText.ToLower());
             Console.WriteLine();
             
             //Concatenation
-            Console.WriteLine("Concatenation with + symbol");
+            Console.WriteLine("***Concatenation with + symbol***");
             string name1 = "Maya ";
             string name2 = "Bonete";
             Console.WriteLine(name1 + name2);
             Console.WriteLine();
 
-            Console.WriteLine("Concatenation with .Concat function" );
+            Console.WriteLine("***Concatenation with .Concat function***" );
             string name3 = "Nheka ";
             string name4 = "Luna";
             string fullName = string.Concat(name3, name4);
             Console.WriteLine(fullName);
             Console.WriteLine();
 
-            Console.WriteLine("String interpolation with $ sign and {} characters");
+            Console.WriteLine("***String interpolation with $ sign and {} characters***");
             string name5 = "China";
             string name6 = " Rufi";
             string justName = $"Both names are: {name5} {name6}";
             Console.WriteLine(justName);
             Console.WriteLine();
             
-            Console.WriteLine("Access strings");
+            Console.WriteLine("***Access strings***");
             string someText = "Nheka";
             Console.WriteLine("This will show the letter from a given text using index number: " + someText[0]);
             Console.WriteLine("This will show the index of a given letter from a text: " + someText.IndexOf("N"));
             Console.WriteLine();
             
-            Console.WriteLine("Combination of IndexOf and Substrings");
+            Console.WriteLine("***Combination of IndexOf and Substrings***");
             //We first create a string variable
             string petName = "Boneton Comelon";
             Console.WriteLine("We first show the full name");
@@ -287,6 +287,17 @@ namespace sixthApp
             string newName = petName.Substring(characPos);
             Console.WriteLine("Now we will show just a substring");
             Console.WriteLine(newName);
+            Console.WriteLine();
+
+            Console.WriteLine("***Special characters***");
+            Console.WriteLine("We are the so called \"Vikings\"");
+            Console.WriteLine("It\'s fine");
+            Console.WriteLine("This is a backslash \\");
+            Console.WriteLine("This is a tab \\t \t this is text on the other side of the tab");
+            Console.WriteLine("This a backspace \\b");
+            Console.WriteLine("This is a new line \\n");
+
+            
             
         }
     }
