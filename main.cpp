@@ -242,7 +242,7 @@ int main()
     dog[0] = 'B';
     cout << "Now Maya will be changed to: " + dog << "\n";
     
-    //At function
+    //At method
     cout << dog.at(0) << endl;
     cout << dog.at(2) << endl;
     cout << dog.at(dog.length() -1) << endl;
