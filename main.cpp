@@ -212,14 +212,14 @@ int main()
     string lastName = "Morrison";
     cout << "The Doors singer was " << firstName + " " + lastName << endl;
     
-    //Note the extra space after "Michael" since append function does not add it
+    //Note the extra space after "Michael" since append method does not add it
     string firstN = "Michael ";
     string lastN = "Jackson";
     string fullN = firstN.append(lastN);
     cout << fullN << "\n\n";
     
     ///String lenght
-    string bigString = "This is a big string to be counted by the length or size function\n";
+    string bigString = "This is a big string to be counted by the length or size method\n";
     cout << bigString << endl;
     cout << "We will use the lenght function first" << "\n";
     cout << "The lenght of the above string is: " << + bigString.length() << "\n\n";
