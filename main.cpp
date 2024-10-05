@@ -208,6 +208,7 @@ using namespace std;
 int main()
 {
     //Concatenation
+    cout << "***Concatenation***" << endl;
     string firstName = "Jim";
     string lastName = "Morrison";
     cout << "The Doors singer was " << firstName + " " + lastName << endl;
@@ -218,15 +219,15 @@ int main()
     string fullN = firstN.append(lastN);
     cout << fullN << "\n\n";
     
-    ///String lenght
-    string bigString = "This is a big string to be counted by the length or size method\n";
+    cout << "***String length***" << endl;
+    string bigString = "This is a big string to be counted by the length or size method \n";
     cout << bigString << endl;
     cout << "We will use the lenght method first" << "\n";
     cout << "The lenght of the above string is: " << + bigString.length() << "\n\n";
     cout << "Now we will use the size method" << "\n";
     cout << "The size of the above string is: " << + bigString.size() << "\n\n";
     
-    //Access strings by index
+    cout <<"***Access strings by index***" << endl;
     string dog = "Maya";
     cout << dog << "\n";
     cout << "Now we will get the letter in position 0: " << dog[0] << endl;
@@ -242,12 +243,45 @@ int main()
     dog[0] = 'B';
     cout << "Now Maya will be changed to: " + dog << "\n";
     
-    //At method
+    cout << "***At method***";
     cout << dog.at(0) << endl;
     cout << dog.at(2) << endl;
     cout << dog.at(dog.length() -1) << endl;
     cout << dog.at(dog.size() -4) << endl;
     dog.at(0) = 'T';
-    cout << dog << endl;
+    cout << dog << "\n\n";
+    
+    cout << "***Special characters in strings with \" \' and \\ ***"<< endl;
+    cout << "We are the so called \"Vikings\" of the sea" << "\n";
+    cout << "It\'s alright" << endl;
+    cout << "This ia backlash \\" << "\n";
+    cout << "This is a new line \\n " << endl;
+    cout << "This is a tab \\t \t this is on the other side of a tab" "\n\n";
+    
+    // cout << "***User input strings***" << endl;
+    // cout << "Let\'s see a buggy code first" << endl;
+    // string fullname;
+    // cout << "Please enter your full name: " << "\n";
+    // cin >> fullname;
+    // cout << "Your full name is: " + fullname << endl;
+    // cout << "The above happens cause cin can only store one word per input, so any other character is ignored" << "\n";
+    // cout << "Now let\'s see a working code using getline method" << "\n\n";
+    // //Comment above lines for the below to work fine
+    string anotherFullName;
+    cout << "Please enter your full name again: " << endl;
+    getline(cin, anotherFullName);
+    cout << "Your full name is now showing as: " + anotherFullName << endl;
+    cout << "Getline gets the full line of text, taking cin as first parameter and the string as second" << "\n\n";
+    
+    cout << "***Omitting std namespace***" << endl;
+    cout << "You might see some C++ programs that run without the standard namespace library. The using namespace std line can be omitted and replaced with the std keyword, followed by the :: operator for string (and cout) objects" << "\n\n";
+    
+    cout << "C-style strings" << endl;
+    cout << "C-style strings are created with the char type instead of string. The name comes from the C language, which, unlike many other programming languages, does not have a string type for easily creating string variables. Instead, you must use the char type and create an array of characters to make a \"string\" in C. As C++ was developed as an extension of C, it continued to support this way of creating strings in C++" << "\n";
+    string dog1 = "Maya in C++ format";
+    char dog2[] = "Maya in C format";
+    cout << dog1 << "\n";
+    cout << dog2 << endl;
+
     
 }
