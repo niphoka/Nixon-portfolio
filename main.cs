@@ -233,14 +233,60 @@ namespace sixthApp
     {
         static void Main(string[] args)
         {
-            //String length
+            Console.WriteLine("String length");
             string bigText = "This is a very large string used for this lesson";
             Console.WriteLine(bigText);
             Console.WriteLine("The above string length is: " + bigText.Length);
             Console.WriteLine();
+            
+            Console.WriteLine("String upper and lower");
             Console.WriteLine("Now we will swap to upper case: " + bigText.ToUpper());
             Console.WriteLine();
             Console.WriteLine("Now to lower case: " + bigText.ToLower());
+            Console.WriteLine();
+            
+            //Concatenation
+            Console.WriteLine("Concatenation with + symbol");
+            string name1 = "Maya ";
+            string name2 = "Bonete";
+            Console.WriteLine(name1 + name2);
+            Console.WriteLine();
+
+            Console.WriteLine("Concatenation with .Concat function" );
+            string name3 = "Nheka ";
+            string name4 = "Luna";
+            string fullName = string.Concat(name3, name4);
+            Console.WriteLine(fullName);
+            Console.WriteLine();
+
+            Console.WriteLine("String interpolation with $ sign and {} characters");
+            string name5 = "China";
+            string name6 = " Rufi";
+            string justName = $"Both names are: {name5} {name6}";
+            Console.WriteLine(justName);
+            Console.WriteLine();
+            
+            Console.WriteLine("Access strings");
+            string someText = "Nheka";
+            Console.WriteLine("This will show the letter from a given text using index number: " + someText[0]);
+            Console.WriteLine("This will show the index of a given letter from a text: " + someText.IndexOf("N"));
+            Console.WriteLine();
+            
+            Console.WriteLine("Combination of IndexOf and Substrings");
+            //We first create a string variable
+            string petName = "Boneton Comelon";
+            Console.WriteLine("We first show the full name");
+            Console.WriteLine(petName);
+            
+            /*We then store the character position, taken from index function, into a new variable
+            IndexOf will first get the index/position of a given string and show it as a decimal number, that is why we need an integer type to store*/
+            int characPos = petName.IndexOf("C");
+            
+            /*Now we store the result from the Substring method into a new variable
+            Substring will get a substring  out of a string, in other words, it will take a portion/word from a string and display it starting out of the character/letter we provide as input, in this case, the character position from IndexOf*/ 
+            string newName = petName.Substring(characPos);
+            Console.WriteLine("Now we will show just a substring");
+            Console.WriteLine(newName);
             
         }
     }
