@@ -295,9 +295,48 @@ namespace sixthApp
             Console.WriteLine("This is a backslash \\");
             Console.WriteLine("This is a tab \\t \t this is text on the other side of the tab");
             Console.WriteLine("This a backspace \\b");
-            Console.WriteLine("This is a new line \\n");
-
+            Console.WriteLine("This is a new line \\n");            
             
+        }
+    }
+}
+
+
+
+
+
+
+
+using System;
+namespace seventhApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***We will now cover booleans!***");
+            int Peter = 24;
+            int May = 56;
+            int Norman = 24;
+            
+            Console.WriteLine("Peter is 24 years old and May is 56, is Peter younger than May? " + (Peter < May));
+            Console.WriteLine("Norman is 24 years old and Peter too, do they both have the same age? " + (Norman == Peter));
+            Console.WriteLine("Is Norman older than May? " + (Norman > May));
+            Console.WriteLine();
+            
+            Console.WriteLine("***This is a bonus***");
+            int drivingAge = 18;
+            //int currentAge;
+            Console.WriteLine("Please enter your age: ");
+            int currentAge = Convert.ToInt32(Console.ReadLine());
+            if (currentAge >= drivingAge)
+            {
+                Console.WriteLine("You're allowed to drive!");
+            }
+            else
+            {
+                Console.WriteLine("Not allowed to drive");
+            }
             
         }
     }
