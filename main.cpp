@@ -283,5 +283,49 @@ int main()
     cout << dog1 << "\n";
     cout << dog2 << endl;
 
+}
+
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    cout << "***Math method***" << endl;
+    int num1;
+    int num2;
+    cout << "Please enter a decimal number: " << endl;
+    cin >> num1;
+    cout << "Now enter another decimal number: " << "\n";
+    cin >> num2;
+    cout << "The biggest number is " << max(num1,num2) << "\n\n";
     
+    int num3;
+    int num4;
+    cout << "Enter a decimal number: " << endl;
+    cin >> num3;
+    cout << "Now enter another one: " << endl;
+    cin >> num4;
+    cout << "The lowest number is: " << min(num3,num4) << "\n\n";
+    
+    cout << "***Now we will have to import the math library by using the #include <cmath> to be able to use math operations***" << endl;
+    
+    int numSqr;
+    cout << "Please enter a decimal number: " << endl;
+    cin >> numSqr;
+    cout << "The square root of such number is: " << sqrt(numSqr) << "\n\n";
+    
+    int rounNum;
+    cout << "Enter a rational number to round it: " << endl;
+    cin >> rounNum;
+    cout << "Such number rounded results in: " << round(rounNum) << "\n\n";
+    
+    //Run each section separately, this last does not work well with the others above
+    int abNum;
+    cout << "Please enter a negative number: " << endl;
+    cin >> abNum;
+    cout << "The absolute value is: " << abs(abNum);
 }
