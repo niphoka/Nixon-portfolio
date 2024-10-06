@@ -329,3 +329,36 @@ int main()
     cin >> abNum;
     cout << "The absolute value is: " << abs(abNum);
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Now we will see booleans" << endl;
+    int Tom = 34;
+    int Yok = 27;
+    int Vilma = 34;
+    cout << "Tom is 34 years old and Yok 27, is Tom older? 1=True and 0=False: " << (Tom > Yok) << endl;
+    cout << "Toms is 34 yeas old, the same as Vilma, do they have the same age? 1=True and 0=False: " << (Vilma == Tom) << endl;
+    cout << "Is Yok older than Vilma? 1=True and 0=False: " << (Yok > Vilma) << "\n\n";
+    
+    cout << "***This is a bonus***" << endl;
+    int driveAge = 18;
+    int currentAge;
+    
+    cout << "Please enter your age: " << endl;
+    cin >> currentAge;
+    if (currentAge >= driveAge)
+    {
+        cout << "You're allowed to drive, congrats :)";
+    }
+    else
+    {
+        cout << "Not allowed to drive, sorry :(";
+    }
+    
+}
