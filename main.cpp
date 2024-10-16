@@ -362,3 +362,50 @@ int main()
     }
     
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "If, else if, else practice" << "\n\n";
+    int freeRideAge = 55;
+    int currentAge;
+    
+    cout << "Please enter your age: " << endl;
+    cin >> currentAge;
+    if (currentAge > freeRideAge)
+    {
+        cout << "You have free ride";
+    }
+    else if (currentAge == freeRideAge)
+    {
+        cout << "You have 50\% discount on the ride";
+    }
+    else
+    {
+        cout << "You pay full price for the ride";
+    }
+    
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Ternary operator - short hand if..else" << "\n\n";
+    int currentAge = 5;
+    int enterAge;
+    cout << "Please enter an age from 1 to 10: ";
+    cin >> enterAge;
+    string result = (enterAge < currentAge) ? "Baby" : "Child";
+    cout << result;
+}
