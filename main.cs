@@ -373,3 +373,24 @@ namespace eigthApp
         }
     }
 }
+
+
+
+
+
+using System;
+namespace ninethApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ternary operator\n");
+            int currentAge = 5;
+            Console.WriteLine("Please enter an age: ");
+            int enterAge = Convert.ToInt32(Console.ReadLine());
+            string result = (enterAge > currentAge) ? "Child" : "Baby";
+            Console.WriteLine(result);
+        }
+    }
+}
