@@ -341,3 +341,35 @@ namespace seventhApp
         }
     }
 }
+
+
+
+
+
+
+using System;
+namespace eigthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("If, else if and else practice\n");
+            int freeRideAge = 54;
+            Console.WriteLine("Please enter your age: ");
+            int currentAge = Convert.ToInt32(Console.ReadLine());
+            if (currentAge > freeRideAge)
+            {
+                Console.WriteLine("You have free ride");
+            }
+            else if (currentAge == freeRideAge)
+            {
+                Console.WriteLine("You have 50% discount on the ride");
+            }
+            else
+            {
+                Console.WriteLine("You pay full price");
+            }
+        }
+    }
+}
