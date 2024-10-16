@@ -409,3 +409,49 @@ int main()
     string result = (enterAge < currentAge) ? "Baby" : "Child";
     cout << result;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Check if a number is even or odd" << "\n\n";
+    int anyNumber;
+    cout << "Please enter any type of number: ";
+    cin >> anyNumber;
+    if (anyNumber % 2 == 0)
+    {
+        cout << "The number is even";
+    }
+    else
+    {
+        cout << " The number is odd";
+    }
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Lock code verification" << "\n\n";
+    int lockCode;
+    cout << "Please create lock code: ";
+    cin >> lockCode;
+    int verifyLockCode;
+    cout << "Please re-enter lock code to check it: ";
+    cin >> verifyLockCode;
+
+    if (lockCode == verifyLockCode)
+    {
+        cout << "Lock code is valid";
+    }
+    else
+    {
+        cout << "Lock code is not valid, please reset it";
+    }
+}
