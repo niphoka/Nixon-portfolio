@@ -394,3 +394,29 @@ namespace ninethApp
         }
     }
 }
+
+
+
+
+using System;
+namespace tenththApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Even or odd verification\n");
+            Console.WriteLine("Please enter a number: ");
+            int enterNum = Convert.ToInt32(Console.ReadLine());
+            if (enterNum % 2 == 0)
+            {
+                Console.WriteLine("Even number");
+            }
+            else
+            {
+                Console.WriteLine("Odd number");
+            }
+
+        }
+    }
+}
