@@ -420,3 +420,31 @@ namespace tenththApp
         }
     }
 }
+
+
+
+
+
+using System;
+namespace elevehthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Lock code verification\n");
+            Console.WriteLine("Please create a lock code: ");
+            int enterLock = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please re-enter lock code to verify it: ");
+            int verifyLock = Convert.ToInt32(Console.ReadLine());
+            if (enterLock == verifyLock)
+            {
+                Console.WriteLine("Lock code is valid");
+            }
+            else
+            {
+                Console.WriteLine("Lock code is not valid, please reset it");
+            }
+        }
+    }
+}
