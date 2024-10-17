@@ -455,3 +455,34 @@ int main()
         cout << "Lock code is not valid, please reset it";
     }
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "This is practice for Switch" << "\n\n";
+    
+    int myNum;
+    cout << "Please enter a number from 1 to 4: " << endl;
+    cin >> myNum;
+    switch (myNum) 
+    {
+        case 1:
+        cout << "Hi I am number 1";
+        break;
+        case 2:
+        cout << "Good day I am number 2";
+        break;
+        case 3:
+        cout << "Hello I am number 3";
+        break;
+        default:
+        cout << "Sorry I only have 3 friends";
+        
+    }
+}
