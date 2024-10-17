@@ -448,3 +448,37 @@ namespace elevehthApp
         }
     }
 }
+
+
+
+
+
+using System;
+
+namespace twelvethApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("This is practice for Switch\n\n");
+            Console.WriteLine("Please enter a number from 1 to 4: ");
+            int myNum = Convert.ToInt32(Console.ReadLine());
+            switch (myNum)
+            {
+                case 1:
+                Console.WriteLine("Hi I am number 1");
+                break;
+                case 2:
+                Console.WriteLine("Good day, I am number 2");
+                break;
+                case 3:
+                Console.WriteLine("Hello, I am number 3");
+                break;
+                default:
+                Console.WriteLine("Sorry I only have 3 friends");
+                break;
+            }
+        }
+    }
+}
