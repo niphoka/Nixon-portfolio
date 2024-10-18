@@ -482,3 +482,24 @@ namespace twelvethApp
         }
     }
 }
+
+
+
+using System;
+
+namespace ThirteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("This is practice for While loops\n");
+            int myNum = 0;
+            while(myNum < 5)
+            {
+                Console.WriteLine("This is number: " + myNum);
+                myNum++;
+            }
+        }
+    }
+}
