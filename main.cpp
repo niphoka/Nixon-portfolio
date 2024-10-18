@@ -505,3 +505,20 @@ int main ()
     }
     
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    cout << "This is practice for Do/While loops \n\n";
+    int anotNum = 0;
+    do
+    {
+        cout << "Number " << anotNum << endl;
+        anotNum++;
+    }
+    while (anotNum < 10);
+}
