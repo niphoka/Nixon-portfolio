@@ -486,3 +486,22 @@ int main()
         
     }
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    cout << "This is practice for While loops \n\n";
+    cout << "Note that While loops do not consider the last digit (myNum < 5), 5 in this case, unless you add an = (equal) on the greater (>) or lesser (<) than symbol, like this: myNum <= 5\n\n";
+    int myNum = 0;
+    while (myNum <= 5)
+    {
+        cout << "This is number " << myNum << endl;
+        myNum++;
+    }
+    
+}
