@@ -487,7 +487,7 @@ namespace twelvethApp
 
 using System;
 
-namespace ThirteenthApp
+namespace thirteenthApp
 {
     class Program
     {
@@ -500,6 +500,29 @@ namespace ThirteenthApp
                 Console.WriteLine("This is number: " + myNum);
                 myNum++;
             }
+        }
+    }
+}
+
+
+
+
+using System;
+
+namespace fourteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("This is practice for Do/While loops\n");
+            int myNum = 0;
+            do
+            {
+                Console.WriteLine("Number " + myNum);
+                myNum++;
+            }
+            while(myNum < 5);
         }
     }
 }
