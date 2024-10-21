@@ -48,3 +48,39 @@ public class Main
         */
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("This is practice for Operators\n");
+        System.out.println("Arithmetic operators");
+        int num1 = 5;
+        int num2 = 10;
+        System.out.println(num1 + " plus " + num2 + " equals: " + (num1 + num2)); //This code does addition
+        System.out.println(num1 + " conatenated with " + num2 + " equals: " + num1 + num2); //This code does concatenation
+        System.out.println();
+        
+        System.out.println("Assignment operators");
+        int num3 = 10;
+        num3 += 5;
+        System.out.println(num3);
+        System.out.println();
+        
+        System.out.println("Comparison operators");
+        int num4 = 14;
+        int num5 = 56;
+        System.out.println(num4 > num5);
+        System.out.println();
+        
+        System.out.println("Logical operators");
+        int num6 = 99;
+        int num7 = 98;
+        int num8 = 89;
+        int num9 = 88;
+        System.out.println(num6 > num9 && num7 > num8);
+    }
+}
