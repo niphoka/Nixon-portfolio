@@ -557,3 +557,25 @@ int main()
     }
     cout << "Counting completed";
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Real life example 1 While loops - reverse numbers \n\n";
+    int myNum = 12345;
+    int revNum = 0;
+    cout << "First we see the numbers before the loop: " << myNum << endl;
+    while (myNum) //This says: while myNum variable exists, but does not apply any condition to it
+    {
+        //cout << myNum << endl;
+        revNum = revNum * 10 + myNum % 10; /*This gets the last digit of myNum and adds it to revNum by moving the decimal point on the result (1234.5, then 123.45, then 12.345 and so on). To test teory, please print/add a cout for revNum and to myNum and see it change, you can also do it on a calculator to see the dot moving*/
+        //cout << revNum << endl;
+        myNum /= 10; // This deletes the last number of myNum, which is a number 1
+    }
+    cout << "Now we see the numbers after the loop: " <<revNum;
+    /*If you do not get any of the above, please divide the code in chunks and analyze each part, adding a cout on each variable to understando its functionality*/
+}
