@@ -522,3 +522,21 @@ int main ()
     }
     while (anotNum < 10);
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Real life example 1 While loops - count down \n\n";
+    int myCount = 3;
+    while (myCount > 0)
+    {
+        cout << myCount << " seconds before explosion!" << endl;
+        myCount--;
+    }
+    cout << "Game over...";
+}
