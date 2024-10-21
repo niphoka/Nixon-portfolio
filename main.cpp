@@ -579,3 +579,28 @@ int main()
     cout << "Now we see the numbers after the loop: " <<revNum;
     /*If you do not get any of the above, please divide the code in chunks and analyze each part, adding a cout on each variable to understando its functionality*/
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Real life example 1 While loops - While and If \n\n";
+    
+    int dice = 1;
+    while (dice <=6)
+    {
+        if (dice < 6)
+        {
+            cout << dice << " Do not jump yet...\n";
+        }
+        else
+        {
+            cout << dice << " Jump now!\n";
+        }
+        dice += 1;
+    }
+}
