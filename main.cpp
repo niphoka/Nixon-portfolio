@@ -540,3 +540,20 @@ int main()
     }
     cout << "Game over...";
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Real life example 1 While loops - print odds \n\n";
+    int myPair = 0;
+    while (myPair <= 20)
+    {
+        cout << myPair << " counting in odds" << endl;
+        myPair+=3; //The increment here decides if counting in pairs, odds, or 4s, or 5s
+    }
+    cout << "Counting completed";
+}
