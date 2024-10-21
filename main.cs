@@ -526,3 +526,47 @@ namespace fourteenthApp
         }
     }
 }
+
+
+
+
+using System;
+namespace fifteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life example - Countdown\n");
+            int myCount = 3;
+            while (myCount > 0)
+            {
+                Console.WriteLine(myCount + " seconds for explosion!");
+                myCount--;
+            }
+            Console.WriteLine("Game over...");
+        }
+    }
+}
+
+
+
+
+using System;
+namespace sixteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life example - Counting odds\n");
+            int myCount = 0;
+            while (myCount < 20)
+            {
+                Console.WriteLine(myCount);
+                myCount+=3;
+            }
+            Console.WriteLine("Loop completed...");
+        }
+    }
+}
