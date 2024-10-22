@@ -604,3 +604,25 @@ int main()
         dice += 1;
     }
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Practice for For loop\n\n";
+    for (int myInt = 0; myInt < 6; myInt++)
+    {
+        cout << "Number: " << myInt << endl;
+    }
+    cout << endl;
+    cout << "For loop using even numbers\n";
+    for (int evenNum = 0; evenNum <= 10; evenNum+=2)
+    {
+        cout << "Even number is: " << evenNum << endl;
+    }
+}
