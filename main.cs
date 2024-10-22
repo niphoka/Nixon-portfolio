@@ -597,3 +597,33 @@ namespace seventeenthApp
         }
     }
 }
+
+
+
+
+
+using System;
+namespace eighteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life example 1 While loops - While and If\n");
+            int dice = 1;
+            while (dice <= 6)
+            {
+                if (dice < 6)
+                {
+                    Console.WriteLine("Do not jump yet...");
+                }
+                else
+                {
+                    Console.WriteLine("Jump now!");
+                }
+                //dice++; The same as below
+                dice += 1;
+            }
+        }
+    }
+}
