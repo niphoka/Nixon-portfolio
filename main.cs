@@ -627,3 +627,30 @@ namespace eighteenthApp
         }
     }
 }
+
+
+
+
+
+using System;
+namespace nineteenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Practice for For loop\n");
+            for (int myNum = 0; myNum < 6; myNum++)
+            {
+                Console.WriteLine("Number: " + myNum);
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("For loop using even numbers\n");
+            for (int evenNum = 0; evenNum < 10; evenNum+=2)
+            {
+                Console.WriteLine("Even number is: " +evenNum);
+            }
+        }
+    }
+}
