@@ -84,3 +84,37 @@ public class Main
         System.out.println(num6 > num9 && num7 > num8);
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("String methods\n");
+        String myStr = "Otorrinolaringologia";
+        System.out.println("The length of " + myStr + " is: " + myStr.length());
+        System.out.println(myStr + " in upper case: " + myStr.toUpperCase());
+        System.out.println(myStr + " in lower case: " + myStr.toLowerCase());
+        System.out.println("The position of rino in " + myStr + " is: " + myStr.indexOf("rino"));
+        System.out.println();
+        
+        System.out.println("Concatenation\n");
+        String name = "Gary";
+        String lastName = " Snail";
+        System.out.println("This is done with +: " + name + lastName);
+        System.out.println("This is done with .concat method: " + name.concat(lastName));
+        
+        int myTen = 10;
+        int myTwen = 20;
+        System.out.println(myTen + " + " + myTwen + " is: " + (myTen + myTwen));
+        System.out.println(myTen + " concatenated with " + myTwen + " is: " + myTen + myTwen);
+        System.out.println();
+        
+        System.out.println("Special characters\n");
+        System.out.println("We are the so-called \"Vikings\" of the North");
+        System.out.println("It\'s fine dude");
+        System.out.println("The character \\");
+    }
+}
