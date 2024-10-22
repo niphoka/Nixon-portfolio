@@ -570,3 +570,30 @@ namespace sixteenthApp
         }
     }
 }
+
+
+
+
+using System;
+namespace seventeenthApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life example - Reverse numbers\n");
+            int myNum = 12345;
+            int revNum = 0;
+            Console.WriteLine("Number before loop: " + myNum);
+
+            while (myNum != 0) //While loops in C# must have a condition, so writing " while (myNum) " as seen on other programming languages is not possible
+            {
+                revNum = revNum * 10 + myNum % 10; /*This gets the last digit of myNum and adds it to revNum by moving the decimal point on the result (1234.5, then 123.45, then 12.345 and so on). To test teory, please print/add a Console.WriteLine for revNum and to myNum and see it change, you can also do it on a calculator to see the dot moving*/
+                myNum /= 10; // This deletes the last number of myNum, which is a number 1
+            }
+            Console.WriteLine("Number after loop: " + revNum);
+                /*If you do not get any of the above, please divide the code in chunks and analyze each part, adding a cout on each variable to understando its functionality*/
+
+        }
+    }
+}
