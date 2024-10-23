@@ -654,3 +654,46 @@ namespace nineteenthApp
         }
     }
 }
+
+
+
+
+using System;
+namespace twentiethApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Practice for Nested For loop\n");
+            for (int extNum = 1; extNum <= 2; extNum++)
+            {
+                Console.WriteLine("Dog " + extNum);
+                for (int intNum = 1; intNum <= 3; intNum++)
+                {
+                    Console.WriteLine(" Cat " + extNum);
+                }
+            }
+        }
+    }
+}
+
+
+
+using System;
+namespace twentyoneApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Practice for Foreach loop");
+            Console.WriteLine("For each is used in arrays (lists) or any other data set\n");
+            string[] animals = {"Cat", "Dog", "Fish", "Bird"};
+            foreach (string pet in animals)
+            {
+                Console.WriteLine(pet);
+            }
+        }
+    }
+}
