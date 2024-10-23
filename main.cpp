@@ -645,3 +645,20 @@ int main()
         }
     }
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Practice for Foreach loop" << endl;
+    cout << "Foreach is used exclusively to loop through elements in an array (lists) or other data structures\n\n";
+    string animals[] = {"Cat", "Dog", "Fish", "Bird"};
+    for (string pet : animals)
+    {
+        cout << pet << endl;
+    }
+}
