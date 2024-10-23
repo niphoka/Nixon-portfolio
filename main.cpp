@@ -626,3 +626,22 @@ int main()
         cout << "Even number is: " << evenNum << endl;
     }
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Practice for Nested For loop\n\n";
+    for (int extNum = 1; extNum <= 2; extNum++)
+    {
+        cout << "Dog " << extNum << endl;
+        for (int intNum = 1; intNum <= 3; intNum++)
+        {
+            cout << "   Cat " << intNum << endl;
+        }
+    }
+}
