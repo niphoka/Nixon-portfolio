@@ -118,3 +118,29 @@ public class Main
         System.out.println("The character \\");
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Math method\n");
+        int firstNum = 64;
+        int secondNum = -7;
+        double thirdNum = 13.99;
+        System.out.println(Math.max(firstNum,secondNum));
+        System.out.println(Math.min(firstNum,secondNum));
+        System.out.println(Math.abs(secondNum));
+        System.out.println(Math.round(thirdNum));
+        System.out.println(Math.sqrt(firstNum));
+        System.out.println();
+        
+        System.out.println("Random number formula and regular approach");
+        int randNum = (int)(Math.random() * 101);
+        System.out.println(randNum);
+        System.out.println(Math.random()); /*The random() method returns a random number between 0 and 1.
+            This method never returns exactly 1, but it can return 0.*/
+    }
+}
