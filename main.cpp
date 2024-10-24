@@ -662,3 +662,40 @@ int main()
         cout << pet << endl;
     }
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    cout << "Real life examples - Count to 100 in 10s\n";
+    for (int counterHun = 0; counterHun <= 100; counterHun+=10)
+    {
+        cout << counterHun << endl;
+    }
+    cout << "\n";
+    cout << "Count even numbers from 0 to 10 inclusive\n";
+    for (int evenCo = 0; evenCo <=10; evenCo+=2)
+    {
+        cout << evenCo << endl;
+    }
+    cout << "\n";
+    cout << "Count to 512 on powers of 2\n";
+    for (int powerNu = 1; powerNu < 512; powerNu*=2)
+    {
+        cout << powerNu << endl;
+    }
+    cout << "\n";
+    cout << "Give multiplication table from an input number\n";
+    int xNum;
+    int yNum;
+    cout << "Please enter a number: " << endl;
+    cin >> yNum;
+
+    for (int xNum = 1; xNum <=10; xNum++)
+    {
+        cout << yNum << "x" << xNum << " = " << xNum * yNum << endl;
+    }
+}
