@@ -144,3 +144,27 @@ public class Main
             This method never returns exactly 1, but it can return 0.*/
     }
 }
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Booleans\n");
+        int driveAge = 18;
+        int userAge = 17;
+        System.out.println("Is " + driveAge + " > " + userAge + "?" + " = " + (driveAge > userAge));
+        System.out.println();
+        int voteeAge = 19;
+        int votingAge = 23;
+        if (voteeAge > votingAge)
+        {
+            System.out.println("User can vote");
+        }
+        else
+        {
+            System.out.println("User CANNOT vote");
+        }
+    }
+}
