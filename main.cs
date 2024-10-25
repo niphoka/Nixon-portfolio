@@ -770,3 +770,46 @@ namespace anotherApp
         }
     }
 }
+
+
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Break in While loop\n");
+            int i = 0;
+            while (i < 10)
+            {
+                Console.WriteLine(i);
+                i++;
+                if (i == 4)
+                {
+                    break;
+                }
+            }
+            Console.WriteLine("Break\n");
+            
+            Console.WriteLine("Continue in While loop");
+            int j = 0;
+            while (j < 10)
+            {
+                Console.WriteLine(j); //Does the same here or in line 33 and 34 below
+                j++;
+                if (j == 4)
+                {
+                    Console.WriteLine("Continue (skip 4)");
+                    j++;
+                    continue;
+                }
+                //Console.WriteLine(j);
+                //j++;
+            }
+        }
+    }
+}
