@@ -168,3 +168,32 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("If, else if, else practice\n");
+        int aNum = 10;
+        if (aNum < 5)
+        {
+            System.out.println("Dog");
+        }
+        else if (aNum < 10)
+        {
+            System.out.println("Cat");
+        }
+        else
+        {
+            System.out.println("Bird");
+        }
+        System.out.println();
+        System.out.println("Short hand If,Else\n");
+        int price = 50;
+        String result = (price < 30) ? "Doggy" : "Kitty";
+        System.out.println(result);
+    }
+}
