@@ -736,3 +736,37 @@ namespace anotherApp
         }
     }
 }
+
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Break in For loop\n");
+            for (int i = 0; i < 4; i++)
+            {
+                if (i == 4)
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Break\n");
+            Console.WriteLine("Continue in For loop");
+            for (int j = 0; j < 10; j++)
+            {
+                if (j == 4)
+                {
+                    Console.WriteLine("Continue (skip 4)");
+                    continue;
+                }
+                Console.WriteLine(j);
+            }
+        }
+    }
+}
