@@ -698,3 +698,32 @@ int main ()
         cout << ingressNum << "x" << xNum << " = " << xNum * ingressNum << endl;
     }
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Break in For loop\n";
+    for (int i = 0; i < 10; i++)
+    {
+        if (i == 4)
+        {
+            break; //This makes counting to stop at 4
+        }
+        cout << i << endl;
+    }
+    cout << endl;
+    cout << "Continue in For loop\n";
+    for (int j = 0; j < 10; j++)
+    {
+        if (j == 4) //This makes counting to skip 4 and continue to 10
+        {
+            continue;
+        }
+        cout << j << endl;
+    }
+}
