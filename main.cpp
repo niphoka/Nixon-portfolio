@@ -689,7 +689,6 @@ int main ()
     }
     cout << "\n";
     cout << "Give multiplication table from an input number\n";
-    int xNum;
     int ingressNum;
     cout << "Please enter a number: " << endl;
     cin >> ingressNum;
