@@ -697,3 +697,42 @@ namespace twentyoneApp
         }
     }
 }
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life examples - Count to 100 in 10s\n");
+            for (int countIn = 0; countIn < 100; countIn +=10)
+            {
+                Console.WriteLine(countIn);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Count even numbers from 0 to 10 inclusive\n");
+            for (int evenIn = 0; evenIn <=10; evenIn+=2)
+            {
+                Console.WriteLine(evenIn);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Count to 512 on powers of 2\n");
+            for (int powerIn = 1; powerIn < 512; powerIn*=2)
+            {
+                Console.WriteLine(powerIn);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Give multiplication table from an input number\n");
+            int ingressNum;
+            Console.WriteLine("Please enter a number: ");
+            ingressNum = Convert.ToInt32(Console.ReadLine());
+            for (int muNum = 1; muNum <=10; muNum++)
+            {
+                Console.WriteLine(ingressNum + "x" + muNum + " = " + ingressNum * muNum);
+            }
+        }
+    }
+}
