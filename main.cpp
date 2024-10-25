@@ -690,12 +690,12 @@ int main ()
     cout << "\n";
     cout << "Give multiplication table from an input number\n";
     int xNum;
-    int yNum;
+    int ingressNum;
     cout << "Please enter a number: " << endl;
-    cin >> yNum;
+    cin >> ingressNum;
 
     for (int xNum = 1; xNum <=10; xNum++)
     {
-        cout << yNum << "x" << xNum << " = " << xNum * yNum << endl;
+        cout << ingressNum << "x" << xNum << " = " << xNum * ingressNum << endl;
     }
 }
