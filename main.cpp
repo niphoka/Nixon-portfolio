@@ -731,6 +731,8 @@ int main()
 }
 
 
+
+
 #include <iostream>
 using namespace std;
 
@@ -753,13 +755,15 @@ int main()
     int j;
     while (j < 10)
     {
+        cout << j << endl;
+        j++;
         if (j == 4)
         {
-            cout << "Skip 4 and continue\n";
+            cout << "Skip 4 and continue\n"; //Does the same here or in lines 31 and 32 below
             j++;        
             continue; //This makes counting to skip 4 and continue to 10
         }
-        cout << j << endl;
-        j++;
+        //cout << j << endl;
+        //j++;
     }
 }
