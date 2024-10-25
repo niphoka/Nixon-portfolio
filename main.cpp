@@ -712,6 +712,7 @@ int main()
     {
         if (i == 4)
         {
+            cout << "Stop here\n";
             break; //This makes counting to stop at 4
         }
         cout << i << endl;
@@ -722,8 +723,43 @@ int main()
     {
         if (j == 4) //This makes counting to skip 4 and continue to 10
         {
+            cout << "Skip 4 and continue\n";
             continue;
         }
         cout << j << endl;
+    }
+}
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Break in While loop\n";
+    int i;
+    while (i < 10)
+    {
+        cout << i << endl;
+        i++;
+        if (i == 4)
+        {
+            break; //This makes counting to stop at 4
+        }
+    }
+    cout << "Stop here\n\n";
+
+    cout << "Continue in While loop\n";
+    int j;
+    while (j < 10)
+    {
+        if (j == 4)
+        {
+            cout << "Skip 4 and continue\n";
+            j++;        
+            continue; //This makes counting to skip 4 and continue to 10
+        }
+        cout << j << endl;
+        j++;
     }
 }
