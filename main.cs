@@ -813,3 +813,58 @@ namespace anotherApp
         }
     }
 }
+
+
+
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        Console.WriteLine("Practice for Arrays\n");
+        string[] carArray = {"BMW","Mercedez","Audi","Land Rover"};
+        Console.WriteLine(carArray[0]);
+        
+        carArray[1] = "Aston Marti";
+        Console.WriteLine(carArray[1]);
+        
+        Console.WriteLine(carArray.Length);//Counts items on array
+        Console.WriteLine();
+        Console.WriteLine("C# has 4 different ways of creating arrays\n");
+        //You should note that if you declare an array and initialize it later, you have to use the new keyword
+
+
+        // Create an array of four elements, and add values later
+        string[] nuArray = new string[3];
+        
+        // Create an array of four elements and add values right away 
+        string[] nuArray1 = new string[3] {"one", "two", "three"};
+        
+        // Create an array of four elements without specifying the size 
+        string[] nuArray2 = new string[] {"one", "two", "three"};
+        
+        // Create an array of four elements, omitting the new keyword, and without specifying the size
+        string[] nuArray3 = {"one", "two", "three"};
+        
+        Console.WriteLine("For loops in Arrays\n");
+        string[] aniArray = {"Dog","Cat","Fish","Bird","Toad"};
+        for (int item = 0; item < aniArray.Length; item++)
+        {
+            Console.WriteLine(item + " = " + aniArray[item]);
+        }
+        Console.WriteLine();
+        Console.WriteLine("Foreach loop in Arrays\n");
+        string[] insArray = {"Mantis","Butterfly","Dragonfly"};
+        foreach (string insect in insArray)
+        {
+            Console.WriteLine(insect);
+        }
+        //If you compare the for loop and foreach loop, you will see that the foreach method is easier to write, it does not require a counter (using the Length property), and it is more readable
+        }
+    }
+}
