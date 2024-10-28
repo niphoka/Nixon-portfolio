@@ -767,3 +767,41 @@ int main()
         //j++;
     }
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Practice for arrays\n\n";
+    string carArray [4] = {"BMW","Mercedez","Audi","Land Rover"};
+    cout << carArray[0];
+    cout << endl;
+    carArray[1] = "Aston Marti";
+    cout << carArray[1];
+    cout << "\n\n";
+    cout << "For loop in Arrays\n";
+    string aniArray [5] = {"Dog","Cat","Fish","Bird","Toad"};
+    for (int aniIndex = 0; aniIndex < 5; aniIndex++) //Regular For has integer inside parenthesis
+    {
+        cout << aniIndex << " = " << aniArray[aniIndex] << endl; //This prints index of each item and then items of array
+    }
+    cout << "\n";
+    
+    int numArray [6] = {10, 20, 30, 40, 50, 60};
+    for (int numIndex = 0; numIndex < 6; numIndex++)
+    {
+        cout << numIndex << " : " << numArray[numIndex] << endl;
+    }
+    cout << "\n";
+    cout << "Foreach loop in Arrays\n";
+    string insArray[3] = {"Mantis","Butterfly","Dragonfly"};
+    for (string insItem : insArray) //Foreach has string inside parenthesis
+    {
+        cout << insItem << endl; 
+    }
+}
