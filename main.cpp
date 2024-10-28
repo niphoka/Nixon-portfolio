@@ -786,7 +786,7 @@ int main()
     cout << "\n\n";
     cout << "For loop in Arrays\n";
     string aniArray [5] = {"Dog","Cat","Fish","Bird","Toad"};
-    for (int aniIndex = 0; aniIndex < 5; aniIndex++) //Regular For has integer inside parenthesis
+    for (int aniIndex = 0; aniIndex < 5; aniIndex++) //Regular For has integer type inside parenthesis
     {
         cout << aniIndex << " = " << aniArray[aniIndex] << endl; //This prints index of each item and then items of array
     }
@@ -800,8 +800,8 @@ int main()
     cout << "\n";
     cout << "Foreach loop in Arrays\n";
     string insArray[3] = {"Mantis","Butterfly","Dragonfly"};
-    for (string insItem : insArray) //Foreach has string inside parenthesis
+    for (string insect : insArray) //Foreach has string type inside parenthesis
     {
-        cout << insItem << endl; 
+        cout << insect << endl; 
     }
 }
