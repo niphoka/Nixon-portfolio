@@ -197,3 +197,46 @@ public class Main
         System.out.println(result);
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Real life examples with If\n");
+        int numLock = 1324; //Example #1
+        if (numLock == 1324)
+        {
+            System.out.println("Code is valid, door is opened");
+        }
+        else
+        {
+            System.out.println("Code is NOT valid, door remains closed");
+        }
+        System.out.println();
+        
+        int anyNum = 33; //Example #2
+        if (anyNum % 2 == 0)
+        {
+            System.out.println("Number is even");
+        }
+        else
+        {
+            System.out.println("Number is odd");
+        }
+        System.out.println();
+        
+        int currentAge = 18;//Example #3
+        int votingAge = 20;
+        if (currentAge >= votingAge)
+        {
+            System.out.println("You can vote");
+        }
+        else
+        {
+            System.out.println("You cannot vote");
+        }
+    }
+}
