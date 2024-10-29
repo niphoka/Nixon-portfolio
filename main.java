@@ -240,3 +240,28 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int fruit = 4;//This indicates which case to select
+        switch (fruit)
+        {
+            case 1:
+                System.out.println("Mango");
+                break;
+            case 2:
+                System.out.println("Papaya");
+                break;
+            case 3:
+                System.out.println("Tamarindo");
+                break;
+            default://Used when there is no case match
+                System.out.println("Avocado");
+        }
+    }
+}
