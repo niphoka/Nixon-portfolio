@@ -805,3 +805,33 @@ int main()
         cout << insect << endl; 
     }
 }
+
+
+
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    cout << "Arrays cannot be modified once created\n";
+    //string fixArray[] = {"Sun", "Moon","Stars"}; This does the same
+    string fixArray[3] = {"Sun", "Moon","Stars"}; //This is is considered as "good practice", because it will reduce the chance of errors in your program.
+    fixArray[3] = "Jupiter"; //This throws an error or does not work since Arrays cannot be modified
+    for (string i : fixArray)
+    {
+        cout << i << endl;
+    }
+    cout << "\n";
+    
+    cout << "Solution is to create a vector\n"; //remember to import vector module at the top
+    vector<string> testArray = {"One","Two","Three"};
+    testArray.push_back("Four");
+    for (string item : testArray)
+    {
+        cout << item << endl;
+    }    
+}
