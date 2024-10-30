@@ -868,3 +868,38 @@ namespace anotherApp
         }
     }
 }
+
+
+
+using System;
+using System.Linq;
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Sorting arrays\n");
+            string[] fruit = {"Durazno","Chayote","Aguacate","Banano"};
+            Array.Sort(fruit);//This reorders alphabetically
+            foreach (string item in fruit)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            
+            int[] nums = {5, 2, 9, 6, 1, 7};//This reorders from low to high
+            Array.Sort(nums);
+            foreach (int num in nums)
+            {
+                Console.WriteLine(num);
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("Use case for System.Linq namespace\n");
+            Console.WriteLine(nums.Max());//Highest from nums
+            Console.WriteLine(nums.Min());//Lowest from nums
+            Console.WriteLine(nums.Sum());//Sum of nums
+        }    
+    }
+}
