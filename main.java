@@ -265,3 +265,70 @@ public class Main
         }
     }
 }
+
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("While loop\n");
+        int num = 0;
+        while (num < 5)
+        {
+            System.out.println(num);
+            num++;
+        }
+        System.out.println();
+        
+        System.out.println("Do While loop\n");
+        int integ = 0;
+        do 
+        {
+            System.out.println(integ);
+            integ++;
+        }
+        while (integ < 5);
+        System.out.println();
+        
+        System.out.println("Real life example 1\n");
+        int counter = 3;
+        while (counter > 0)
+        {
+            System.out.println(counter + " minutes to explode");
+            counter--;
+        }
+        System.out.println("Game over");
+        System.out.println();
+        
+        System.out.println("Real life example 2.0\n");//This and 2.5 achieve the same goal with different approach
+        int gameCount = 1;
+        while (gameCount < 5) //This does not have equals sign
+        {
+            if (gameCount <= 5)//and this does
+            {
+                System.out.println("Hold it..." + gameCount);
+                gameCount++;//The increase is inside the If
+            }
+        }
+        System.out.println("Go!");//Result is outside If and While
+        System.out.println();
+        
+        System.out.println("Real life example 2.5\n");
+        int gameCount2 = 1;
+        while (gameCount2 <= 5)//This has equals sign
+        {
+            if (gameCount2 < 5)//and this does not
+            {
+                System.out.println("Hold your gun " +  gameCount2);
+            }
+            else
+            {
+                System.out.println("Fire!");//Result is inside If
+            }
+            gameCount2++;//The increase is outside the If and inside the While
+        }
+    }
+}
