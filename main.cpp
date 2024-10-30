@@ -835,3 +835,49 @@ int main()
         cout << item << endl;
     }    
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string words[] = {"Mango", "Tree", "Squirrel", "Rain"};
+    cout << "Size of \"words\" array in bytes: " << sizeof(words) << endl; //This shows the size of the entire array in bytes
+    cout << "Size of Mango: " << sizeof(words[0]) << endl;//This shows the size of each item in the array in bytes
+    cout << "Size of Tree: " << sizeof(words[1]) << endl;
+    cout << "Size of Squirrel: " << sizeof(words[2]) << endl;
+    cout << "Size of Rain: " << sizeof(words[3]) << endl;
+    /*Why did the result show 128 (or any other number) instead of 4, when the array contains 4 elements?
+It is because the sizeof() operator returns the size of a type in bytes.
+You learned from the Data Types chapter that an int type is usually 4 bytes, so from the example above, 32 x 4 (4 bytes x 5 elements) = 128 bytes.
+To find out how many elements an array has, you have to divide the size of the array by the size of the first element in the array*/
+    int arrayLength = sizeof(words) / sizeof(words[0]);
+    cout << "Number of items in array: " << arrayLength << endl;
+    cout << "\n";
+    
+    cout << "Regular For loop to go through an array with sizeof()\n";
+    cout << "num < 4 is not ideal, since it will only work for arrays of a specified size\n";
+    int inteArray[4] = {10, 20, 30, 40};
+    for (int num = 0; num < 4; num++)
+    {
+        cout << num <<endl;
+    }
+    cout << endl;
+    
+    cout << "sizeof(myArray) / sizeof(myArray[0]) is better\n";
+    int myArray[4] = {50, 60, 70, 80};
+    for (int i = 0; i < sizeof(myArray) / sizeof(myArray[0]); i++)
+    {
+        cout << myArray[i] << endl;
+    }
+    cout << endl;
+    cout << "Foreach loop \"string j : bunch\" is better, faster and cleaner\n";
+    string bunch[4] = {"Tomato", "Spaguetti","Toad","Tiger"};
+    for (string j : bunch)
+    {
+        cout << j << endl;
+    }
+}
