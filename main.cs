@@ -903,3 +903,44 @@ namespace anotherApp
         }    
     }
 }
+
+
+
+using System;
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Real life example - calculate average of an array");
+            int[] manyAges = {16,24,36,43,57,62,78};
+            Console.WriteLine("manyAges = {16,24,36,43,57,62,78}");
+            float sum = 0;
+            int length = manyAges.Length;
+    
+            foreach (int age in manyAges)
+            {
+                sum+=age;
+            }
+            float average = sum / length;
+            Console.WriteLine("The average of manyAges array/list is " + average);
+            Console.WriteLine();
+            
+            Console.WriteLine("Real life example - find lowest age in an array");
+            int[] ages = {15,21,32,47,9,62,78};
+            Console.WriteLine("ages = {15,21,32,47,9,62,78}");
+            int lowestAge = ages[0];
+            
+            foreach (int age in ages)
+            {
+                if (lowestAge > age)
+                {
+                    lowestAge = age;
+                }
+            }
+            Console.WriteLine("The lowest age in ages array is: " + lowestAge);
+        }
+    }
+}
