@@ -881,3 +881,47 @@ To find out how many elements an array has, you have to divide the size of the a
         cout << j << endl;
     }
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Real life example - calculate average of an array\n";
+    cout << "manyAges[7] = {15,24,36,43,57,62,78}" << endl;
+    int manyAges[7] = {16,24,36,43,57,62,78};
+
+    float average, sum = 0;//We need 2 variables initialized in 0 for the operations below
+
+    int length = sizeof(manyAges) / sizeof(manyAges[0]);//Get size of array
+    
+    for (int age : manyAges)//For every item in manyAges
+    {
+        sum+=age;//Add sum with age, in other words, sum every item on the array
+    }
+    
+    average = sum / length;//Finally, divide the sum of all items in array by the lenght of array
+    
+    cout << "The average of manyAges array/list is " << average << endl;
+    cout << endl;
+
+    cout << "Real life example - find lowest age in an array\n";
+    int ages[7] = {15,21,32,47,9,62,78};
+    cout << "ages[7] = {15,21,32,47,9,62,78}\n";
+    
+    //arrayLength = sizeof(ages) / sizeof(ages[0]);
+    
+    int lowestAge = ages[0];//Initialize lowestAge with the value of the first item in ages array
+    
+    for (int age : ages)//For every item in ages array
+    {
+        if (lowestAge > age)//if the condition of lowestAge (having the value of the first item) is higher than each item evaluated in the array (15 > 15, then 21 > 15, and so on)
+        {
+            lowestAge = age;//Assign the value of such item to lowestAge
+        }
+    }
+   cout << "The lowest age in ages array is: " << lowestAge << endl;//Once the lowest number is found (9 < 47) then print to screen
+}
