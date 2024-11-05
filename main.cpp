@@ -918,3 +918,38 @@ int main()
     }
    cout << "The lowest age in ages array is: " << lowestAge << endl;
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "2 dimension arrays\n";
+    string twoArray [2][3] = {{"A","B","C"},{"D","E","F"}};
+    cout << twoArray[1][2] << "\n\n";
+    
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << twoArray[i][j] << endl;
+        }
+    }
+    cout << "\n";
+    cout << "3 dimension arrays\n";
+    int threeArray[2][2][2] = {{{1,2},{10,20}},{{100,200},{1000,2000}}};
+    for (int layer1 = 0; layer1 < 2; layer1++)
+    {
+        for (int layer2 = 0; layer2 < 2; layer2++)
+        {
+            for (int layer3 = 0; layer3 < 2; layer3++)
+            {
+                cout << threeArray[layer1][layer2][layer3] << endl;
+            }
+        }
+    }
+}
