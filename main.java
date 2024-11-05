@@ -341,22 +341,27 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int fruit = 4;
-        switch (fruit)
+        System.out.println("For loop\n");
+        for (int i = 0; i < 5; i++)
         {
-            case 1:
-                System.out.println("Tamarindo");
-                break;
-            case 2:
-                System.out.println("Mango");
-                break;
-            case 3:
-                System.out.println("Papaya");
-                break;
-            case 4:
-                System.out.println("Continue");
-            default:
-                System.out.println("No fruit chosen");
+            System.out.println(i);
+        }
+        System.out.println();
+        
+        for (int j = 0; j < 10; j+=2)//This prints even numbers
+        {
+            System.out.println(j);
+        }
+        System.out.println();
+        
+        System.out.println("Nested For loop\n");
+        for (int a = 1; a <3; a++)
+        {
+            System.out.println("Outer " + a);
+            for (int b = 1; b < 4; b++)
+            {
+                System.out.println("    Inner " + b);
+            }    
         }
     }
 }
