@@ -365,3 +365,19 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Foreach loop\n");
+        String[] cars = {"Toyota", "Honda", "Mazda", "Mitsubishi"};
+        for (String car : cars)
+        {
+            System.out.println(car);
+        }
+    }
+}
