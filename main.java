@@ -381,3 +381,33 @@ public class Main
         }
     }
 }
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Real life examples \n");
+        System.out.println("Count to 100 in tens");
+        for (int counter = 0; counter <=100; counter+=10)
+        {
+            System.out.println(counter);
+        }
+        System.out.println();
+        
+        System.out.println("Count to 10 in pairs");
+        for (int pair = 0; pair<=10; pair+=2)
+        {
+            System.out.println(pair);
+        }
+        System.out.println();
+        
+        System.out.println("Multiplication table for a given number");
+        int number = 9;
+        for (int multiplier = 1; multiplier <=10; multiplier++)
+        {
+            System.out.println(number + "x" + multiplier + " = " + number*multiplier);
+        }
+    }
+}
