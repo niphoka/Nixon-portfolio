@@ -953,3 +953,49 @@ int main()
         }
     }
 }
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Welcome to shoot the disc game!\n";//This is aimed to practice multidimensional arrays
+    cout << "You need to select a row (0, 1 or 2 or up, center, bottom) and column (0, 1 or 2 or left, center, right) to see if you can shoot a disc at the same time the disc is shot\n\n";
+  
+    bool discs[3][3] = 
+        {{0,0,1},
+        {0,1,0},
+        {1,0,0}};
+        
+    int hits = 0;
+    int turns = 0;
+    
+    while (hits <3)
+    {
+        int row, column;
+        cout << "Time to aim!\n";
+        
+        cout <<"Choose a row (type 0, 1 or 2): \n";
+        cin >> row;
+        
+        cout <<"Choose a colum (type 0, 1 or 2 again): \n";
+        cin >> column;
+        
+        if (discs[row][column])
+        {
+            discs[row][column] = 0;
+            hits++;
+            cout << "You hit it! " << (3-hits) << " left\n\n";
+        }
+        else
+        {
+            cout << "You missed it\n\n";
+        }
+        turns++;
+    }
+    cout << "Well done! " << "You won in " << turns << " turns\n";
+}
