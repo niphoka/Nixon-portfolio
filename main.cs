@@ -947,6 +947,37 @@ namespace anotherApp
 
 
 
+using System;
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Multidimensional arrays with Foreach loop\n");
+            int[,] numbers = {{1,4,2}, {3,6,8}};
+            foreach (int number in numbers)
+            {
+                Console.WriteLine(number);
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("Multidimensional arrays with For loop\n");
+            int[,] numeros = {{2,4,6},{8,10,12}};
+            for (int i = 0; i < numeros.GetLength(0); i++)
+            {
+                for (int x = 0; x < numeros.GetLength(1); x++)
+                {
+                    Console.WriteLine(numeros[i,x]);
+                }
+            }
+        }
+    }
+}
+
+
+
 
 
 using System;
@@ -995,3 +1026,6 @@ namespace anotherApp
         }
     }
 }
+
+
+
