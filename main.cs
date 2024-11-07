@@ -944,3 +944,54 @@ namespace anotherApp
         }
     }
 }
+
+
+
+
+
+using System;
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*This is a replication of the same game but in C++. I could not make this game a 3D array, and thus, loses a bit of the challenge. 
+            In C++ it is fairly easy to setup, in here, C#, I just could not do it, so I changed the game from being 3D to 2D array, and some other modifications to make it work decently. 
+            I will work on this later on if I have chance*/
+            
+            Console.WriteLine("Welcome to shoot the disc game!\n");//This is aimed to practice multidimensional arrays
+            Console.WriteLine("You need to select a row (0, 1 or 2 or up, center, bottom) and column (0, 1 or 2 or left, center, right) to see if you can shoot a disc at the same time the disc is shot\n\n");
+            
+            int[,] discs = {{0,1,0}, {1,0,0}}; //I had to change from bool to int due to errors in C# for not being able to transform it, and the dimensions of the array
+            
+            int hits = 0;
+            int turns = 0;
+            
+            while (hits < 2)
+            {
+                Console.WriteLine("Tie to aim!");
+                
+                Console.WriteLine("Choose a row (0, 1)");
+                int row = Convert.ToInt32(Console.ReadLine());
+                
+                Console.WriteLine("Choose a column (0, 1)");
+                int column = Convert.ToInt32(Console.ReadLine());
+                
+                if (discs[row,column] != 0)
+                {
+                    discs[row, column] = 0;
+                    hits++;
+                    Console.WriteLine("You hit it! " + (2-hits) + " left\n");
+                }
+                else
+                {
+                    Console.WriteLine("You missed it\n");
+                }
+                turns++;
+            }
+            Console.WriteLine("Well done, you won in " + turns + " turns\n");
+        }
+    }
+}
