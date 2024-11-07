@@ -411,3 +411,35 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Break in For loop\n");
+        for (int i = 0; i <= 10; i++)
+        {
+            if (i == 4)
+            {
+                System.out.println("Break and do not continue to 10\n");
+                break;
+            }
+            System.out.println(i);
+        }    
+    
+            
+        System.out.println("Continue in For loop\n");
+        for (int x = 0; x <=10; x++)
+        {
+            if (x == 4)
+            {
+                System.out.println("Skip 4 and continue to 10");
+                continue;
+            }
+           System.out.println(x);
+        }
+    }
+}
