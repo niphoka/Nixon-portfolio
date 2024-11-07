@@ -479,3 +479,19 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Arrays\n");
+        String[] cars = {"BMW","Ford","Toyota","Audi"};
+        System.out.println(cars[2]);
+        cars[2] = "Mazda";
+        System.out.println(cars[2]);
+        System.out.println(cars.length);
+    }
+}
