@@ -443,3 +443,39 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Break in While loop\n");
+        int i = 0;
+        while (i <= 10)
+        {
+            System.out.println(i);
+            i++;
+            if (i == 4)
+            {
+                System.out.println("Break and do not continue to 10\n");
+                break;
+            }
+        }    
+    
+            
+        System.out.println("Continue in While loop\n");
+        int x = 0;
+        while (x <= 10)
+        {
+            System.out.println(x);
+            x++;
+            if (x == 4)
+            {
+                System.out.println("Skip 4 and continue to 10");
+                continue;
+            }
+        }
+    }
+}
