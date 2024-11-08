@@ -999,3 +999,61 @@ int main()
     }
     cout << "Well done! " << "You won in " << turns << " turns\n";
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+/* Structures (also called structs) are a way to group several related variables into one place. 
+Each variable in the structure is known as a member of the structure.
+
+Unlike an array, a structure can contain many different data types (int, string, bool, etc.). */ 
+
+struct fruit {string taste; string color; int amount;};//This goes outside of main when doing named structs
+
+int main()
+{
+    cout << "***Structs***\n";
+    struct {int myNum; string myWord;} myStruct;
+    myStruct.myNum = 1;
+    myStruct.myWord = "Tamarindo";
+    cout << myStruct.myNum << endl;
+    cout << myStruct.myWord << endl;
+    cout << endl;
+    
+    //The following is a diffrent way to obtain the same result
+    struct {int numero = 2; string palabra = "Hola";} Estructura;
+    cout << Estructura.numero << endl;
+    cout << Estructura.palabra << endl;
+    cout << endl;
+
+    cout << "***One struct in multiple variables***\n";
+    struct {string brand; string model; int year;} car1, car2;
+    car1.brand = "Toyota";
+    car1.model = "Rav4";
+    car1.year = 2018;
+    
+    car2.brand = "Mazda";
+    car2.model = "C5";
+    car2.year = 2017;
+    
+    cout << car1.brand << " " << car1.model << " " << car1.year << endl;
+    cout << car2.brand << " " << car2.model << " " << car2.year << endl;
+    cout << endl;
+    
+    cout << "***Named structs***\n";
+    fruit orange;
+    orange.taste = "sour";
+    orange.color = "orange";
+    orange.amount = 1;
+    
+    fruit watermelon;
+    watermelon.taste = "sweet";
+    watermelon.color = "green";
+    watermelon.amount = 2;
+    
+    cout << orange.taste << " " << orange.color << " " << orange.amount << endl;
+    cout << watermelon.taste << " " << watermelon.color << " " << watermelon.amount << endl;
+}
