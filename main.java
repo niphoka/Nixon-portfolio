@@ -495,3 +495,23 @@ public class Main
         System.out.println(cars.length);
     }
 }
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("For loop with arrays\n");
+        String[] cars = {"BMW","Ford","Toyota","Audi"};
+        for (int i = 0; i < cars.length; i++)
+        {
+            System.out.println(cars[i]);
+        }
+        System.out.println();
+        System.out.println("Foreach loop with arrays\n");
+        for (String i : cars)
+        {
+            System.out.println(i);
+        }
+    }
+}
