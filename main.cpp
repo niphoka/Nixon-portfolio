@@ -1057,3 +1057,35 @@ int main()
     cout << orange.taste << " " << orange.color << " " << orange.amount << endl;
     cout << watermelon.taste << " " << watermelon.color << " " << watermelon.amount << endl;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+enum Level {LOW=1, MEDIUM, HIGH};
+
+int main()
+{
+    cout << "Enums - Group of constants (unchangeable values)\n";
+    // enum Level myEnum = LOW;// 0
+    // enum Level myEnum1 = MEDIUM;// 1
+    enum Level myEnum2 = HIGH;// 2
+    
+    // cout << myEnum << endl;
+    // cout << myEnum1 << endl;
+    // cout << myEnum2 << endl;
+    cout << "Enum with switch\n";
+    switch (myEnum2)
+    {
+        case 1:
+        cout << "Low level";
+        break;
+        case 2:
+        cout << "Medium level";
+        break;
+        case 3:
+        cout << "High level";
+        break;
+    }
+}
