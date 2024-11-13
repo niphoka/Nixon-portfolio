@@ -1089,3 +1089,31 @@ int main()
         break;
     }
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "***References***\n";
+    // A reference variable is a "reference" to an existing variable, and it is created with the & operator
+    
+    string animal = "dog";
+    string &pet = animal;
+    
+    cout << animal << " (this is the original)" << endl;
+    cout << pet << " (this is the reference of the above)" << endl;
+    cout << endl;
+    
+    cout << "***Memory address***\n";
+    /* In the example from the previous page, the & operator was used to create a reference variable. But it can also be used to get the memory address of a variable; which is the location of where the variable is stored on the computer.
+
+    When a variable is created in C++, a memory address is assigned to the variable. And when we assign a value to the variable, it is stored in this memory address.
+
+    To access it, use the & operator, and the result will represent where the variable is stored*/
+
+    cout << "Memory address of animal variable: " << &animal << endl;
+    cout << "Memory address of pet reference: " << &pet << endl;
+}
