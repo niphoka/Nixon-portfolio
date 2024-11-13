@@ -515,3 +515,46 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Real life examples for Arrays\n");
+        System.out.println("Average from a list of ages");
+        
+        int[] ages = {10, 34, 57, 98, 69, 15};
+        
+        float average, sum = 0;
+        int length = ages.length;
+        
+        for (int age : ages)
+        {
+            sum+= age;
+        }
+        
+        average = sum / length;
+        
+        System.out.println("The average age in ages = {10, 34, 57, 98, 69, 15} is: " + average);
+        System.out.println();
+        
+        System.out.println("Lowest from a list of ages");
+        
+        int[] Ages = {20, 77, 45, 12, 1, 35, 69};
+        
+        int lowestAge = Ages[0];
+        
+        for (int Age : Ages)
+        {
+            if (lowestAge > Age)
+            {
+                lowestAge = Age;
+            }
+        }
+        
+        System.out.println("The lowest age in myAges = {20, 77, 45, 12, 1, 35, 69} is: " + lowestAge);
+    }
+}
