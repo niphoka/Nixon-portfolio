@@ -1059,3 +1059,28 @@ namespace anotherApp
         void means that this method does not have a return value. You will learn more about return values later in this chapter */
     }
 }
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void anotherMethod(string firstName)
+        {
+            Console.WriteLine(firstName + " Trump");
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Methods - Parameter and Arguments");
+            /*Information can be passed to methods as parameter. Parameters act as variables inside the method.
+            They are specified after the method name, inside the parentheses. 
+            You can add as many parameters as you want, just separate them with a comma.*/
+            anotherMethod("Donald");
+            anotherMethod("Jessica");
+            anotherMethod("Richard");
+        }
+    }
+}
