@@ -1121,6 +1121,9 @@ namespace anotherApp
         static void Main(string[] args)
         {
             Console.WriteLine("Default Parameter\n");
+            /*If we call the method without an argument, it uses the default value (Costa Rica)
+            A parameter with a default value, is often known as an "optional parameter". 
+            From the example, country is an optional parameter and "Costa Rica" is the default value.*/
             myMethod("Guatemala");
             myMethod("Nicaragua");
             myMethod();
