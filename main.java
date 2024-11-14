@@ -558,3 +558,34 @@ public class Main
         System.out.println("The lowest age in myAges = {20, 77, 45, 12, 1, 35, 69} is: " + lowestAge);
     }
 }
+
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Multidimensional Arrays\n");
+        
+        System.out.println("For loop with multidimensional arrays");
+        String[][] myArray = {{"Ostrich","Donkey","Bird"},{"Jiraffe","Elefant","Dog"}};
+        for (int i = 0; i < myArray.length; i++)//Notice the int here
+        {
+            for (int j = 0; j < myArray[i].length; j++)//Notice the int here
+            {
+                System.out.println(myArray[i][j]);
+            }
+        }
+        System.out.println();
+        
+        System.out.println("Foreach loop with multidimensional arrays");
+        String[][] aniArray = {{"Whale","Rabbit","Cat"},{"Fish","Fox","Rat"}};
+        for (String[] row : aniArray)//Notice the String here
+        {
+            for (String animal : row)//Notice the String here
+            {
+                System.out.println(animal);
+            }
+        }
+    }
+}
