@@ -1084,3 +1084,26 @@ namespace anotherApp
         }
     }
 }
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void myMethod(string firstName, int age)
+        {
+            Console.WriteLine(firstName + " is " + age + " years old");
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Multiple Parameters\n");
+            myMethod("Barry", 25);
+            myMethod("Clark", 35);
+            myMethod("Diana", 28);
+        }
+    }
+}
+
