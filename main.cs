@@ -1107,3 +1107,24 @@ namespace anotherApp
     }
 }
 
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static void myMethod(string country = "Costa Rica")
+        {
+            Console.WriteLine(country);
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Default Parameter\n");
+            myMethod("Guatemala");
+            myMethod("Nicaragua");
+            myMethod();
+            myMethod("Mexico");
+        }
+    }
+}
