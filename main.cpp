@@ -1108,12 +1108,54 @@ int main()
     cout << endl;
     
     cout << "***Memory address***\n";
-    /* In the example from the previous page, the & operator was used to create a reference variable. But it can also be used to get the memory address of a variable; which is the location of where the variable is stored on the computer.
+    /* In the example from the previous page, the & operator was used to create a reference variable. 
+    But it can also be used to get the memory address of a variable; which is the location of where the variable is stored on the computer.
 
-    When a variable is created in C++, a memory address is assigned to the variable. And when we assign a value to the variable, it is stored in this memory address.
+    When a variable is created in C++, a memory address is assigned to the variable. 
+    And when we assign a value to the variable, it is stored in this memory address.
 
     To access it, use the & operator, and the result will represent where the variable is stored*/
 
     cout << "Memory address of animal variable: " << &animal << endl;
     cout << "Memory address of pet reference: " << &pet << endl;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "***Pointers***\n";
+    
+    string food = "Pizza";
+    string* ptr = &food;
+    
+    cout << "Value of variable: "<< food << endl;
+    cout << "Memory adddress of variable: " << &food << endl;
+    cout << "Memory address of variable with pointer: " << ptr << endl;
+    
+    /*Tip: There are three ways to declare pointer variables, but the first way is preferred:
+
+    string* mystring; // Preferred
+    string *mystring;
+    string * mystring;*/
+    cout << endl;
+    
+    cout << "***Dereference***\n";
+    /*In the example from the previous page, we used the pointer variable to get the memory address of a variable (used together with the & reference operator). 
+    However, you can also use the pointer to get the value of the variable, by using the * operator (the dereference operator)*/
+    cout << "Value of variable with pointer: " << *ptr << endl;
+    /*Note that the * sign can be confusing here, as it does two different things in our code:
+
+    1) When used in declaration (string* ptr), it creates a pointer variable.
+    2) When not used in declaration, it act as a dereference operator.*/
+    cout << endl;
+    
+    cout << "***Modify Pointer value***\n";
+    /*You can also change the pointer's value. But note that this will also change the value of the original variable*/
+    *ptr = "Lasagna";
+    cout << "New value of pointer: " << *ptr << endl;
+    cout << "New value of variable: " << food << endl;
 }
