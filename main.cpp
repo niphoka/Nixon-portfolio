@@ -1159,3 +1159,42 @@ int main()
     cout << "New value of pointer: " << *ptr << endl;
     cout << "New value of variable: " << food << endl;
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+void myFunction()
+{
+    cout << "I got executed from another function!\n";
+}
+
+int main()
+{
+    cout << "***Functions***\n";
+    /*A function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.*/
+    myFunction();
+    myFunction();
+    myFunction();
+}
+
+/* The following is also possible
+
+// Function declaration
+void myFunction();
+
+// The main method
+int main() 
+{
+  myFunction();  // call the function
+}
+
+// Function definition
+void myFunction() 
+{
+  cout << "I just got executed!";
+} */
