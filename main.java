@@ -626,3 +626,21 @@ public class Main
         myMethod("Shaniqua");
     }
 }
+
+
+
+public class Main
+{
+    static void myMethod(String firstName, int age)
+    {
+        System.out.println(firstName + " is " + age + " years old");
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Multiple Parameters***");
+        myMethod("Jhon", 25);
+        myMethod("Mary", 35);
+        myMethod("Shaniqua", 45);
+    }
+}
