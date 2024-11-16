@@ -1218,3 +1218,23 @@ int main()
     /*When a parameter is passed to the function, it is called an argument. So, from the example above: fname is a parameter, 
     while Liam, Jenny and Anja are arguments.*/
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+void myFunction(string country = "Costa Rica")
+{
+    cout << country << endl;
+}
+int main()
+{
+    cout << "***Default Parameter***\n";
+    myFunction("Panama");
+    myFunction();//Default
+    myFunction("Mexico");
+    /*A parameter with a default value, is often known as an "optional parameter". From the example above, 
+    country is an optional parameter and "Costa Rica" is the default value.*/
+}
