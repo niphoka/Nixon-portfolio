@@ -1198,3 +1198,23 @@ void myFunction()
 {
   cout << "I just got executed!";
 } */
+
+
+
+
+#include <iostream>
+using namespace std;
+
+void myFunction(string firstName)
+{
+    cout << firstName << " Johnson" << endl;
+}
+int main()
+{
+    cout << "***Function Parameters and Arguments***\n";
+    myFunction("Mike");
+    myFunction("Dalila");
+    myFunction("Rob");
+    /*When a parameter is passed to the function, it is called an argument. So, from the example above: fname is a parameter, 
+    while Liam, Jenny and Anja are arguments.*/
+}
