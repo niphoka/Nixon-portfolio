@@ -1131,3 +1131,46 @@ namespace anotherApp
         }
     }
 }
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static int numMethod(int num)
+        {
+            return 10 + num;
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Return values - One Parameter***");
+            Console.WriteLine(numMethod(4));
+        }
+    }
+}
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static int numMethod(int x, int y)
+        {
+            return x + y;//Please take note of this return
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Return values - Two Parameters***");
+            
+            //Console.WriteLine(numMethod(5,10));Just writing this is valid
+            
+            int result = numMethod(5,10);//Writing this
+            Console.WriteLine(result);//and this is recommended, more readable and easier to maintain
+        }
+    }
+}
