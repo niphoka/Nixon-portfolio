@@ -589,3 +589,22 @@ public class Main
         }
     }
 }
+
+
+
+
+public class Main
+{
+    static void myMethod()
+    {
+        System.out.println("I got executed from another method");
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Methods***");
+        myMethod();
+        myMethod();
+        myMethod();
+    }
+}
