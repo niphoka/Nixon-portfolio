@@ -608,3 +608,21 @@ public class Main
         myMethod();
     }
 }
+
+
+
+public class Main
+{
+    static void myMethod(String firstName)
+    {
+        System.out.println(firstName + " Davis");
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Method Parameters***");
+        myMethod("Jhon");
+        myMethod("Mary");
+        myMethod("Shaniqua");
+    }
+}
