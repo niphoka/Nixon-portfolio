@@ -644,3 +644,26 @@ public class Main
         myMethod("Shaniqua", 45);
     }
 }
+
+
+
+public class Main
+{
+    static void checkAge(int age)
+    {
+        if (age < 18)
+        {
+            System.out.println("You cannot vote");
+        }
+        else
+        {
+            System.out.println("You can vote");
+        }
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Method with If***");
+        checkAge(17);
+    }
+}
