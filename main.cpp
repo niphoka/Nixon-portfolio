@@ -1326,7 +1326,7 @@ void modifyString(string &word)//Rememeber to add reference here
 
 int main()
 {
-    cout << "***Pass integers by Reference***\n";
+    cout << "***Pass string by Reference***\n";
 
     string love = "I love ";
     modifyString(love);
