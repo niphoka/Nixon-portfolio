@@ -1313,3 +1313,22 @@ int main()
     swapNums(firstNum, secondNum);//This is what makes the swap happen
     cout << firstNum << secondNum << endl;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+void modifyString(string &word)//Rememeber to add reference here
+{
+    word += "programming!";
+}
+
+int main()
+{
+    cout << "***Pass integers by Reference***\n";
+
+    string love = "I love ";
+    modifyString(love);
+    cout << love;
+}
