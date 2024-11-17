@@ -667,3 +667,20 @@ public class Main
         checkAge(17);
     }
 }
+
+
+
+
+public class Main
+{
+    static int numMethod(int num)
+    {
+        return 5 + num;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Return value - One Parameter***\n");
+        System.out.println(numMethod(3));
+    }
+}
