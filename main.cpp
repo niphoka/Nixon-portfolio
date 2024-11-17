@@ -1286,3 +1286,30 @@ int main()
     int result = numFunction(1,6);//Typing this other option
     cout << result << endl;//and this is recommended, better and easier to read
 }
+
+
+#include <iostream>
+using namespace std;
+
+void swapNums(int &x, int &y)//Rememeber to add reference here
+{
+    int numExchanger = x;//Imagine this is an empty jar/box used to do the exchange/swap of x to y and y to x
+    x = y;
+    y = numExchanger;
+}
+
+int main()
+{
+    cout << "***Pass integers by Reference***\n";
+    
+    int firstNum = 50;
+    int secondNum = 30;
+    
+    cout << "Before swap\n";
+    cout << firstNum << secondNum << endl;
+    cout << endl;
+
+    cout << "After swap\n";
+    swapNums(firstNum, secondNum);//This is what makes the swap happen
+    cout << firstNum << secondNum << endl;
+}
