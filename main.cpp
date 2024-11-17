@@ -1255,3 +1255,34 @@ int main()
     myFunction("Amanda", 28);
     myFunction("Lex", 48);
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int numFunction(int num)
+{
+    return num + 5;
+}
+int main()
+{
+    cout << "***Return value***"
+    cout << numFunction(5);
+}
+
+
+#include <iostream>
+using namespace std;
+
+int numFunction(int x, int y)
+{
+    return x + y;
+}
+int main()
+{
+    cout << "***Return value two Parameters and Arguments***\n";
+    //cout << numFunction(1,6); This option is valid
+    int result = numFunction(1,6);//Typing this other option
+    cout << result << endl;//and this is recommended, better and easier to read
+}
