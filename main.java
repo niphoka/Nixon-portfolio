@@ -684,3 +684,22 @@ public class Main
         System.out.println(numMethod(3));
     }
 }
+
+
+
+public class Main
+{
+    static int numMethod(int x, int y)
+    {
+        return x + y;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Return value - Two Parameters and Arguments***\n");
+        //System.out.println(numMethod(3, 6)); Just this line is valid
+        
+        int result = numMethod(3, 6);//Typing this
+        System.out.println(result);//and this is recommended and makes the code easier to read and manage
+    }
+}
