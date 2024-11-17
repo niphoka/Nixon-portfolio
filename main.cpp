@@ -1238,3 +1238,20 @@ int main()
     /*A parameter with a default value, is often known as an "optional parameter". From the example above, 
     country is an optional parameter and "Costa Rica" is the default value.*/
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+void myFunction(string firstName, int age)
+{
+    cout << firstName << " Davidson" << " is " << age << " years old" << endl;
+}
+int main()
+{
+    cout << "***Multiple Parameters***\n";
+    myFunction("Harry", 38);
+    myFunction("Amanda", 28);
+    myFunction("Lex", 48);
+}
