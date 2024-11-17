@@ -1174,3 +1174,27 @@ namespace anotherApp
         }
     }
 }
+
+
+
+
+using System;
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void namedMethod(string dog1, string dog2, string dog3)
+        {
+            Console.WriteLine("The bravest dog is: " + dog2);
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Named Arguments***\n");
+            namedMethod(dog3: "Luna", dog2: "Maya", dog1: "Bobby");
+        /*It is also possible to send arguments with the key: value syntax.
+        That way, the order of the arguments does not matter*/
+        }
+    }
+}
