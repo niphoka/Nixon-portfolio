@@ -1357,3 +1357,23 @@ int main()
 
     Note that when you call the function, you only need to use the name of the array when passing it as an argument myFunction(myNumbers). However, the full declaration of the array is needed in the function parameter (int myNumbers[5]) */
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+float toCelsius(float fahrenheit)
+{
+    return (fahrenheit -32.0) * (5.0 / 9.0);
+}
+
+int main()
+{
+    cout << "***Real life example using Functions***\n\n";
+    float fahrenheit = 98.8;
+    float result = toCelsius(fahrenheit);
+    cout << "Fahrenheit value: " << fahrenheit << endl;
+    cout << "Fahrenheit to Celsius conversion value: " << result << endl;
+}
