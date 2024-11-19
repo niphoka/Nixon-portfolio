@@ -703,3 +703,30 @@ public class Main
         System.out.println(result);//and this is recommended and makes the code easier to read and manage
     }
 }
+
+
+
+public class Main
+{
+    public static int additionMethod(int x, int y)
+    {
+        return x + y;
+    }
+    
+    //Note: Multiple methods can have the same name as long as the number and/or type of parameters are different.
+
+    public static double additionMethod(double x, double y)
+    {
+        return x + y;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Method overloading***\n");
+        int myInt = additionMethod(5, 3);
+        System.out.println("Method overloading integer result: " + myInt);
+        
+        double myDouble = additionMethod(5.5, 3.3);
+        System.out.println("Method overloading double result: " + myDouble);
+    }
+}
