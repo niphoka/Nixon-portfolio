@@ -1198,3 +1198,34 @@ namespace anotherApp
         }
     }
 }
+
+
+
+using System;
+namespace anotherApp
+{
+    class Program
+    {
+        static int additionMethod(int x, int y)
+        {
+            return x + y;
+        }
+        
+        //Note: Multiple methods can have the same name as long as the number and/or type of parameters are different.
+
+        static double additionMethod(double x, double y)
+        {
+            return x + y;
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Method overloading***\n");
+            int myInteger = additionMethod(5, 3);
+            Console.WriteLine("Method overloading with integer result: " + myInteger);
+            
+            double myDouble = additionMethod(5.5, 3.3);
+            Console.WriteLine("Method overloading with double result: " + myDouble);
+        }
+    }
+}
