@@ -1377,3 +1377,31 @@ int main()
     cout << "Fahrenheit value: " << fahrenheit << endl;
     cout << "Fahrenheit to Celsius conversion value: " << result << endl;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int additionFunction(int x, int y)
+{
+    return x + y;
+}
+
+    // Note: Multiple functions can have the same name as long as the number and/or type of parameters are different.
+
+double additionFunction(double x, double y)
+{
+    return x+ y;
+}
+
+int main()
+{
+    cout << "***Function Overloading***\n";
+    
+    int myInt = additionFunction(5, 3);
+    cout << "Function overloading with integer: " << myInt << endl;
+
+    double myDoub = additionFunction(5.5, 3.3);
+    cout << "Function overloading with double: " << myDoub << endl;
+}
