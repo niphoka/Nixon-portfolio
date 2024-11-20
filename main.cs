@@ -1229,3 +1229,18 @@ namespace anotherApp
         }
     }
 }
+
+
+
+using System;
+
+class Car
+{
+    string color = "red";
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***OOP - Classes and Objects***\n");
+        Car myObject = new Car();
+        Console.WriteLine(myObject.color);
+        //Note that we use the dot syntax (.) to access variables/fields inside a class (myObj.color).
+}
