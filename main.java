@@ -730,3 +730,52 @@ public class Main
         System.out.println("Method overloading double result: " + myDouble);
     }
 }
+
+
+
+
+
+public class Main
+{
+    static int varGlobal = 100;//This is a global variable. Global variables are available from within any scope, global and local
+    
+    public static void myFunc()
+    {
+        int varLocal = 10;/*This is a local variable. A local variable cannot be used outside the function it belongs to (in this case, myFunc)
+    If you try to access it outside the function, an error occurs*/
+        System.out.println("Local variable: " + varLocal);
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Local and Global variables***\n");
+        myFunc();
+        System.out.println("Global variable: " + varGlobal);
+        
+    /* When doing this:
+    
+    public class Main
+{
+    int varGlobal = 100;
+    
+    This is received:
+    
+    ERROR!
+/tmp/nfNWXYJOUI/Main.java:14: error: non-static variable varGlobal cannot be referenced from a static context
+        System.out.println("Global variable: " + varGlobal);
+                                                 ^
+1 error
+
+    ***Explanation***
+    Static methods are tied to the class itself, so they don't know which instance of a non-static variable to use. Non-static variables are unique to each instance of a class, and depend on class instances to store and manipulate data. 
+
+    ***Possible solutions***
+    To fix this error, you can:
+    - Create an instance of the class 
+    - Make the class member static 
+    - Add the static keyword to the object 
+    - Have all members non-static and instantiate the class
+    
+    The Java compiler will include the exact location of the variable or method in the error message */    
+    }
+}
