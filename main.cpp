@@ -1405,3 +1405,27 @@ int main()
     double myDoub = additionFunction(5.5, 3.3);
     cout << "Function overloading with double: " << myDoub << endl;
 }
+
+
+
+#include <iostream>
+using namespace std;
+
+int varGlobal = 100;//This is a global variable. Global variables are available from within any scope, global and local
+
+void myFunc()
+{
+    int varLocal = 10;/*This is a local variable. A local variable cannot be used outside the function it belongs to (in this case, myFunc)
+    If you try to access it outside the function, an error occurs*/
+
+    cout << "Local variable: " << varLocal << endl;
+}
+
+//You should avoid using the same variable name for both globally and locally variables as it can lead to errors and confusion
+
+int main()
+{
+    cout << "***Local and Global variables***\n";
+    myFunc();
+    cout << "Global variable: " << varGlobal << endl;
+}
