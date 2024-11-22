@@ -779,3 +779,44 @@ public class Main
     The Java compiler will include the exact location of the variable or method in the error message */    
     }
 }
+
+
+
+
+
+public class Main
+{
+    public static int sum(int numer)
+{
+    if (numer > 0)
+    {
+        return numer + sum(numer - 1);
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+/* When the sum() function is called, it adds parameter numer to the sum of all numbers smaller than numer and returns the result. 
+When numer becomes 0, the function just returns 0. When running, the program follows these steps:
+
+10 + sum(9)
+10 + ( 9 + sum(8) )
+10 + ( 9 + ( 8 + sum(7) ) )
+...
+10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + sum(0)
+10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0
+
+Since the function does not call itself when numer is 0, the program stops there and returns the result */
+
+    public static void main(String[] args)
+    {
+        System.out.println("***Recursion in Functions***\n");
+        int result = sum(10);
+        System.out.println(result);
+    }
+}
+/* The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, 
+or one that uses excess amounts of memory or processor power. 
+However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.*/
