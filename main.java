@@ -820,3 +820,38 @@ Since the function does not call itself when numer is 0, the program stops there
 /* The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, 
 or one that uses excess amounts of memory or processor power. 
 However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.*/
+
+
+
+
+
+
+public class Main
+{
+    public static int sum(int start, int end)
+    {
+        if (end > start)
+        {
+            return end + sum(start, end - 1);
+        }
+        else
+        {
+            return end;
+        }
+    }
+    /* The program does this:
+
+    10 + sum(5, 9)
+    10 + ( 9 + sum(8) )
+    10 + ( 9 + ( 8 + sum(7) ) )
+    ...
+    10 + 9 + 8 + 7 + 6 + 5  >> It stops at 5 since we have specified a range from 5 to 10*/
+    
+    public static void main(String[] args)
+    {
+        System.out.println("Another example on Function Recursion and Halting\n")
+        int result = sum(5, 10);
+        System.out.println(result);
+    }
+    //In this example, the function adds a range of numbers between a start and an end. The halting condition for this recursive function is when end is not greater than start
+}
