@@ -855,3 +855,61 @@ public class Main
     }
     //In this example, the function adds a range of numbers between a start and an end. The halting condition for this recursive function is when end is not greater than start
 }
+
+
+
+
+
+public class Main
+{
+    int x = 5;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***OOP - Classes and Objects***\n");
+        Main myObject = new Main();
+        System.out.println(myObject.x);
+    }
+}
+
+
+
+
+public class Main
+{
+    int x = 5;
+    int y = 10;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Multiple objects of a class***\n");
+        Main myObject1 = new Main();
+        Main myObject2 = new Main();
+
+        System.out.println(myObject1.x);
+        System.out.println(myObject2.y);
+    }
+}
+
+
+
+
+
+public class Main
+{
+    int x = 5;
+    int y = 10;
+}
+
+class Second
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Multiple classes***\n");
+        Main myObject1 = new Main();
+        Main myObject2 = new Main();
+
+        System.out.println(myObject1.x);
+        System.out.println(myObject2.y);
+    }
+}
