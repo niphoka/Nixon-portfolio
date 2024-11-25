@@ -1244,3 +1244,23 @@ class Car
         Console.WriteLine(myObject.color);
         //Note that we use the dot syntax (.) to access variables/fields inside a class (myObj.color).
 }
+
+
+
+using System;
+
+class Car
+{
+    string color1 = "red";
+    string color2 = "blue";
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Multiple objects on a class***\n");
+        
+        Car myObject1 = new Car();
+        Console.WriteLine("Car 1 is: " + myObject1.color1);
+        
+        Car myObject2 = new Car();
+        Console.WriteLine("Car 2 is: " + myObject2.color2);
+    }    
+}    
