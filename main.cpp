@@ -1468,3 +1468,38 @@ int main()
 /* The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, 
 or one that uses excess amounts of memory or processor power. 
 However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming.*/
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class myClass
+{
+    public: 
+        int myNum;
+        string myString;
+};
+
+/*The class keyword is used to create a class called MyClass.
+The public keyword is an access specifier, which specifies that members (attributes and methods) of the class are accessible from 
+outside the class. 
+Inside the class, there is an integer variable myNum and a string variable myString. When variables are declared within a class, 
+they are called attributes.
+At last, end the class definition with a semicolon ";" */
+
+int main()
+{
+    cout << "***OOP - Classes and Objects***\n";
+    
+    myClass myObject;
+    
+    myObject.myNum = 69;
+    myObject.myString = "This is text from a class";
+    
+    cout << myObject.myNum << endl;
+    cout << myObject.myString << endl;
+}
