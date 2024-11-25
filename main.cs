@@ -1264,3 +1264,35 @@ class Car
         Console.WriteLine("Car 2 is: " + myObject2.color2);
     }    
 }    
+
+
+    
+
+using System;
+
+class Car
+{
+    public string color1 = "red";
+    public string color2 = "blue";
+}
+
+/*Did you notice the public keyword? It is called an access modifier, 
+    which specifies that the color variable/field of Car is accessible for other classes as well, such as Program.*/
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Multiple classes***\n");
+        
+        Car myObject1 = new Car();
+        Console.WriteLine("Car 1 is: " + myObject1.color1);
+        
+        Car myObject2 = new Car();
+        Console.WriteLine("Car 2 is: " + myObject2.color2);
+    }    
+}
+
+/*You can also create an object of a class and access it in another class. 
+    This is often used for better organization of classes (one class has all the fields and methods, 
+    while the other class holds the Main() method (code to be executed)).*/    
