@@ -1503,3 +1503,38 @@ int main()
     cout << myObject.myNum << endl;
     cout << myObject.myString << endl;
 }
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car
+{
+    public: 
+        string brand;
+        string model;
+        int year;
+};
+
+int main()
+{
+    cout << "***Multiple objects on a class***\n";
+    
+    Car car1;
+    Car car2;
+    
+    car1.brand = "Toyota";
+    car1.model = "Rav4";
+    car1.year = 2018;
+    cout << car1.brand << " " << car1.model << " " << car1.year << endl;
+
+
+    car2.brand = "Geo";
+    car2.model = "Tracker";
+    car2.year = 1997;
+    cout << car2.brand << " " << car2.model << " " << car2.year << endl;
+}
