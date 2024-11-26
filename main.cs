@@ -1296,3 +1296,29 @@ class Program
 /*You can also create an object of a class and access it in another class. 
     This is often used for better organization of classes (one class has all the fields and methods, 
     while the other class holds the Main() method (code to be executed)).*/    
+
+
+    
+
+using System;
+
+class Car
+{
+    string color = "red";//Field
+    int speed = 100;//Field
+    public void fullSpeed()//Method 
+    {
+        Console.WriteLine("Car is going full speed!");
+    }
+    
+   /* Why method is public and not static?  
+   
+   a static method can be accessed without creating an object of the class, while public methods can only be accessed by objects*/
+   
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Object methods***\n");
+        Car car1 = new Car();
+        car1.fullSpeed();//Method called here
+    }
+}    
