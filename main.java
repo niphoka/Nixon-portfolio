@@ -913,3 +913,67 @@ class Second
         System.out.println(myObject2.y);
     }
 }
+
+
+
+
+
+public class Main
+{
+    int x = 5;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Class attributes - Accessing them***\n");
+        Main myObj = new Main();
+        System.out.println(myObj.x);
+    }
+}
+
+
+
+
+public class Main
+{
+    int x;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Class attributes - Modifying them***\n");
+        Main myObj = new Main();
+        myObj.x = 40;
+        System.out.println(myObj.x);
+    }
+}
+
+
+
+public class Main
+{
+    int x = 10;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Class attributes - Override them***\n");
+        Main myObj = new Main();
+        myObj.x = 69;
+        System.out.println(myObj.x);
+    }
+}
+
+
+
+
+public class Main
+{
+    final int x = 20;//Final equal constant(cannot be changed)
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Class attributes - Cannot override them***\n");
+        Main myObj = new Main();
+        myObj.x = 35;// will generate an error: cannot assign a value to a final variable
+        System.out.println(myObj.x);
+    }
+}
+
