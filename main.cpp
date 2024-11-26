@@ -1591,3 +1591,30 @@ int main()
     myClass myObj;
     myObj.myMethod();
 }
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car //Class
+{
+    public: //Access specifier / Modifier
+        int speed(int maxSpeed);
+};
+
+int Car::speed(int maxSpeed) //Parameter added
+{
+    return maxSpeed;
+}
+
+int main()
+{
+    cout << "***Class method parameters***\n";
+    Car car1;
+    cout << "Parameter result is: " << car1.speed(200);
+}
