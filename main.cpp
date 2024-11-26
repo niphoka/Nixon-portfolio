@@ -1538,3 +1538,56 @@ int main()
     car2.year = 1997;
     cout << car2.brand << " " << car2.model << " " << car2.year << endl;
 }
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class myClass //Class
+{
+    public: //Access specifier / Modifier
+        void myMethod() //Method/function defined inside class
+        {
+            cout << "Class method inside class definition" << endl;
+        }
+};
+
+int main()
+{
+    cout << "***Class methods***\n";
+    myClass myObj;
+    myObj.myMethod();
+}
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class myClass //Class
+{
+    public: //Access specifier / Modifier
+        void myMethod();
+};
+
+void myClass::myMethod() //Method/function defined outside class
+{
+    cout << "Class method outside class definition" << endl;
+}
+
+/* To define a function outside the class definition, you have to declare it inside the class and then define it outside of the class. 
+This is done by specifiying the name of the class, followed by the scope resolution :: operator, followed by the name of the function */
+
+int main()
+{
+    cout << "***Class methods***\n";
+    myClass myObj;
+    myObj.myMethod();
+}
