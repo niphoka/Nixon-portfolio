@@ -1618,3 +1618,90 @@ int main()
     Car car1;
     cout << "Parameter result is: " << car1.speed(200);
 }
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class myClass //Class
+{
+    public: //Access specifier/modifier
+        myClass() //Constructor 
+        {
+            cout << "Output from a constructor!\n";
+        }
+};
+
+/*Note: The constructor has the same name as the class, it is always public, and it does not have any return value */
+
+int main()
+{
+    cout << "***Constructors***\n";
+    myClass myObj; //This calls the constructor
+}
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car //Class
+{
+    public: //Access specifier/modifier
+        string brand; //Attribute
+        string model; //Attribute
+        int year; //Attribute
+        Car(string x, string y, int z) //Constructor with parameters
+        {
+            brand = x;
+            model = y;
+            year = z;
+        }
+};
+
+int main()
+{
+    cout << "***Constructor Parameters***\n";
+    Car car1("Toyota", "Tacoma", 2020); //This calls the constructor
+    Car car2("Isuzu", "Dmax", 2024);
+    
+    cout << car1.brand << " " << car1.model << " " << car1.year << endl;
+    cout << car2.brand << " " << car2.model << " " << car2.year << endl;
+}
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Car //Class
+{
+    public: //Access specifier/modifier
+        string brand; //Attribute
+        string model; //Attribute
+        int year; //Attribute
+        Car(string x, string y, int z); //Constructor with parameters
+};
+
+Car::Car(string x, string y, int z) //Constructor outside class
+{
+    brand = x;
+    model = y;
+    year = z;
+}
+        
+int main()
+{
+    cout << "***Constructors Parameters outside class***\n";
+    Car car1("Porsche", "911", 2000); //This calls the constructor
+    Car car2("Lamborghini", "Diablo", 1990);
+    
+    cout << car1.brand << " " << car1.model << " " << car1.year << endl;
+    cout << car2.brand << " " << car2.model << " " << car2.year << endl;
+}
