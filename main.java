@@ -977,3 +977,45 @@ public class Main
     }
 }
 
+
+
+
+
+
+public class Main
+{
+    int x =5;
+    
+//Change the value of x to 25 in myObj2, and leave x in myObj1 unchanged
+
+    public static void main(String[] args)
+    {
+        System.out.println("***Multiple objects on a class ***\n");
+        Main myObj = new Main(); //Object 1
+        Main myObj2 = new Main(); //Object 2
+        myObj2.x = 25;
+        
+        System.out.println(myObj.x);
+        System.out.println(myObj2.x);
+    }
+}
+
+
+
+public class Main
+{
+    String firstName = "Mark"; //Attribute
+    String lastName = "Twain"; //Attribute
+    int age = 58; //Attribute
+    
+//Change the value of x to 25 in myObj2, and leave x in myObj1 unchanged
+
+    public static void main(String[] args)
+    {
+        System.out.println("***Multiple Attributes on a class ***\n");
+        Main myObj = new Main();
+
+        System.out.println("Full name: " + myObj.firstName + " " + myObj.lastName);
+        System.out.println("Age: " + myObj.age);
+    }
+}
