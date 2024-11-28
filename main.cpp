@@ -1705,3 +1705,43 @@ int main()
     cout << car1.brand << " " << car1.model << " " << car1.year << endl;
     cout << car2.brand << " " << car2.model << " " << car2.year << endl;
 }
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class myClass
+{
+    int a = 28;// Private attribute not specified 
+    public: // Public access specifier
+        int x;// Public attribute
+        
+    private:// Private access specifier
+        int y;// Private attribute
+};
+
+/*Access specifiers
+
+public - members are accessible from outside the class
+private - members cannot be accessed (or viewed) from outside the class
+protected - members cannot be accessed from outside the class, however, they can be accessed in inherited classes. 
+
+Note: By default, all members of a class are private if you don't specify an access specifier */
+
+int main()
+{
+    cout << "***Access Specifiers/modifiers***\n";
+    myClass myObj;
+    
+    myObj.x = 5;// Allowed (public)
+    myObj.y = 10;// Not allowed (private)
+    myObj.a;
+}
+
+/*Tip: It is considered good practice to declare your class attributes as private (as often as you can). 
+This will reduce the possibility of yourself (or others) to mess up the code. 
+This is also the main ingredient of the Encapsulation concept*/
