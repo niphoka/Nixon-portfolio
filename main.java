@@ -1019,3 +1019,20 @@ public class Main
         System.out.println("Age: " + myObj.age);
     }
 }
+
+
+
+
+public class Main
+{
+    static void myMethod()
+    {
+        System.out.println("Hello Java!");
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Class Methods***\n");
+        myMethod();
+    }
+}
