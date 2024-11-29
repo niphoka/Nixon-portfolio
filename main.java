@@ -1036,3 +1036,28 @@ public class Main
         myMethod();
     }
 }
+
+
+
+public class Main
+{
+    static void myStaticMethod()
+    {
+        System.out.println("Static methods can be called without creating objects\n");
+    }
+    
+    public void myPublicMethod()
+    {
+        System.out.println("Public methods must be called by creating objects\n");
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Static vs Public Methods***\n");
+        myStaticMethod();
+        //myPublicMethod(); If called in this position, it will give an error
+        
+        Main myObj = new Main();
+        myObj.myPublicMethod();
+    }
+}
