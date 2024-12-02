@@ -1745,3 +1745,43 @@ int main()
 /*Tip: It is considered good practice to declare your class attributes as private (as often as you can). 
 This will reduce the possibility of yourself (or others) to mess up the code. 
 This is also the main ingredient of the Encapsulation concept*/
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    private://Restricted access
+        int salary;//Private attribute
+        
+    public:
+        void setSalary(int pay)//Setter
+        {
+            salary = pay;// with this, we link the private attribute salary to a public method setSalary and establish a value for it
+        }
+        int getSalary()//Getter
+        {
+            return salary;// with this, we can retrieve the private attribute
+        }
+};
+
+/*The salary attribute is private, which have restricted access.
+The public setSalary() method takes a parameter (pay) and assigns it to the salary attribute (salary = pay).
+The public getSalary() method returns the value of the private salary attribute.
+Inside main(), we create an object of the Employee class. Now we can use the setSalary() method to set the value of the private attribute to 500000. Then we call the getSalary() method on the object to return the value.*/
+
+int main()
+{
+    cout << "***Encapsulation***\n"
+    Employee myObj;
+    myObj.setSalary(500000);
+    cout << myObj.getSalary();
+}
+
+/*Why Encapsulation?
+It is considered good practice to declare your class attributes as private (as often as you can). Encapsulation ensures better control of your data, because you (or others) can change one part of the code without affecting other parts
+Increased security of data*/
