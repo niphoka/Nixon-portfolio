@@ -1061,3 +1061,29 @@ public class Main
         myObj.myPublicMethod();
     }
 }
+
+
+
+
+
+public class Main
+{
+    public void fullThrottle()//Method
+    {
+        System.out.println("The car is going as fas as it can!");
+    }
+    
+    public void speed(int maxSpeed)//Method with Parameter
+    {
+        System.out.println("Max speed is: " + maxSpeed);
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Access methods with an object***\n");
+        Main myCar = new Main();//Create object
+        
+        myCar.fullThrottle();//Call method
+        myCar.speed(200);//Call method
+    }
+}
