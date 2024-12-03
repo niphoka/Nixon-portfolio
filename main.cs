@@ -1322,3 +1322,26 @@ class Car
         car1.fullSpeed();//Method called here
     }
 }    
+
+
+    
+
+using System;
+
+class Car //Class
+{
+    public string model;//Field
+    
+    public Car()//Constructor
+    {
+        model = "Mustang";//Initial value
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Constructors***\n");
+        Car Ford = new Car();//Objec from class that will call constructor
+        Console.WriteLine(Ford.model);
+    }
+}
+    
