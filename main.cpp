@@ -1785,3 +1785,33 @@ int main()
 /*Why Encapsulation?
 It is considered good practice to declare your class attributes as private (as often as you can). Encapsulation ensures better control of your data, because you (or others) can change one part of the code without affecting other parts
 Increased security of data*/
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Vehicle
+{
+    public:
+        string brand = "Ford";
+        void honk()
+        {
+            cout << "Tuuuu, tuuuuu!\n";
+        }
+};
+
+class Car : public Vehicle
+{
+    public:
+        string model = "Mustang";
+};
+
+int main()
+{
+    cout << "***Inheritance***\n";
+    Car myCar;
+    myCar.honk();
+    cout << myCar.brand + " " + myCar.model;
+}
