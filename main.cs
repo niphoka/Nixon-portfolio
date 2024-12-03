@@ -1345,3 +1345,30 @@ class Car //Class
     }
 }
     
+
+
+
+using System;
+
+class Car //Class
+{
+    public string brand;
+    public string model;
+    public string color;
+    public int year;
+    
+    public Car(string brandName, string modelName, string modelColor, int modelYear)//Constructor with Parameters
+    {
+        brand = brandName;
+        model = modelName;
+        color = modelColor;
+        year = modelYear;
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Constructor Parameters***\n");
+        Car myCar = new Car("Ford", "Mustang", "Red", 1969);//Objec from class that will call constructor
+        Console.WriteLine(myCar.brand + " " + myCar.model + ", " + myCar.color + ", " + myCar.year);
+    }
+}
