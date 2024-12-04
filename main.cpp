@@ -1815,3 +1815,38 @@ int main()
     myCar.honk();
     cout << myCar.brand + " " + myCar.model;
 }
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class parentClass //Original
+{
+    public:
+        void myFunction()
+        {
+            cout << "This belongs to parent class!\n";
+        }
+};
+
+class childClass : public parentClass //Derived from original
+{
+    
+};
+
+class grandChild : public childClass //Derived from child
+{
+    
+};
+
+int main()
+{
+    cout << "***Multilevel Inheritance***\n";
+    grandChild myObject;
+    myObject.myFunction();
+}
+
