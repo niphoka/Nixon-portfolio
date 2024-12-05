@@ -1142,3 +1142,28 @@ Also note that the constructor is called when the object is created.
 All classes have constructors by default: if you do not create a class constructor yourself, Java creates one for you. 
 However, then you are not able to set initial values for object attributes.*/
 
+
+
+
+public class Main
+{
+    String brandName;
+    String modelName;
+    String modelColor;
+    int modelYear;
+    
+    public Main(String brand, String model, String color, int year)
+    {
+        brandName = brand;
+        modelName = model;
+        modelColor = color;
+        modelYear = year;
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Constructors with Parameters***\n");
+        Main myCar = new Main("Ford", "Mustang", "Yellow", 1969);
+        System.out.println(myCar.brandName + " " + myCar.modelName + ", " + myCar.modelColor + ", " + myCar.modelYear);
+    }
+}
