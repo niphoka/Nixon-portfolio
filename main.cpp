@@ -1850,3 +1850,38 @@ int main()
     myObject.myFunction();
 }
 
+
+
+
+#include <iostream>
+using namespace std;
+
+class parentClass
+{
+    public:
+        void myFunction()
+        {
+            cout << "This comes from parent class\n";
+        }
+};
+
+class otherParentClass
+{
+    public:
+        void myOtherFunction()
+        {
+            cout << "This other comes from another parent class\n";
+        }
+};
+
+/*A class can also be derived from more than one base class, using a comma-separated list*/
+
+class childClass : public parentClass, public otherParentClass {};
+
+int main()
+{
+    cout << "***Multiple Inheritance***\n";
+    childClass myObj;
+    myObj.myFunction();
+    myObj.myOtherFunction();
+}
