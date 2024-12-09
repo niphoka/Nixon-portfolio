@@ -1167,3 +1167,24 @@ public class Main
         System.out.println(myCar.brandName + " " + myCar.modelName + ", " + myCar.modelColor + ", " + myCar.modelYear);
     }
 }
+
+
+
+
+
+
+public class Main
+{
+    final int x = 10;//attribute cannot be modified
+    final double PI = 3.14;
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Java Modifiers - Final***\n");
+        Main myObj = new Main();
+        //myObj.x = 50; >> error: cannot assign a value to final variable
+        //myObj.PI = 2.50; >> error: cannot assign a value to final variable
+        System.out.println(myObj.x);
+        System.out.println(myObj.PI);
+    }
+}
