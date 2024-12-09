@@ -1217,3 +1217,39 @@ public class Main
         myObj.myPublicMethod();
     }
 }
+
+
+
+
+
+
+abstract class Main
+{
+    public String fName = "John";
+    public int age = 24;
+    public abstract void study();//Abstract method
+}
+
+class Student extends Main
+{
+    public int gradYear = 2018;
+    public void study()//Body of abstract method is provided here
+    {
+        System.out.println("Studying abstract methods all day long");
+    }
+}
+
+//An abstract method belongs to an abstract class, and it does not have a body. The body is provided by the subclass
+
+class Second
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Java Modifiers - Abstract***\n");
+        Student myObj = new Student();
+        System.out.println("First name: " + myObj.fName);
+        System.out.println("Age: " + myObj.age);
+        System.out.println("Graduation year: " + myObj.gradYear);
+        myObj.study();
+    }
+}
