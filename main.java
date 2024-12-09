@@ -1188,3 +1188,32 @@ public class Main
         System.out.println(myObj.PI);
     }
 }
+
+
+
+
+
+
+
+
+public class Main
+{
+    static void myStaticMethod()
+    {
+        System.out.println("Static methods can be called without creating objects of the class\n");
+    }
+    
+    public void myPublicMethod()
+    {
+        System.out.println("Public methods must be called by creating objects\n");
+    }
+    
+     public static void main(String[] args)
+    {
+        System.out.println("***Java Modifiers - Static vs Public***\n");
+        myStaticMethod();//Static can be called as simple as this
+        
+        Main myObj = new Main();//Public requires some extra steps
+        myObj.myPublicMethod();
+    }
+}
