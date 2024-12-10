@@ -1885,3 +1885,43 @@ int main()
     myObj.myFunction();
     myObj.myOtherFunction();
 }
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    protected://Access specifier
+        int salary;
+};
+
+//Access specifier protected is similar to private, but it can also be accessed in the inherited class
+
+class Programmer : public Employee//Inherited/derived class
+{
+    public:
+        int bonus;
+        void setSalary(int s)//Set method
+        {
+            salary = s;
+        }
+        int getSalary()//Get method
+        {
+            return salary;
+        }
+};
+
+int main()
+{
+    cout << "***Inheritance Access - Access specifiers***\n";
+    Programmer myObj;
+    myObj.setSalary(500000);//Calling set method
+    myObj.bonus = 150000;
+    cout << "Salary: " << myObj.getSalary() << endl;//Calling get method
+    cout << "Bonus: " << myObj.bonus << endl;
+}
