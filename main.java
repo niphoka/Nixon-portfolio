@@ -1299,3 +1299,25 @@ Better control of class attributes and methods
 Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)
 Flexible: the programmer can change one part of the code without affecting other parts
 Increased security of data*/
+
+
+
+
+
+//import java.util.*; This imports all classes from within
+
+import java.util.Scanner;//Scanner is a simple, versatile, easy-to-use class that makes user input in Java relatively straightforward
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Java Packages/API - Scanner class***\n");
+        
+        Scanner myObj = new Scanner(System.in);//System.in is used to read user input and must be passed as an argument to the Scanner class
+        System.out.println("Enter username: ");
+        
+        String userName = myObj.nextLine();//Use the Scanner’s next () or nextLine() methods to convert user input into the appropriate type
+        System.out.println("Username is: " + userName);
+    }
+}
