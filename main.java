@@ -1321,3 +1321,29 @@ class Main
         System.out.println("Username is: " + userName);
     }
 }
+
+
+
+
+
+
+class Vehicle
+{
+    protected String brand = "Ford";//Attribute
+    public void honk()//Method
+    {
+        System.out.println("Tuuuu tuuuu");
+    }
+}
+
+class Main extends Vehicle
+{
+    private String model = "Mustang";//Attribute
+    public static void main(String[] args)
+    {
+        System.out.println("***Inheritance***\n");
+        Main myCar = new Main();//Creating object out of Main class
+        myCar.honk();//Invoking method
+        System.out.println(myCar.brand + " " + myCar.model);
+    }
+}
