@@ -1347,3 +1347,36 @@ class Main extends Vehicle
         System.out.println(myCar.brand + " " + myCar.model);
     }
 }
+
+/* The final Keyword
+
+If you don't want other classes to inherit from a class, use the final keyword.
+
+If you try to access a final class, Java will generate an error:
+
+final class Vehicle 
+{
+  ...
+}
+
+class Car extends Vehicle 
+{
+  ...
+}
+
+The output will be something like this:
+
+Main.java:9: error: cannot inherit from final Vehicle
+class Main extends Vehicle {
+                  ^
+1 error)
+
+*/    
+
+
+
+
+
+
+
+
