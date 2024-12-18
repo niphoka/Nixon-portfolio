@@ -1379,4 +1379,51 @@ class Main extends Vehicle {
 
 
 
+class Animal
+{
+    public void animalSound()
+    {
+        System.out.println("The animal makes a sound");
+    }
+}
+
+class Dog extends Animal
+{
+    public void animalSound()
+    {
+        System.out.println("The dog goes: guau guau!");
+    }
+}
+
+class Pig extends Animal
+{
+    public void animalSound()
+    {
+        System.out.println("The pig goes: oink oink!");
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Polymorphism***\n");
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        Animal myPig = new Pig();
+        myAnimal.animalSound();
+        myDog.animalSound();
+        myPig.animalSound();
+        
+    }
+}
+/*Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.
+
+Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.*/
+
+
+
+
+
+
 
