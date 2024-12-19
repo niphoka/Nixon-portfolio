@@ -1426,4 +1426,80 @@ Inheritance lets us inherit attributes and methods from another class. Polymorph
 
 
 
+class outerClass
+{
+    int x = 10;
+    /* If you don't want outside objects to access the inner class, declare the class as private
+    If you try to access a private inner class from an outside class, an error occurs:
+    error: outerClass.innerClass has private access in outerClass
+    
+    private class innerClass */
+    class innerClass 
+    {
+        int y = 5;
+    }
+}
 
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Inner/Nested classes***\n");
+        outerClass myOut = new outerClass();
+        outerClass.innerClass myInn = myOut.new innerClass();
+        System.out.println("Outer: " + myOut.x + " and inner: " + myInn.y);
+    }
+}
+
+
+
+
+class outerClass
+{
+    int x = 10;
+    static class innerClass//Here static means that you can access inner class without creating an object of the outer class
+    {
+        int y = 5;
+    }
+}
+
+///Note: just like static attributes and methods, a static inner class does not have access to members of the outer class
+    
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Static Inner/Nested classes***\n");
+        //outerClass myOut = new outerClass();This is not needed due to static class
+        outerClass.innerClass myInn = new outerClass.innerClass();//Declaration is also different
+        System.out.println("Inner: " + myInn.y);
+    }
+}
+
+
+
+
+
+
+class outerClass
+{
+    int x = 10;
+    class innerClass
+    {
+        public int myInnerMethod()
+        {
+            return x;//Outer variable is called inside inner method
+        }
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Access outer class from inner class***\n");
+        outerClass myOut = new outerClass();
+        outerClass.innerClass myInn = myOut.new innerClass();
+        System.out.println("Inner method: " + myInn.myInnerMethod());
+    }
+}
