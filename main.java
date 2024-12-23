@@ -1503,3 +1503,42 @@ class Main
         System.out.println("Inner method: " + myInn.myInnerMethod());
     }
 }
+
+
+
+
+
+
+
+abstract class Animal//Abstract class is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class)
+{
+    public abstract void animalSound();//Abstract method (non access modifier) can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from)
+    public void sleep()//Regular method
+    {
+        System.out.println("Zzzzz");
+    }
+}
+
+class Pig extends Animal//Pig class inherits from Animal class
+{
+    public void animalSound()//Body of animalSound is provided here
+    {
+        System.out.println("The pig goes: oink oink");
+    }
+}
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Abstraction***\n");
+        Pig myPig = new Pig();
+        myPig.animalSound();
+        myPig.sleep();
+    }
+}
+
+/* Why And When To Use Abstract Classes and Methods?
+
+To achieve security - hide certain details and only show the important details of an object
+Note: Abstraction can also be achieved with Interfaces */
