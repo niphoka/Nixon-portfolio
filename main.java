@@ -1604,3 +1604,60 @@ Note: To implement multiple interfaces, separate them with a comma.
 class DemoClass implements FirstInterface, SecondInterface {...}
 
 */
+
+
+
+
+
+
+public class Main
+{
+    enum Level
+    {
+        LOW,
+        MEDIUM,
+        HIGH
+    }
+    
+    public static void main(String[] args)
+    {
+        System.out.println("***Enums - enum inside a class***\n");
+        Level myLevel = Level.MEDIUM;
+        System.out.println(myLevel);
+    }
+}
+
+
+
+
+
+
+enum Level
+{
+    LOW,
+    MEDIUM,
+    HIGH
+}
+
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Enum in a switch statement***\n");
+        Level myLevel = Level.HIGH;
+        
+        switch(myLevel)
+        {
+            case LOW:
+                System.out.println("Low level");
+                break;
+            case MEDIUM:
+                System.out.println("Medium level");
+                break;
+            case HIGH:
+                System.out.println("High level");
+                break;
+        }    
+    }
+}
