@@ -22,4 +22,28 @@ Dictionary is a collection which is ordered** and changeable. No duplicate membe
 
 ===================================================================================================================================
 
+print("***Access items on a List***\n")
+
+fruitList = ["orange","banana","mango","kiwi","grape","apple","melon"]
+print("List: 0)orange, 1)banana, 2)mango, 3)kiwi, 4)grape, 5)apple, 6)melon\n")
+print("List: -7)orange, -6)banana, -5)mango, -4)kiwi, -3)grape, -2)apple, -1)melon\n")
+print(f"The range [2:] covers {fruitList[2:]}")
+print(f"The range [:2] covers {fruitList[:2]}")
+print(f"The range [2:4] cover {fruitList[2:4]}")
+print(f"The range [-2:] covers {fruitList[-2:]}")
+print(f"The range [:-2] covers {fruitList[:-2]}")
+print(f"The range [-4:-2] covers {fruitList[-4:-2]}\n")
+
+
+print("***Check if item exist***\n")
+if "kiwi" in fruitList:
+    print("Kiwi is on list")
+
+if "tomato" not in fruitList:
+    print("Tomato is not on list")
+
+===================================================================================================================================
+
+ 
+
 
