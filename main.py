@@ -20,7 +20,7 @@ Dictionary is a collection which is ordered** and changeable. No duplicate membe
 
 **As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.  '''
 
-===================================================================================================================================
+==================================================================================================================================================
 
 print("***Access items on a List***\n")
 
@@ -42,7 +42,31 @@ if "kiwi" in fruitList:
 if "tomato" not in fruitList:
     print("Tomato is not on list")
 
-===================================================================================================================================
+==================================================================================================================================================
+
+
+print("***Change items on a List***\n")
+
+fruitList = ["orange","banana","mango","kiwi","grape","apple","melon"]
+print("List:\n 0)orange, 1)banana, 2)mango, 3)kiwi, 4)grape, 5)apple, 6)melon\n")
+
+fruitList[1] = "avocado"
+print(f"We now replace banana for avocado:\n {fruitList}\n")
+
+fruitList[3:5] = ["papaya","lemon"]
+print(f"Let us replace kiwi and grape for papaya and lemon\n {fruitList}\n")
+
+fruitList[6:7] = ["guava","tamarindo"]
+print(f"We can substitute melon and add guava and tamarindo\n {fruitList}\n")
+
+fruitList[0:2] = ["strawberry"]
+print(f"We can also replace orange and avocado for strawberry\n {fruitList}\n")
+
+fruitList.insert(0, "blueberry")
+print(f"Let us insert blueberry without deleting anything else\n {fruitList}")
+
+==================================================================================================================================================
+
 
  
 
