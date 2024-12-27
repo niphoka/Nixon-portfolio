@@ -1622,4 +1622,43 @@ class Main
     }
 }
 
+===============================================================================================================================================
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+/*
+LocalDate	Represents a date (year, month, day (yyyy-MM-dd))
+LocalTime	Represents a time (hour, minute, second and nanoseconds (HH-mm-ss-ns))
+LocalDateTime	Represents both a date and a time (yyyy-MM-dd-HH-mm-ss-ns)
+DateTimeFormatter	Formatter for displaying and parsing date-time objects */
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("****Date and Time***\n");
+        LocalDate currentDate = LocalDate.now();
+        System.out.println("Current date: " + currentDate);
+
+        LocalTime currentTime = LocalTime.now();
+        System.out.println("Current time: " + currentTime);
+        
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        System.out.println("Current date and time: " + currentDateTime);
+        
+        DateTimeFormatter DTFormat = DateTimeFormatter.ofPattern("E, MMM dd yyyy");
+        String dataFormatted = currentDateTime.format(DTFormat);
+        System.out.println("Formatted date and time: " + dataFormatted);
+    }
+}
+
+/* The ofPattern() method accepts all sorts of values, if you want to display the date and time in a different format. For example:
+
+Value	Example	Tryit
+yyyy-MM-dd	"1988-09-29"	
+dd/MM/yyyy	"29/09/1988"	
+dd-MMM-yyyy	"29-Sep-1988"	
+E, MMM dd yyyy	"Thu, Sep 29 1988" */
