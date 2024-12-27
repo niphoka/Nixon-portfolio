@@ -67,7 +67,33 @@ print(f"Let us insert blueberry without deleting anything else\n {fruitList}")
 
 ==================================================================================================================================================
 
+ print("***Add items to a List***\n")
 
- 
+fruitList = ["orange","banana","mango","kiwi"]
+print("List:\n 0)orange, 1)banana, 2)mango, 3)kiwi\n")
+
+fruitList.append("lemon")#Adds lemon to the end of the list
+print(fruitList)
+
+fruitList.insert(5, "papaya")#Adds papaya to the specified index number
+print(fruitList)
+
+veggyList = ["carrot","spinach","celery" ]
+fruitList.extend(veggyList)#Adds veggyList to the end of the list
+print(fruitList)
+
+'''The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.)'''
+
+normalList = ["One","Two","Three"]
+normalTupple = ("Four","Five","Six")
+normalList.extend(normalTupple)
+print(normalList)
+
+normalDict = {"greet":"Hey", "subject":"You"}
+normalList.extend(normalDict)
+print(normalList)
+
+==================================================================================================================================================
+
 
 
