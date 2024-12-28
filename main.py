@@ -128,4 +128,43 @@ NameError: name 'fruitList' is not defined '''
 
 ==================================================================================================================================================
 
+print("***For loop through items from a List***\n")
+
+fruitList = ["orange","banana","mango","kiwi","banana","papaya","apple"]
+
+print("Show items from a list")
+for i in fruitList:
+    print(i)
+print("\n")
+
+print("Show index of items from a list")
+for i in range(len(fruitList)):
+    print(i)
+print("\n")
+
+print("List comprehension")    
+[print(x) for x in fruitList]  
+
+==================================================================================================================================================
+
+print("***While loop through items from a List***\n")
+
+fruitList = ["orange","banana","mango","kiwi","banana","papaya","apple"]
+
+print("Show items from a list")
+i = 0
+while i < len(fruitList):
+    print(fruitList[i])
+    i += 1
+
+print("\n")
+
+i = 0
+print("Show index of items from a list")
+while i < len(fruitList):
+    print(i)
+    i += 1
+    
+==================================================================================================================================================
+
 
