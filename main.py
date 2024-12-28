@@ -95,5 +95,37 @@ print(normalList)
 
 ==================================================================================================================================================
 
+print("***Remove items from a List***\n")
+
+fruitList = ["orange","banana","mango","kiwi","banana","papaya","apple"]
+print(f"{fruitList}\n")
+
+fruitList.remove("mango")
+print(f"Let us remove mango from fruitList\n {fruitList}\n")
+
+fruitList.remove("banana")
+print(f"Now let's remove the first occurrence of a repeated item, banana\n {fruitList}\n")
+
+fruitList.pop(0)
+print(f"Let's try to remove orange by index using pop method\n {fruitList}\n")
+
+fruitList.pop()
+print(f"If we do not specify an index, pop will remove last item, apple\n {fruitList}\n")
+
+del fruitList[1]
+print(f"We use del with index to delete an item, banana\n {fruitList}\n")
+
+fruitList.clear()
+print(f"We can delete list contents but list still remains\n {fruitList}\n")
+
+del fruitList
+'''print(fruitList)
+
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 25, in <module>
+NameError: name 'fruitList' is not defined '''
+
+==================================================================================================================================================
 
 
