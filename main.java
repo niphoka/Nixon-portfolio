@@ -1662,3 +1662,156 @@ yyyy-MM-dd	"1988-09-29"
 dd/MM/yyyy	"29/09/1988"	
 dd-MMM-yyyy	"29-Sep-1988"	
 E, MMM dd yyyy	"Thu, Sep 29 1988" */
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***ArrayList***\n");
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Toyota");//Add item with Add method
+        cars.add("Suzuki");
+        cars.add(0,"Honda");//Add item using index
+        
+        System.out.println(cars);
+        System.out.println(cars.get(1));//Access an item with Get method
+        cars.set(2,"Mazda");//Susbstitute item with Set method
+        System.out.println(cars);
+        cars.remove(0);//Remove method using index
+        System.out.println(cars);
+        System.out.println(cars.size());//Get size
+        cars.clear();//Delete ArrayList contents
+        System.out.println(cars);
+    }
+}
+
+/*The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified 
+(if you want to add or remove elements to/from an array, you have to create a new one). 
+While elements can be added and removed from an ArrayList whenever you want. The syntax is also slightly different*/
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***For loop in ArrayList***\n");
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Toyota");//Add item with Add method
+        cars.add("Suzuki");
+        cars.add(0,"Honda");//Add item using index
+
+        for (int i = 0; i < cars.size(); i++)//Use the size() method to specify how many times the loop should run
+        {
+            System.out.println(cars.get(i));
+        }
+    }
+}
+
+===============================================================================================================================================
+
+
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Foreach loop in ArrayList***\n");
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Toyota");//Add item with Add method
+        cars.add("Suzuki");
+        cars.add(0,"Honda");//Add item using index
+
+        for (String i : cars)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Foreach loop in ArrayList with integers***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(10);//Add item with Add method
+        numbers.add(20);
+        numbers.add(0,30);//Add item using index
+        numbers.add(80);
+        numbers.add(60);
+        numbers.add(50);
+
+        for (int i : numbers)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Foreach loop in ArrayList sorted***\n");
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Toyota");//Add item with Add method
+        cars.add("Suzuki");
+        cars.add(0,"Honda");//Add item using index
+        cars.add("Aston Martin");
+        cars.add("Chevrolet");
+        Collections.sort(cars);
+
+        for (String i : cars)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Foreach loop in ArrayList sorted integers***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(10);//Add item with Add method
+        numbers.add(20);
+        numbers.add(0,30);//Add item using index
+        numbers.add(80);
+        numbers.add(60);
+        numbers.add(50);
+        Collections.sort(numbers);
+
+        for (int i : numbers)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+
+    
