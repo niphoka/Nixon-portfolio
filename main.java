@@ -1861,5 +1861,59 @@ When To Use
 Use an ArrayList for storing and accessing data, and LinkedList to manipulate data.*/
 
 ===============================================================================================================================================
-
     
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Sorting a list***\n");
+        
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Maseratti");
+        cars.add("Lamborgini");
+        cars.add("Jaguar");
+        
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(69);
+        numbers.add(95);
+        numbers.add(38);
+        
+        System.out.println("Sort from a to z / ascending order");
+        Collections.sort(cars);
+        
+        for(String i : cars)
+        {
+            System.out.println(i);
+        }
+        System.out.println();
+
+        Collections.sort(numbers);
+        for(int x : numbers)
+        {
+            System.out.println(x);
+        }
+        System.out.println();
+
+        
+        System.out.println("Sort from z to a / descending order");
+        Collections.sort(cars, Collections.reverseOrder());
+        
+        for(String i : cars)
+        {
+            System.out.println(i);
+        }
+        System.out.println();
+       
+        Collections.sort(numbers, Collections.reverseOrder());
+        for(int x : numbers)
+        {
+            System.out.println(x);
+        }
+    }
+}
+
+===============================================================================================================================================
+
