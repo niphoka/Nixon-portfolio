@@ -167,4 +167,44 @@ while i < len(fruitList):
     
 ==================================================================================================================================================
 
+print("***List comprehension***\n")
 
+itemList = ["orange","cherry","onion","oister","carrot","celery","tuna"]
+
+print(f"Original list\n{itemList}\n")
+
+#Find items beginning with letter C and add them to a new list
+cList = []
+
+for i in itemList:
+    if "c" in i:
+        cList.append(i)
+print(f"List only with letter C using regular for loop\n{cList}\n")
+
+
+#Find items beginning with letter C and add them to a new list
+oList = [x for x in itemList if "o" in x]
+print(f"List only with letter O using list comprehension\n{oList}\n")
+
+nList = [i for i in itemList if i != "tuna"]#Pay attention to order in for loop here
+print(f"List with no tuna in it\n{nList}\n")
+
+xList = [i for i in range(10) if i < 5]
+print(f"Iterate using comprehension\n{xList}\n")
+
+uList = [x.upper() for x in itemList]
+print(f"Use of methods inside comprehension\n{uList}\n")
+
+sList = ["dog" for i in itemList]
+print(f"Substitue all items for a new sigle one\n{sList}\n")
+
+tList = [x if x != "tuna" else "salmon" for x in itemList]#Pay attention to order in for loop here and compare it to above
+print(f"Substitute tuna for salmon\n{tList}\n")
+
+'''If there is no else, for loop goes first:
+    
+    [i for i in itemList if i != "tuna"]
+    
+   otherwise, for loop goes last:
+   
+    [x if x != "tuna" else "salmon" for x in itemList]'''
