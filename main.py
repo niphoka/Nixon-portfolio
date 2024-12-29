@@ -208,3 +208,50 @@ print(f"Substitute tuna for salmon\n{tList}\n")
    otherwise, for loop goes last:
    
     [x if x != "tuna" else "salmon" for x in itemList]'''
+
+==================================================================================================================================================
+
+print("***Sorting a list***\n")
+
+itemList = ["ostrich","donkey","zebra","antilope","bird","cheetah"]
+numList = [55, 89, 10, 23, 69, 33, 99]
+print(f"Original list\n{itemList}\n")
+print(f"Original integer list\n{numList}\n")
+
+print("Sort from a to z / ascending order")
+itemList.sort()
+print(itemList)
+
+numList.sort()
+print(f"{numList}\n")
+
+print("Sort from z to a / descending order")
+itemList.sort(reverse = True)
+print(itemList)
+
+numList.sort(reverse = True)
+print(f"{numList}\n")
+
+print("Customize sort by creating a custom function to calculate which number from numList is closer to 50 after susbracting 50 and applying absolute value")
+def sortFunc(n):
+    return abs(n - 50)
+numList.sort(key = sortFunc)
+print(f"{numList}\n")
+
+print("Sorting a list with some items in caps will give unexpected results since capital letters take prescedence over non caps, no matter the alphabetical order\n")
+
+someList = ["dog","Cat","bird", "Zebra"]
+print(f"Original list\n{someList}\n")
+
+someList.sort()
+print(f"List sorted according to caps prescedence\n{someList}\n")
+
+someList.sort(key = str.lower)
+print(f"After telling Sort method to consider all caps as lower\n{someList}\n")
+
+someList.reverse()
+print(f"Reversing order regardles of alphabet\n{someList}\n")
+
+==================================================================================================================================================
+
+    
