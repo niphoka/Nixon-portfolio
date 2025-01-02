@@ -254,4 +254,18 @@ print(f"Reversing order regardles of alphabet\n{someList}\n")
 
 ==================================================================================================================================================
 
-    
+print("***Copy a list***\n")
+
+petList = ["dog","cat","bird","fish"]
+copyList = petList.copy()
+print(f"Copied with copy() method: {copyList}")
+
+doppelgangerList = list(petList)
+print(f"Copied with list() method: {doppelgangerList}")
+
+duplicateList = petList[:]
+print(f"Copied with [:] slice: {duplicateList}")
+
+==================================================================================================================================================
+
+
