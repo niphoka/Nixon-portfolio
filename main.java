@@ -1917,3 +1917,73 @@ public class Main
 
 ===============================================================================================================================================
 
+import java.util.HashMap;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("****Hashmaps***\n");
+        HashMap<String, String> capitalCities = new HashMap<String, String>();
+        
+        capitalCities.put("England", "London");
+        capitalCities.put("Germany", "Berlin");
+        capitalCities.put("Costa Rica", "San Jose");
+        capitalCities.put("USA", "Washington DC");
+        System.out.println("Hashmap: " + capitalCities + "\n");
+        
+        System.out.println("Get capital city of one country: " + capitalCities.get("Costa Rica") + "\n");
+        
+        capitalCities.remove("England");
+        System.out.println("Remove England from hashmap: " + capitalCities + "\n");
+        
+        //capitalCities.clear() Deletes all contents, leaving an empty hashmap
+        
+        System.out.println("Size of hashmap: " + capitalCities.size() + "\n");
+        
+        System.out.println("Foreach loop to show keys");
+        for (String i : capitalCities.keySet())
+        {
+            System.out.println(i);
+        }
+        System.out.println("\n");
+        
+        System.out.println("Foreach loop to show values");
+        for (String x : capitalCities.values())
+        {
+            System.out.println(x);
+        }
+        System.out.println("\n");
+        
+        System.out.println("Foreach loop to show both, keys and values");
+        for (String j : capitalCities.keySet())
+        {
+            System.out.println("Key: " + j + " - " + "Value: " + capitalCities.get(j));
+        }
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.HashMap;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("****Hashmap variation***\n");
+        HashMap<String, Integer> names = new HashMap<String, Integer>();
+        
+        names.put("Rob", 32);
+        names.put("Alexa", 29);
+        names.put("Lebron", 45);
+        names.put("Jessiquanda", 22);
+        System.out.println("Hashmap with string as key and integer as value:\n" + names + "\n");
+        
+        System.out.println("Foreach loop to show both, keys and values");
+        for (String j : names.keySet())
+        {
+            System.out.println("Key: " + j + " - " + "Value: " + names.get(j));
+        }
+    }
+}
