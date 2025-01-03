@@ -268,4 +268,27 @@ print(f"Copied with [:] slice: {duplicateList}")
 
 ==================================================================================================================================================
 
+print("***Join lists***\n")
 
+petList = ["dog","cat","bird","fish"]
+wildList = ["wolf","tiger","eagle","shark"]
+
+animalList = petList + wildList
+print(f"Join 2 lists by using + symbol:\n{animalList}\n")
+
+
+for x in wildList:
+    petList.append(x)
+print(f"Join 2 lists by using for loop and append() method:\n{petList}\n") 
+
+''' or
+for i in petList:
+    wildList.append(i)
+print(wildList) '''
+    
+numList = [1,2,3,4]
+letterList = ["a","b","c","d"]
+newList = numList.extend(letterList)
+print(f"Join 2 lists by using extend() method:\n{numList}")
+
+==================================================================================================================================================
