@@ -1987,3 +1987,65 @@ public class Main
         }
     }
 }
+
+===============================================================================================================================================
+
+import java.util.HashSet;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***HashSets***\n");
+        HashSet<String> cars = new HashSet<String>();
+        cars.add("BMW");
+        cars.add("Audi");
+        cars.add("Land Rover");
+        cars.add("BMW");
+        cars.add("Chevrolet");
+        System.out.println(cars + "\n");
+        
+        //cars.remove("Audi");
+        //cars.clear();
+
+        System.out.println("Check if cars HashSet has BMW: " + cars.contains("BMW"));
+        System.out.println("Check the size of cars HashSet: " + cars.size() + "\n");
+        
+        System.out.println("For each loop on HashSet");
+        for (String i : cars)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.HashSet;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***HashSet variation***\n");
+        HashSet<Integer> numbers = new HashSet<Integer>();
+        numbers.add(3);
+        numbers.add(6);
+        numbers.add(9);
+
+        for (int i = 1; i <= 10; i++)
+        {
+            if (numbers.contains(i))
+            {
+                System.out.println(i + " was found in the set");
+            }
+            else
+            {
+                System.out.println(i + " was not found");
+            }
+        }
+    }
+}   
+===============================================================================================================================================
+
+    
