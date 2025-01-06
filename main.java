@@ -1971,7 +1971,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.println("****Hashmap variation***\n");
+        System.out.println("****Hashmap example***\n");
         HashMap<String, Integer> names = new HashMap<String, Integer>();
         
         names.put("Rob", 32);
@@ -2027,7 +2027,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        System.out.println("***HashSet variation***\n");
+        System.out.println("***HashSet example***\n");
         HashSet<Integer> numbers = new HashSet<Integer>();
         numbers.add(3);
         numbers.add(6);
@@ -2046,6 +2046,69 @@ public class Main
         }
     }
 }   
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Iterators***\n");
+        ArrayList<String> pet = new ArrayList<String>();
+        pet.add("dog");
+        pet.add("cat");
+        pet.add("turtle");
+        pet.add("hamster");
+        
+        Iterator<String> iter = pet.iterator();
+        
+        // System.out.println("Prints first item of ArrayList via iterator using next() method: " + iter.next() + "\n");
+        
+        while (iter.hasNext())//Returns true if there are more elements in the iteration	
+        {
+            System.out.println(iter.next());//Returns the next element in the iteration	
+        }
+    }
+}
+    
+===============================================================================================================================================
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Iterators example***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(30);
+        numbers.add(10);
+        numbers.add(5);
+        numbers.add(90);
+        
+        Iterator<Integer> iter = numbers.iterator();
+        
+        while (iter.hasNext())//Returns true if there are more elements in the iteration	
+        {
+            //Integer i = iter.next();This does the same as below
+            int item = iter.next();//Returns the next element in the iteration	
+
+            if (item > 10)
+            {
+                iter.remove();
+            }
+        }
+        System.out.println(numbers);
+    }
+}
+
+/*Note: Trying to remove items using a for loop or a for-each loop would not work correctly because the collection is changing 
+size at the same time that the code is trying to loop.*/
+
 ===============================================================================================================================================
 
     
