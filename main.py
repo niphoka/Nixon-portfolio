@@ -326,3 +326,27 @@ it could mean an increase in efficiency or security.'''
 
 ==================================================================================================================================================
 
+print("***Update Tuples***\n")
+
+'''Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created but there are some workarounds'''
+
+print("Original tuple")
+myTup = ("mango","banana","orange")
+print(f"{myTup}\n")
+
+print("Convert tuple to a list, add or remove items and convert back")
+myList = list(myTup)
+myList[1] = "kiwi" 
+myList.append("papaya")
+myList.remove("mango")
+myTup = tuple(myList)
+print(f"{myTup}\n")
+
+print("Add a tuple into a tuple")
+myTup2 = ("coconut",)
+myTup += myTup2
+print(myTup)
+#del myTup This deletes whole tuple and no longer exists/is not printable
+
+==================================================================================================================================================
+
