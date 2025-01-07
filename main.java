@@ -2111,4 +2111,32 @@ size at the same time that the code is trying to loop.*/
 
 ===============================================================================================================================================
 
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Wrapper classes***\n");
+        
+        //Wrapper classes provide a way to use primitive data types (int, boolean, etc..) as objects.
+
+        Integer myNum = 10;
+        Double myDou = 5.99;
+        Character myChar = 'Z';
+        System.out.println(myNum);
+        System.out.println(myDou);
+        System.out.println(myChar + "\n");
+        
+        System.out.println("Print using intValue() method: " + myNum.intValue());
+        System.out.println("Print using doubleValue() method: " + myDou.doubleValue());
+        System.out.println("Print using charValue() method: " + myChar.charValue() + "\n");
+        
+        Integer myInt = 1300;
+        String myStr = myInt.toString();
+        System.out.println("Casting/changing wrapper object, 1300 as integer, to string to then get its size: " + myStr.length());
+    }
+}
+
+===============================================================================================================================================
+
+
     
