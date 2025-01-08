@@ -383,3 +383,27 @@ Python will assign values to the variable until the number of values left matche
 
 ==================================================================================================================================================
 
+print("***Loop a tuple***\n")
+
+print("For loop using the item")
+fruitTup = ("melon","grape","banana")
+for i in fruitTup:
+    print(i)
+print()    
+    
+print("For loop using the index")    
+veggyTup = ("onion","celery","garlic","potato")
+for i in range (len(veggyTup)):
+    print(i)
+print()    
+    
+print("While loop using item") 
+aniTup = ("chicken","dog","cat")
+x = 0
+while x < len(aniTup):
+    print(aniTup[x])
+    x += 1
+
+==================================================================================================================================================
+
+
