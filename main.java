@@ -2160,6 +2160,42 @@ public class Main
         }
     }
 }
+/*The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+The try and catch keywords come in pairs*/
+
+===============================================================================================================================================
+
+public class Main
+{
+    static void checkAge(int age)
+    {
+        if (age < 18)
+        {
+            throw new ArithmeticException("Age less than 18");
+        }
+        else
+        {
+            System.out.println("Age is old enough");
+        }
+    }
+    
+    /*The throw statement allows you to create a custom error.
+
+The throw statement is used together with an exception type. There are many exception types available in Java: ArithmeticException, FileNotFoundException, ArrayIndexOutOfBoundsException, SecurityException, etc*/
+
+    public static void main(String[] args)
+    {
+        System.out.println("***Exceptions - Throw***\n");
+        checkAge(15);
+    }
+    /*ERROR!
+Exception in thread "main" java.lang.ArithmeticException: Age less than 18
+	at Main.checkAge(Main.java:7)
+	at Main.main(Main.java:17)*/
+}
 
 ===============================================================================================================================================
 
