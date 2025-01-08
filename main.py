@@ -350,3 +350,36 @@ print(myTup)
 
 ==================================================================================================================================================
 
+print("***Unpacking a tuple***\n")
+
+fruitTup = ("melon","grape","banana")
+print(f"Packed tuple:\n{fruitTup} \n")
+
+''' When we create a tuple, we normally assign values to it. This is called "packing" a tuple.
+
+But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking" '''
+
+print("Unpacked tuple:")
+(one,two,three) = fruitTup#Variables called one, two and three
+print(one)
+print(two)
+print(three)
+print()
+
+'''Note: The number of variables must match the number of values in the tuple, if not, 
+you must use an asterisk to collect the remaining values as a list.'''
+
+veggyTup = ("onion","celery","garlic","potato")
+print(f"Another packed tuple:\n{veggyTup}\n")
+
+print("Unpacked tuple with asterisk:")
+(one,*red,two) = veggyTup
+print(one)
+print(two)
+print(red)
+
+''' If the asterisk is added to another variable name than the last, 
+Python will assign values to the variable until the number of values left matches the number of variables left '''
+
+==================================================================================================================================================
+
