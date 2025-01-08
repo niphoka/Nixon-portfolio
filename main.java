@@ -2138,5 +2138,30 @@ public class Main
 
 ===============================================================================================================================================
 
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Exceptions - Try/Catch/Finally***\n");
+        try
+        {
+            int[] myArray = {1,2,3};
+            System.out.println(myArray[10]);/*Without try, this will give error:
+            Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 10
+        at Main.main*/
+        }
+        catch (Exception ex)
+        {
+            System.out.println("Error: Index out of bounds");
+        }
+        finally
+        {
+            System.out.println("Try/Catch/Finally has ended");
+        }
+    }
+}
+
+===============================================================================================================================================
+
 
     
