@@ -419,3 +419,35 @@ print(mySet)
 
 ==================================================================================================================================================
 
+print("***Sets***\n")
+
+mySet = {False,"mango",True,"avocado",1,0,"mango","avocado"}
+for i in mySet:
+    print(i)
+print()    
+
+print(f"Check if mango exists in mySet: {"mango" in mySet}\n")    
+
+mySet.add("tomato")
+print(f"{mySet}\n")
+
+otherSet = {"one","two","three"}
+print(f"{otherSet}\n")
+mySet.update(otherSet)
+print(f"Fuse/combine mySet and otherSet in one\n{mySet}\n")
+
+mySet.remove("avocado")
+print(f"{mySet}\n")
+''' Note: If the item to remove does not exist, remove() will raise an error'''
+
+mySet.discard("two")
+print(f"{mySet}\n")
+'''Note: If the item to remove does not exist, discard() will NOT raise an error'''
+
+x = mySet.pop()
+print(mySet)
+'''Note: Sets are unordered, so when using the pop() method, you do not know which item that gets removed'''
+
+==================================================================================================================================================
+
+
