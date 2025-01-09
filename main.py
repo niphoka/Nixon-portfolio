@@ -406,4 +406,16 @@ while x < len(aniTup):
 
 ==================================================================================================================================================
 
+print("***Sets***\n")
+
+#A set is a collection which is unordered, unchangeable*, and unindexed
+#* Note: Set items are unchangeable, but you can remove items and add new items.
+
+mySet = {False,"mango",True,"avocado",1,0,"mango","avocado"}
+print(mySet)
+
+#Sets cannot have two items with the same value
+#Note: The values False and 0, True and 1 are considered the same value in sets, and are treated as duplicates
+
+==================================================================================================================================================
 
