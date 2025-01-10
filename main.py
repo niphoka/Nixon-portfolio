@@ -428,25 +428,29 @@ print()
 
 print(f"Check if mango exists in mySet: {"mango" in mySet}\n")    
 
+print("Add tomato item with add() method")
 mySet.add("tomato")
 print(f"{mySet}\n")
 
 otherSet = {"one","two","three"}
-print(f"{otherSet}\n")
 mySet.update(otherSet)
 print(f"Fuse/combine mySet and otherSet in one\n{mySet}\n")
 
+print("Remove avocado item with remove() method")
 mySet.remove("avocado")
 print(f"{mySet}\n")
 ''' Note: If the item to remove does not exist, remove() will raise an error'''
 
+print("Remove two item with discard() method")
 mySet.discard("two")
 print(f"{mySet}\n")
 '''Note: If the item to remove does not exist, discard() will NOT raise an error'''
 
+print("Remove a random item with pop() method")
 x = mySet.pop()
-print(mySet)
+print(f"{mySet}\n")
 '''Note: Sets are unordered, so when using the pop() method, you do not know which item that gets removed'''
+
 
 ==================================================================================================================================================
 
