@@ -451,6 +451,37 @@ x = mySet.pop()
 print(f"{mySet}\n")
 '''Note: Sets are unordered, so when using the pop() method, you do not know which item that gets removed'''
 
+==================================================================================================================================================
+
+print("***Dictionaries***\n")
+
+carDict = {
+    "brand":"Ford",
+    "model":"Mustang",
+    "year":"1964" }
+
+print(f"Accesing item by key name:\n{carDict["model"]}\n")
+print(f"Accesing item with get() method:\n{carDict.get("year")}\n")
+print(f"Returns all keys in dictionary with keys() method:\n{carDict.keys()}\n")
+print(f"Returns all values in dictionary with values() method:\n{carDict.values()}\n")
+print(f"Returns all items from a dictionary as tuples inside a list with items() method:\n{carDict.items()}\n")
+
+print("If statement used with IN")
+if "model" in carDict:
+    print("Key model exists in dictionary")
+print()
+
+carDict["year"] = "2020"
+print(f"Change value of an item by referring to its key:\n{carDict}\n")
+
+carDict.update({"model":"Explorer"})
+print(f"Change value of an item by using update() method:\n{carDict}\n")
+
+carDict["color"] = "red"
+print(f"Add an item to dictionary by using new key and value:\n{carDict}\n")
+
+carDict.update({"value":"$150000"})
+print(f"Add an item to dictionary by using update() method:\n{carDict}\n")
 
 ==================================================================================================================================================
 
