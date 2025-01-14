@@ -2340,5 +2340,78 @@ public class Main extends Thread
 
 ===============================================================================================================================================
 
+import java.util.ArrayList;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        /* A lambda expression is a short block of code which takes in parameters and returns a value. 
+	Lambda expressions are similar to methods, 
+ 	but they do not need a name and they can be implemented right in the body of a method */
+	    
+        System.out.println("***Lambda***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(6);
+        numbers.add(9);
+        numbers.add(3);
+        numbers.add(1);
+        numbers.forEach((n) -> {System.out.println(n * n);});//For each n in numbers, print the result of multiplying n * n
+	// -> symbol signifies lambda usage
+    }
+}
+
+===============================================================================================================================================
+
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        /* Lambda expressions can be stored in variables if the variable's type is an interface which has only one method. The lambda expression should have the same number of parameters and the same return type as that method. Java has many of these kinds of interfaces built in, such as the Consumer interface (found in the java.util package) used by lists */
+        
+        System.out.println("***Lambda Consumer interface***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(6);
+        numbers.add(9);
+        numbers.add(3);
+        numbers.add(1);
+        Consumer<Integer> consumer = (n) -> {System.out.println(n * n);};
+        numbers.forEach(consumer);
+    }
+}
+
+===============================================================================================================================================
+
+interface StringFunc
+{
+    String run(String str);
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Lambda as a parameter on a method***\n");
+        StringFunc exclaim = (s) -> s + "!";
+        StringFunc ask = (s) -> s + "?";
+        printFormat("Hello", exclaim);
+        printFormat("Hello", ask);//This method will be used as a class below
+    }
+    
+    //To use a lambda expression in a method, the method should have a parameter with a single-method interface as its type. Calling the interface's method will run the lambda expression
+    
+    public static void printFormat(String str, StringFunc format)
+    {
+        String result = format.run(str);
+        System.out.println(result);
+    }
+}
+	
+===============================================================================================================================================
+
+
 
 	
