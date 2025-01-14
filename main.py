@@ -485,4 +485,36 @@ print(f"Add an item to dictionary by using update() method:\n{carDict}\n")
 
 ==================================================================================================================================================
 
+print("***For loop in Dictionaries***\n")
+
+carDict = {
+    "brand":"Ford",
+    "model":"Mustang",
+    "year":"1964" }
+
+print("Print all keys")
+for i in carDict:
+    print(i)
+print()    
+    
+print("Print all values")    
+for x in carDict:
+    print(carDict[x])
+print()
+
+print("Print all keys with method")
+for i in carDict.keys():
+    print(i)
+print()    
+    
+print("Print all values with method")    
+for x in carDict.values():
+    print(x)
+print()   
+
+print("Print keys and values with method")    
+for i,x in carDict.items():
+    print(f"{i}: {x}")
+
+==================================================================================================================================================
 
