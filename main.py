@@ -518,3 +518,32 @@ for i,x in carDict.items():
 
 ==================================================================================================================================================
 
+print("***Nested Dictionaries***\n")
+
+zoo = {
+    "animal1" : {
+        "name" : "zebra",
+        "year" : 1990 },
+    "animal2" : {
+        "name" : "lion",
+        "year" : 1980 },
+    "animal3" : {
+        "name" : "giraffe",
+        "year" : 2000 }}
+
+print("Print lion item from inside animal2 dictionary which is inside zoo dictionary")
+print(f"{zoo["animal2"]["name"]}\n")
+
+print("Unformatted for loop to print items, keys and dictionaries")
+for x,y in zoo.items():
+    print(x,y)
+print()
+
+print("Formatted for loop to print items, keys and dictionaries")
+for x,obj in zoo.items():
+    print(x)
+    for y in obj:
+        print(y + " : ", obj[y])
+
+==================================================================================================================================================
+
