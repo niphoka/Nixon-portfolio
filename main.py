@@ -547,3 +547,37 @@ for x,obj in zoo.items():
 
 ==================================================================================================================================================
 
+print("***While loops***\n")
+
+print("While loop with break")
+x = 1
+while x < 6:
+    print(x)
+    if x == 4:
+        print("Stopping on four")
+        break
+    x += 1 #Pay attention to this here
+    
+print()#This is just for formatting
+
+print("While loop with continue")
+i = 0
+while i < 6:
+    i += 1 #Pay attention to this here
+    if i == 5:
+        print("Five was here")
+        continue
+    print(i) 
+
+print()#This is just for formatting
+
+print("While loop with Else statement")
+y = 1
+while y < 6:
+    print(y)
+    y += 1 #Pay attention to this here
+else:
+    print("variable 'y' is no longer less than 6")
+
+==================================================================================================================================================
+
