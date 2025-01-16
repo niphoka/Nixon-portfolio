@@ -2530,5 +2530,63 @@ public class Main
 	
 ===============================================================================================================================================
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
-	
+class sortEvenFirst implements Comparator
+{
+    public int compare(Object obj1, Object obj2)
+    {
+        Integer a = (Integer) obj1;
+        Integer b = (Integer) obj2;
+        
+        boolean aIsEven = (a % 2) == 0;
+        boolean bIsEven = (b % 2) == 0;
+        
+        if (aIsEven == bIsEven) // If both numbers are even or both are odd then use normal sorting rules
+        {
+            if (a > b) return -1;
+            if (a < b) return 1;
+            return 0;
+        }
+        else
+        {
+            if (aIsEven) // If a is even then it goes first, otherwise b goes first
+            {
+                return -1;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Advanced Sorting - Comparator special rules***\n");
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(33);
+        numbers.add(20);
+        numbers.add(77);
+        numbers.add(84);
+        numbers.add(13);
+        numbers.add(6);
+        
+        Comparator comp = new sortEvenFirst();
+        Collections.sort(numbers, comp);
+        
+        for (int i : numbers)
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+
