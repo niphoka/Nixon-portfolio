@@ -2484,5 +2484,51 @@ public class Main
 
 ===============================================================================================================================================
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Car
+{
+    public String brand;
+    public String model;
+    public int year;
+    
+    public Car(String b, String m, int y)
+    {
+        brand = b;
+        model = m;
+        year = y;
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Advanced Sorting - Lambda instead of Comparator***\n");
+        ArrayList<Car> myCar = new ArrayList<Car>();
+        myCar.add(new Car ("Toyota","Rav4",2018));
+        myCar.add(new Car ("Ford","Mustang",1970));
+        myCar.add(new Car ("Honda","CRV",2000));
+        
+        /*To make the code shorter, the comparator can be replaced with a lambda expression which has the same arguments and return value as the compare() method */
+        
+        Collections.sort(myCar, (obj1, obj2) -> { //Lambda used here to simplify code
+            Car a = (Car) obj1;
+            Car b = (Car) obj2;
+            
+            if (a.year < b.year) return -1;
+            if (a.year > b.year) return 1;
+            return 0; });
+        
+        for (Car c : myCar)
+        {
+            System.out.println(c.brand + " " + c.model + " " + c.year);
+        }
+    }
+}	
 	
+===============================================================================================================================================
+
+
 	
