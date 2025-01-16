@@ -2412,6 +2412,77 @@ public class Main
 	
 ===============================================================================================================================================
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
+/*In the List Sorting Chapter, you learned how to sort lists alphabetically and numerically, but what if the list has objects in it?
 
+To sort objects you need to specify a rule that decides how objects should be sorted. For example, if you have a list of cars you might want to sort them by year, the rule could be that cars with an earlier year go first.
+
+The Comparator and Comparable interfaces allow you to specify what rule is used to sort objects.
+
+Being able to specify a sorting rule also allows you to change how strings and numbers are sorted.*/
+
+class Car
+{
+    public String brand;
+    public String model;
+    public int year;
+    
+    public Car(String b, String m, int y)
+    {
+        brand = b;
+        model = m;
+        year = y;
+    }
+}
+
+/*An object that implements the Comparator interface is called a comparator.
+
+The Comparator interface allows you to create a class with a compare() method that compares two objects to decide which one should go first in a list.
+
+The compare() method should return a number which is:
+
+Negative if the first object should go first in a list.
+Positive if the second object should go first in a list.
+Zero if the order does not matter.*/
+
+class sortByYear implements Comparator
+{
+    public int compare(Object obj1, Object obj2)
+    {
+        Car a = (Car) obj1;
+        Car b = (Car) obj2;
+        
+        if (a.year < b.year) return -1;
+        if (a.year > b.year) return 1;
+        return 0;
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Advanced Sorting - Comparator***\n");
+        ArrayList<Car> myCar = new ArrayList<Car>();
+        myCar.add(new Car ("Toyota","Rav4",2018));
+        myCar.add(new Car ("Ford","Mustang",1970));
+        myCar.add(new Car ("Honda","CRV",2000));
+        
+        Comparator comp = new sortByYear();
+        Collections.sort(myCar, comp);
+        
+        for (Car c : myCar)
+        {
+            System.out.println(c.brand + " " + c.model + " " + c.year);
+        }
+        
+    }
+}
+
+===============================================================================================================================================
+
+	
 	
