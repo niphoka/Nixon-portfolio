@@ -2589,4 +2589,52 @@ public class Main
 
 ===============================================================================================================================================
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
+class Car implements Comparable
+{
+    public String brand;
+    public String model;
+    public int year;
+    
+    public Car(String b, String m, int y)
+    {
+        brand = b;
+        model = m;
+        year = y;
+    }
+    
+    public int compareTo(Object obj)
+    {
+        Car oneCar = (Car) obj;
+        if (year < oneCar.year) return -1; //If object is smaller, first place
+        if (year > oneCar.year) return 1; //If object larger, second
+        return 0; // Both objects are the same
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***Advanced Sorting - Comparable interface***\n");
+        ArrayList<Car> someCars = new ArrayList<Car>();
+        someCars.add(new Car("Chevrolet","Camaro",1999));
+        someCars.add(new Car("Ford","Mustang",1970));
+        someCars.add(new Car("Porsche","911",1990));
+        
+        Collections.sort(someCars);
+        
+        for (Car c : someCars)
+        {
+            System.out.println(c.brand + " " + c.model + " " + c.year);
+        }
+    }
+}
+
+===============================================================================================================================================
+
+
+	
