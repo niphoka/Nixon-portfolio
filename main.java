@@ -2516,10 +2516,13 @@ public class Main
         Collections.sort(myCar, (obj1, obj2) -> { //Lambda used here to simplify code
             Car a = (Car) obj1;
             Car b = (Car) obj2;
-            
-            if (a.year < b.year) return -1;
-            if (a.year > b.year) return 1;
-            return 0; });
+
+            // if (a.year < b.year) return -1;
+            // if (a.year > b.year) return 1;
+            // return 0; 
+		
+		return a.year - b.year;}); //Sort from old to new. This does the same as the IF statemens above, but shorter
+        	//return b.year - a.year;}); //Sort from new to old. 
         
         for (Car c : myCar)
         {
