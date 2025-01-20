@@ -581,3 +581,34 @@ else:
 
 ==================================================================================================================================================
 
+print("***Functions***\n")
+
+def myFunc(fName):
+    print(fName + " Trump")
+myFunc("Nathan")
+myFunc("Jennifer")
+print()
+
+def myFunc2(fname, lname):#This function expects 2 arguments, and gets 2 arguments, no more, no less
+    print(fname + " " + lname)
+myFunc2("Emily", "Richardson")    
+print()
+
+def myFunc3(*food):#If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition. This is called *args in documentation
+    print("My favorite food is " + food[2])
+myFunc3("tacos","lasagna","salmon","roasted chicken")    
+print()
+
+def myFunc4(food1, food2, food3):#This is called *kwargs in documentation
+    print("The food I like the least is " + food2)
+myFunc4(food1 = "gummy bears", food2 = "soup", food3 = "beans")    
+print()
+
+def myFunc5(**kid):#If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition
+    print("His last name is " + kid["lname"])
+myFunc5(fname = "Robert", lname = "Jacobsen")    
+
+==================================================================================================================================================
+
+
+
