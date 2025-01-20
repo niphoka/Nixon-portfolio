@@ -1851,3 +1851,57 @@ int main()
     cout << "Salary: " << myObj.getSalary() << endl;//Calling get method
     cout << "Bonus: " << myObj.bonus << endl;
 }
+
+==================================================================================================================================================
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Animal
+{
+    public:
+        void animalSound()
+        {
+            cout << "Animals make a particular sound \n";
+        }
+}; //Pay attention to this }; when using inheritance and polymorphism
+
+class Pig : public Animal
+{
+    public:
+        void animalSound()
+        {
+            cout << "The pig goes: oink oink\n";
+        }
+};
+
+class Dog : public Animal
+{
+    public:
+        void animalSound()
+        {
+            cout << "The dog goes: guau guau\n";
+        }
+};
+
+/* Why And When To Use "Inheritance" and "Polymorphism"?
+- It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class*/
+
+int main()
+{
+    cout << "***Polymorphism***\n\n";
+    Animal myAnimal;
+    Pig myPig;
+    Dog myDog;
+    
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+}
+
+==================================================================================================================================================
+
+
+  
