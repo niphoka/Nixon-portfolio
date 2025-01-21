@@ -610,5 +610,55 @@ myFunc5(fname = "Robert", lname = "Jacobsen")
 
 ==================================================================================================================================================
 
+print("***Functions part 2***\n")
 
+def countryFunc(country = "Costa Rica"):
+    print("I am from " + country)
+countryFunc("Germany")
+countryFunc()# Default parameter
+countryFunc("Spain")
+print()
+
+def foodFunc(food):
+    for i in food:
+        print(i)
+fruits = ["lemon","papaya","banana"]# Passing a list as an argument of a function
+foodFunc(fruits)        
+print()
+
+def mathFunc(x):
+    return x * 5# Return values in functions
+print(mathFunc(3))   
+print(mathFunc(5))  
+print()
+
+def positionFunc(x, /):# Positional-only arguments
+    print(x)
+positionFunc(3)  
+# positionFunc(x = 3) This shows error since keyword arguments are not allowed
+print()
+
+def keywordFunc(*, x):# Keyword-only arguments 
+    print(x)
+keywordFunc(x = 3)
+# keywordFunc(3) This shows error since positional arguments are not allowed
+print()
+
+def combineFunc(a,b,/,*,c,d):#Any argument before the / , are positional-only, and any argument after the *, are keyword-only.
+    print(a+b+c+d)
+combineFunc(2,3,c=4,d=5)  
+print()
+
+def triRecursion(x):# Function calls itself (recursion)
+    if(x > 0):
+        #print(x)
+        result = x + triRecursion(x - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+print("Recursion equals to: ")
+triRecursion(6)
+
+==================================================================================================================================================
 
