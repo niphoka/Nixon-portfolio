@@ -649,16 +649,55 @@ def combineFunc(a,b,/,*,c,d):#Any argument before the / , are positional-only, a
 combineFunc(2,3,c=4,d=5)  
 print()
 
-def triRecursion(x):# Function calls itself (recursion)
+# def triRecursion(x):# Function calls itself (recursion)
+#     if(x > 0):
+#         result = x + triRecursion(x - 1) # This takes argument 6 and substracts 1, so it goes: 6 - 1 then print, 5 - 1 then print, 4 - then print and so on
+#         print(result)
+#     else:# Once argument reaches 0, then recursion goes from 1 to 6, one by one, adding the number plus the previous result, starting from 0
+#         result = 0
+#     return result # For example, 1 + previous result(0) = 1, 2 + previous(1) = 3, 3 + previous (3) = 6, 4 + previous (6) = 10, 5 + previous (10) = 15 and 6 + previous (15) = 21
+# print("Recursion: ")
+# triRecursion(6)
+
+def tri_recursion(x):# This is a simplified and rustic version from the one seen on StacOverflow
     if(x > 0):
-        #print(x)
-        result = x + triRecursion(x - 1)
-        print(result)
+        print('Run loop x - 1 =',x)
+        holder = tri_recursion(x - 1)
+        result = x + holder
+        print('x =',x,'+ previous result =',holder,'result =',result)
     else:
         result = 0
+        print('Result from loop = ', x)
     return result
-print("Recursion equals to: ")
-triRecursion(6)
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+'''
+Recursion Example Results
+                         start loop k 6
+                     start loop k 5
+                 start loop k 4
+             start loop k 3
+         start loop k 2
+     start loop k 1
+i reached when k = 0
+ end loop 0
+     i am k( 1 )+previous result( 0 )= 1
+     end loop 1
+         i am k( 2 )+previous result( 1 )= 3
+         end loop 2
+             i am k( 3 )+previous result( 3 )= 6
+             end loop 3
+                 i am k( 4 )+previous result( 6 )= 10
+                 end loop 4
+                     i am k( 5 )+previous result( 10 )= 15
+                     end loop 5
+                         i am k( 6 )+previous result( 15 )= 21
+                         end loop 6
+                         
+Taken from https://stackoverflow.com/questions/52578602/how-does-a-python-recursive-function-works-for-tri-recursion-function                         
+'''                         
 
 ==================================================================================================================================================
 
