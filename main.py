@@ -701,3 +701,29 @@ Taken from https://stackoverflow.com/questions/52578602/how-does-a-python-recurs
 
 ==================================================================================================================================================
 
+print("***Lambda functions***\n")
+'''A lambda function is a small anonymous function.
+
+A lambda function can take any number of arguments, but can only have one expression'''
+
+x = lambda a : a + 10 # One argument
+print(x(5))
+
+y = lambda a,b : a * b # Two arguments
+print(y(6,6))
+
+z = lambda a,b,c : a + b * c # Three arguments
+print(z(2,3,4))
+
+#The power of lambda is better shown when you use them as an anonymous function inside another function, as seen below
+
+def myLambdaFunc(n):
+    return lambda a : a ** n # Not multiplied but elevated to the power of
+myDouble = myLambdaFunc(2)
+myTriple = myLambdaFunc(3)
+print(myDouble(9))
+print(myTriple(3))
+
+==================================================================================================================================================
+
+
