@@ -1903,5 +1903,30 @@ int main()
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    cout << "***Create, Write and Read files***\n";
+    ofstream myFile("test.txt");// Creates and writes to a file
+    myFile << "There are all kinds of love in the world, but not the same love twice (F. Scott Fitzgerald)";
+    myFile.close();// Closing is recommended to save changes and save memory
+    
+    string myText;
+    ifstream myReadfile("test.txt");// Reads from a file
+    while (getline (myReadfile, myText))// This is required to read line by line
+    {
+        cout << myText;
+    }
+    myReadfile.close();// Closing is recommended to save changes and save memory
+}
+
+==================================================================================================================================================
+
+  
 
   
