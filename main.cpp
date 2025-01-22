@@ -1927,6 +1927,77 @@ int main()
 
 ==================================================================================================================================================
 
-  
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "***Exceptions***\n\n";
+    
+    /*When executing C++ code, different errors can occur: coding errors made by the programmer, errors due to wrong input, or other unforeseeable things.
+
+When an error occurs, C++ will normally stop and generate an error message. The technical term for this is: C++ will throw an exception (throw an error).*/
+
+    try
+    {
+        int age = 13;
+        if (age >= 18)
+    {
+        cout << "Access granted";
+    }
+    else
+    {
+        throw (age);// This shows age
+    }
+}
+    catch (int myAge)
+    {
+        cout << "Acces denied, you must be at least 18 years old\n";
+        cout << "Age is: " << myAge << endl;
+    }
+    cout << endl;
+    
+    
+    try
+    {
+        int age = 17;
+        if (age > 18)
+        {
+            cout << "Allowed to drive";
+        }
+        else
+        {
+            throw (33);// This shows an error code
+        }
+    }
+    catch (int errorCode)
+    {
+        cout << "Not old enough to drive\n";
+        cout << "Error code: " << errorCode;
+    }
+    cout << "\n\n";
+    
+    
+    try
+    {
+        int investment = 2500;
+        if (investment > 3000)
+        {
+            cout << "You get 5% discount";
+        }
+        else
+        {
+            throw ("n/a");// This does nothing, it is just a filler
+        }
+    }
+    catch (...)
+    {
+        cout << "You do not get any discount";
+    }
+}
+
+==================================================================================================================================================
+
 
   
