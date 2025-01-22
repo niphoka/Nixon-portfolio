@@ -2638,6 +2638,35 @@ public class Main
 }
 
 ===============================================================================================================================================
+	
+import java.io.File;
+import java.io.IOException;
 
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***File handling - Create files***\n");
+        try 
+        {
+            File myFile = new File("test.txt");
+            if (myFile.createNewFile())
+            {
+                System.out.println("File created" + myFile.getName());
+            }
+            else
+            {
+                System.out.println("File already exists");
+            }
+        }
+        catch (IOException error)
+        {
+            System.out.println("An error ocurred");
+            error.printStackTrace();
+        }
+    }
+}
+
+===============================================================================================================================================
 
 	
