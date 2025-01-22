@@ -2668,5 +2668,30 @@ public class Main
 }
 
 ===============================================================================================================================================
+	
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***File handling - Write files***\n");
+        try 
+        {
+            FileWriter writer = new FileWriter("test.txt");
+            writer.write("Files in Java are tricky but fun");
+            writer.close();
+            System.out.println("Write operation succesful");
+        }
+        catch (IOException error)
+        {
+            System.out.println("An error ocurred");
+            error.printStackTrace();
+        }
+    }
+}
+
+===============================================================================================================================================
 
 	
