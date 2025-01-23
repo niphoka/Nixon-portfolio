@@ -726,4 +726,36 @@ print(myTriple(3))
 
 ==================================================================================================================================================
 
+print("***Lists as Arrays***\n")
+
+''' Note: Python does not have built-in support for Arrays, but Python Lists can be used instead.
+
+Note: This shows you how to use LISTS as ARRAYS, however, to work with arrays in Python you will have to import a library, like the NumPy library. '''
+
+cars = ["Ford","Volvo","BMW"]
+
+print(cars[0])
+
+cars[0] = "Toyota"
+print(cars[0])
+
+print(len(cars))
+print()
+
+for i in cars:
+    print(i)
+    
+cars.append("Honda")# By name
+print(cars)
+
+cars.insert(2,"Suzuki")# By index and name
+print(cars)
+
+cars.pop(1)# By index
+print(cars)
+
+cars.remove("Honda")# By name
+print(cars)
+
+==================================================================================================================================================
 
