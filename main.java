@@ -2694,4 +2694,35 @@ public class Main
 
 ===============================================================================================================================================
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***File handling - Read files***\n");
+        try 
+        {
+            File file = new File("test.txt");
+            Scanner reader = new Scanner(file);
+            while (reader.hasNextLine())
+            {
+                String data = reader.nextLine();
+                System.out.println(data);
+            }
+            reader.close();
+        }
+        catch (FileNotFoundException error)
+        {
+            System.out.println("An error ocurred");
+            error.printStackTrace();
+        }
+    }
+}
+
+===============================================================================================================================================
+
+
 	
