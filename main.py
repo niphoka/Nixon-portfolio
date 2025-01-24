@@ -772,3 +772,38 @@ print(f"{person1.name} is {person1.age} years old")
 
 ==================================================================================================================================================
 
+print("***Classes & objects - Str function***\n")
+
+'''The __str__() function controls what should be returned when the class object is represented as a string.
+
+If the __str__() function is not set, the string representation of the object is returned'''
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+    def __str__(self):
+        return f"{person1.name} is {person1.age} years old"
+person1 = Person("John",69)
+print(person1)
+
+
+''' If you decide not to use str function:
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1)
+
+This will print a not so helpful value:
+
+<__main__.Person object at 0x15039e602100>'''
+
+==================================================================================================================================================
+
+
