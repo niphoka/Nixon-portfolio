@@ -1999,5 +1999,57 @@ When an error occurs, C++ will normally stop and generate an error message. The 
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+//The time() function gives us a timestamp representing the current date and time. We can use the ctime() function to show the date and time that a timestamp represents
+
+int main()
+{
+    cout << "***Date and Time***\n\n";
+    struct tm datetime;
+    time_t timestamp;// Get the timestamp for the current date and time
+    time(&timestamp);
+    cout << ctime(&timestamp);// Display the date and time represented by the timestamp
+    
+    /*Datetime structures
+tm_sec - The seconds within a minute
+tm_min - The minutes within an hour
+tm_hour - The hour within a day (from 0 to 23)
+tm_mday - The day of the month
+tm_mon - The month (from 0 to 11 starting with January)
+tm_year - The number of years since 1900
+tm_wday - The weekday (from 0 to 6 starting with Sunday)
+tm_yday - The day of the year (from 0 to 365 with 0 being January 1)
+tm_isdst - Positive when daylight saving time is in effect, zero when not in effect and negative when unknown*/
+
+    datetime.tm_year = 1997 - 1900;
+    datetime.tm_mon = 12 - 11;
+    datetime.tm_mday = 11;
+    datetime.tm_hour = 12;
+    datetime.tm_min = 30;
+    datetime.tm_sec = 1;
+    datetime.tm_isdst = -1;
+    
+    /*
+Hours are represented in 24-hour format. 11pm would be represented as 23.
+The months go from 0 to 11. For example, December would be represented as 11 rather than 12.
+Years are represented relative to the year 1900. The year 2024 would be represented as 124 because 124 years have passed since 1900.*/
+    
+    timestamp = mktime(&datetime);
+    /*The time() function can only create a timestamp for the current date, but we can create a timestamp for any date by using the mktime() function.
+
+The mktime() function converts a datetime structure into a timestamp*/
+
+    cout << ctime(&timestamp); //This can be used alone
+    
+    string weekdays[] = {"Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"};
+    cout << "Bebe's birthday is on a " << weekdays[datetime.tm_wday];
+
+}
+
+==================================================================================================================================================
 
   
