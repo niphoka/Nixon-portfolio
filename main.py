@@ -759,3 +759,16 @@ print(cars)
 
 ==================================================================================================================================================
 
+print("***Classes & objects - Init function***\n")
+
+'''Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created'''
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+person1 = Person("John",69)
+print(f"{person1.name} is {person1.age} years old")
+
+==================================================================================================================================================
+
