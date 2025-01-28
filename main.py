@@ -806,4 +806,23 @@ This will print a not so helpful value:
 
 ==================================================================================================================================================
 
+print("***Object Methods***\n")
+
+'''Objects can also contain methods. Methods in objects are functions that belong to the object.'''
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+ # Note: The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class
+ 
+    def myFunc(self):# Insert a function that prints a greeting
+        print(f"Hello my name is {self.name} and I am {self.age} years old")
+        
+p1 = Person("Bob", 55)# p1 is the object
+p1.myFunc()# Execute function on the p1 object
+
+==================================================================================================================================================
+
 
