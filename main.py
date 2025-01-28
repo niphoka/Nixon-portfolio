@@ -825,4 +825,28 @@ p1.myFunc()# Execute function on the p1 object
 
 ==================================================================================================================================================
 
+print("***Self Parameter***\n")
+
+'''The self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.
+
+It does not have to be named self, you can call it whatever you like, but it has to be the first parameter of any function in the class'''
+
+class Person:
+    def __init__(reference, name, age):
+        reference.name = name
+        reference.age = age
+        
+ 
+    def myFunc(reference):# Insert a function that prints a greeting
+        print(f"Hello my name is {reference.name} and I am {reference.age} years old")
+        
+p1 = Person("Maya", 5)# p1 is the object
+p1.myFunc()# Execute function on the p1 object
+
+'''class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error
+
+class Person:
+    pass 
+    '''
+==================================================================================================================================================
 
