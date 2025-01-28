@@ -2749,3 +2749,24 @@ public class Main
 
 ===============================================================================================================================================
 
+import java.io.File;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        System.out.println("***File handling - Delete a file***\n");
+        File file = new File("test.txt");
+        if (file.delete())
+        {
+            System.out.println("Following file has been deleted: " + file.getName());
+        }
+        else
+        {
+            System.out.println("Failed to delete the file: " + file.getName());
+        }
+    }
+}
+
+===============================================================================================================================================
+	
