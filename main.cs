@@ -1385,3 +1385,43 @@ This is done by declaring fields as private.
 Note: By default, all members of a class are private if you don't specify an access modifier*/ 
 
 ==================================================================================================================================================    
+
+using System;
+
+// namespace anotherApp
+// {
+//     class Person
+//     {
+//         private string name;
+//         public string Name
+//         {
+//             get { return name; }
+//             set { name = value; }
+//         }
+//     }
+    
+// The following does the same as the above but with less code
+
+namespace anotherApp
+{
+    class Person
+    {
+        public string Name
+        { get; set; } 
+    }    
+    
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("***Properties / Encapsulation - Get & Set***\n");
+            Person person = new Person();
+            person.Name = "Liam";
+            Console.WriteLine(person.Name);
+        }
+    }
+}
+ 
+==================================================================================================================================================
+
+    
