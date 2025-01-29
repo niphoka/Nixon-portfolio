@@ -2052,4 +2052,82 @@ The mktime() function converts a datetime structure into a timestamp*/
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+/* A vector in C++ is like a resizable array.
+
+Both vectors and arrays are data structures used to store multiple elements of the same data type.
+
+The difference between an array and a vector, is that the size of an array cannot be modified (you cannot add or remove elements from an array). A vector however, can grow or shrink in size as needed */
+
+int main()
+{
+    cout << "***Vectors***\n\n";
+    vector<string> cars = {"Rolls Royce","Lexus","Porsche","Lamborghini"};
+    
+    for (string car : cars)// Access all elements of vector
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cout << cars[2] << endl;// Access single elements of vector
+
+    cout << cars.front() << endl;// Access first element of vector
+    cout<< cars.back() << endl;// Access last element of vector
+    cout << cars.at(1) << endl;// Access single element by index
+    // Note: The .at() function is often preferred over square brackets [] because it lets you know if an error occurs.
+    cout << endl;
+    
+    // cars[0] = "Ferrari";// This does the same as the below
+    // cout << cars[0] << endl;
+    cars.at(0) = "Ferrari";// But this one is preferred since it is safer to use
+    cout << cars.at(0) << endl;
+    cout << endl;
+    
+    cars.push_back("Tesla");// Use the .push_back() function to add an element at the end of the vector
+    cars.push_back("BMW");
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cars.pop_back();// Use the .pop_back() function to remove an element from the end of the vector
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    // Note: Elements are usually only added and removed from the end of the vector. If you need to add or remove elements from both ends, it is often better to use a deque instead of a vector.
+    cout << endl;
+    
+    cout << cars.size() << endl;// To get size of vector
+    cout << cars.empty() << endl;// .empty() function returns 1 (true) if vector is empty and 0 (false) if it contains one or more elements
+    cout << endl;
+    
+    for (int i = 0; i < cars.size(); i++)// For loop to get vector items
+    {
+        cout << cars[i] << endl;
+    }
+    cout << endl;
+    
+    for (int x = 0; x < cars.size(); x++)// For loop to get vector indexes
+    {
+        cout << x << endl;
+    }
+    
+    //You can also use a for-each loop (introduced in C++ version 11 (2011), which is cleaner and more readable
+    cout << endl;
+    
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+}
+
+==================================================================================================================================================
+
   
