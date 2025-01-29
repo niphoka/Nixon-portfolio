@@ -1423,5 +1423,57 @@ namespace anotherApp
 }
  
 ==================================================================================================================================================
-
     
+using System;
+
+namespace anotherApp
+{
+    class Vehicle// base class (parent) 
+    {
+        public string brand = "Ford";
+        public void honk()
+        {
+            Console.WriteLine("Tuuuu tuuuuu");
+        }
+    }
+    
+    ///To inherit from a class, use the : symbol.
+
+    class Car : Vehicle// derived class (child)
+    {
+        public string model = "Mustang";
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Inheritance***\n");
+            Car car = new Car();
+            car.honk();// Call the honk() method (From the Vehicle class) on the myCar object
+
+            Console.WriteLine(car.brand + " " + car.model);// Display the value of the brand field (from the Vehicle class) and the value of the model (from the Car class)
+        }
+    }
+}
+
+/*If you don't want other classes to inherit from a class, use the sealed keyword:
+
+If you try to access a sealed class, C# will generate an error
+
+sealed class Vehicle 
+{
+  ...
+}
+
+class Car : Vehicle 
+{
+  ...
+}
+
+The error message will be something like this:
+
+'Car': cannot derive from sealed type 'Vehicle'*/
+
+==================================================================================================================================================
+
