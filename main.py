@@ -848,5 +848,47 @@ p1.myFunc()# Execute function on the p1 object
 class Person:
     pass 
     '''
+
 ==================================================================================================================================================
 
+print("***Inheritance***\n")
+
+class Person:# Parent class
+    def __init__(self,fname,lname):
+        self.firstn = fname
+        self.lastn = lname
+        
+    '''def printname(self):
+        print(self.firstn,self.lastn)'''
+
+# When you add the __init__() function, the child class will no longer inherit the parent's __init__() function. Note: The __init__() function is called automatically every time the class is being used to create a new object.
+
+'''class Student(Person): Child class - This does the same as the below class
+     def __init__(self,fname,lname):
+       Person.__init__(self,fname,lname)'''
+
+# To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function. Note: The child's __init__() function overrides the inheritance of the parent's __init__() function.
+
+'''class Student(Person):# Child class - This is simpler
+    def __init__(self,fname,lname):
+        super().__init__(fname,lname)'''
+ 
+# Python also has a super() function that will make the child class inherit all the methods and properties from its parent       
+# By using the super() function, you do not have to use the name of the parent element, it will automatically inherit the methods and properties from its parent. 
+        
+class Student(Person):# Child class - This is simpler
+    def __init__(self,fname,lname,year):# In this method we add the year parameter
+        super().__init__(fname,lname)
+        self.gradyear = year# Function Property
+
+# If you add a method in the child class with the same name as a function in the parent class, the inheritance of the parent method will be overridden.
+
+    def welcome(self):# Method/Function
+        print("Welcome",self.firstn,self.lastn,"to the class of",self.gradyear)
+        
+# The year 2025 should be a variable, and passed into the Student class when creating student objects
+
+x = Student("Mike","Olsen",2025)# And here we see the arguments      
+x.welcome()
+
+==================================================================================================================================================
