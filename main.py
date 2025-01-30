@@ -892,3 +892,35 @@ x = Student("Mike","Olsen",2025)# And here we see the arguments
 x.welcome()
 
 ==================================================================================================================================================
+
+print("***Iterator vs Iterable***\n")
+
+'''Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from. All these objects have a iter() method which is used to get an iterator'''
+
+aTupple = ("apple","banana","cherry")
+iterable = iter(aTupple)
+print(next(iterable))
+print(next(iterable))
+print(next(iterable))
+print()
+
+for i in aTupple:# We can also use a for loop to iterate through an iterable object
+    print(i)
+print()
+
+aString = "kid"
+itera = iter(aString)
+print(next(itera))
+print(next(itera))
+print(next(itera))
+print()
+
+# The for loop actually creates an iterator object and executes the next() method for each loop.
+
+for x in aString:
+    print(x)
+print()
+
+==================================================================================================================================================
+
+
