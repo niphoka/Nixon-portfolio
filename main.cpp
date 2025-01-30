@@ -2130,4 +2130,78 @@ int main()
 
 ==================================================================================================================================================
 
-  
+#include <iostream>
+#include <list>
+
+/*A list is similar to a vector in that it can store multiple elements of the same type and dynamically grow in size.
+
+However, two major differences between lists and vectors are:
+
+You can add and remove elements from both the beginning and at the end of a list, while vectors are generally optimized for adding and removing at the end.
+
+Unlike vectors, a list does not support random access, meaning you cannot directly jump to a specific index, or access elements by index numbers.*/
+
+using namespace std;
+
+int main()
+{
+    cout << "***Lists***\n\n";
+    list<string> cars = {"BMW","Lexus","Mercedez","Ferrari"};
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cout << cars.front() << endl;// Shows first element in list
+    cout << cars.back() << endl;// Shows last element in list
+    cout << endl;
+    
+    cars.front() = "Toyota";// Replace first element in list
+    cars.back() = "Honda";// Replace last element in list
+    cout << cars.front() << endl;
+    cout << cars.back() << endl;
+    cout << endl;
+    
+    cars.push_front("Tesla");// Add element on first position of list
+    cars.push_back("Suzuki");// Add element on last position of list
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cout << cars.size() << endl;
+    cout << endl;
+    
+    cars.pop_front();// Delete first element in list
+    cars.pop_back();// Delete last element in list
+        for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cout << cars.empty() << endl;// Outputs 1 if list is empty, 0 if it's not
+    cout << endl;
+    
+    /* You cannot loop through the list elements with a traditional for loop combined with the .size() function, since it is not possible to access elements in a list by index:
+
+    list<string> cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+    for (int i = 0; i < cars.size(); i++) 
+    {
+    cout << cars[i] << "\n"
+    }
+
+    The simplest way to loop through a list is with the for-each loop */
+
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+}
+
+==================================================================================================================================================
+
