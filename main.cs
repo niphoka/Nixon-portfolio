@@ -1477,3 +1477,63 @@ The error message will be something like this:
 
 ==================================================================================================================================================
 
+using System;
+
+/*Inheritance lets us inherit fields and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.*/
+
+namespace anotherApp
+{
+    class Animal// Base class (parent) 
+    {
+        public virtual void animalSound()//Overrides derived class by default
+        {
+            Console.WriteLine("Animals make a sound");
+        }
+    }
+    
+    class Pig : Animal// Derived class (child) 
+    {
+        public override void animalSound()//It now overrides base class
+        {
+            Console.WriteLine("The pig goes: oink oink");
+        }
+    }
+    
+    class Dog : Animal// Derived class (child) 
+    {
+        public override void animalSound()//It now overrides base class
+        {
+            Console.WriteLine("The dog goes: guau guau");
+        }
+    }
+    
+    /* If virtual and override are not used on methods, the out will be:
+    
+The animal makes a sound
+The animal makes a sound
+The animal makes a sound
+
+That is because the base class method overrides the derived class method, when they share the same name.
+
+However, C# provides an option to override the base class method, by adding the virtual keyword to the method inside the base class, and by using the override keyword for each derived class methods*/
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Polymorphism***\n");
+           Animal animal = new Animal();// Create Animal object
+           Animal pig = new Pig();// Create Pig object
+           Animal dog = new Dog();// Create Dog object
+           
+           animal.animalSound();
+           pig.animalSound();
+           dog.animalSound();
+           
+        }
+    }
+}
+
+==================================================================================================================================================
+
+    
