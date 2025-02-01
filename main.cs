@@ -1535,5 +1535,53 @@ However, C# provides an option to override the base class method, by adding the 
 }
 
 ==================================================================================================================================================
+    
+using System;
 
+/*Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+The abstract keyword is used for classes and methods:
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).
+An abstract class can have both abstract and regular methods*/
+
+abstract class Animal// Abstract class
+{
+    public abstract void sound();// Abstract method (does not have a body)
+    public void sleep()// Regular method
+    {
+        Console.WriteLine("The pig sleeps: Zzzzzzzzz");
+    }
+}
+
+class Pig : Animal// Derived class (inherit from Animal)
+{
+    public override void sound()// The body of sound() is provided here
+    {
+        Console.WriteLine("The pig goes: oink oink oink");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Abstraction***\n");
+        Pig pig = new Pig();// Create a Pig object
+        pig.sound();// Call the abstract method
+        pig.sleep();// Call the regular method
+    }
+}
+
+/* Why And When To Use Abstract Classes and Methods?
+To achieve security - hide certain details and only show the important details of an object.
+
+Note: Abstraction can also be achieved with Interfaces */
+
+==================================================================================================================================================
+
+ 
     
