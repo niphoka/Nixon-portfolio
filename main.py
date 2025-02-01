@@ -976,3 +976,82 @@ for i in iterable:# More dynamic than iterating one by one
 
 ==================================================================================================================================================
 
+print("***Polymorphism***\n")
+
+'''Polymorphism is often used in Class methods, where we can have multiple classes with the same method name.
+
+For example, say we have three classes: Car, Boat, and Plane, and they all have a method called move()'''
+
+class Car:
+    def __init__(self,brand,model):# Same fuction and paramters on all classes
+        self.brand = brand
+        self.model = model
+        
+    def move(self):# Same fuction and paramters on all classes
+        print("Drive!")
+
+class Boat:
+    def __init__(self,brand,model):
+        self.brand = brand
+        self.model = model
+    
+    def move(self):
+        print("Sail!")
+        
+class Plane:
+    def __init__(self,brand,model):
+        self.brand = brand
+        self.model = model
+    
+    def move(self):
+        print("Fly!")
+        
+car = Car("Ford","Mustang")
+boat = Boat("Ibiza","Touring 20")
+plane = Plane("Boeing","747")
+
+for i in (car,boat,plane):
+    print(i.brand,i.model)
+    i.move()
+    print()
+
+==================================================================================================================================================
+
+print("***Polymorphism and inheritance class***\n")
+
+'''What about classes with child classes with the same name? Can we use polymorphism there?
+
+Yes. If we use the example above and make a parent class called Vehicle, and make Car, Boat, Plane child classes of Vehicle, the child classes inherits the Vehicle methods, but can override them'''
+
+class Vehicle:
+    def __init__(self,brand,model):# This is declared only on parent class
+        self.brand = brand
+        self.model = model
+                
+    def move(self):# This function will be inherited to all children
+        print("Drive!")
+        
+class Car(Vehicle):# Empty class, it will inherit function from parent
+    pass
+
+class Boat(Vehicle):
+    def move(self):# Each children can override method with their own arguments
+        print("Sail!")
+
+class Plane(Vehicle):# Look how shorter the code is
+    def move(self):
+        print("Fly!")
+        
+car = Car("Ford","Mustang")
+boat = Boat("Ibiza","Touring 20")
+plane = Plane("Boeing","747")
+
+for i in (car,boat,plane):
+    print(i.brand,i.model)
+    i.move()
+    print()
+
+==================================================================================================================================================
+
+
+
