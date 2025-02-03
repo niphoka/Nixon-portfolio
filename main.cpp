@@ -2240,4 +2240,46 @@ int main()
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <queue>
+
+/* A queue stores multiple elements in a specific order, called FIFO.
+
+FIFO stands for First in, First Out. To visualize FIFO, think of a queue as people standing in line in a supermarket. The first person to stand in line is also the first who can pay and leave the supermarket. This way of organizing elements is called FIFO in computer science and programming.
+
+Unlike vectors, elements in the queue are not accessed by index numbers. Since queue elements are added at the end and removed from the front, you can only access an element at the front or the back */
+
+using namespace std;
+
+int main()
+{
+    cout << "***Queues***\n\n"; 
+    queue<string> cars;//Note: You cannot add elements to the queue at the time of declaration, like you can with vectors
+
+    cars.push("Ferrari");// Adds an element at the end of the queue
+    cars.push("Lamborghini");
+    cars.push("Rolls Royce");
+    cout << cars.front() << endl;// Shows the value of the front element
+    cout << cars.back() << endl;// Shows the value of the last element
+    cout << endl;
+    
+    cars.front() = "Tesla";// Changes the value of the front element
+    cars.back() = "Alpha Romeo";// Changes the value of the last element
+    cout << cars.front() << endl;
+    cout << cars.back() << endl;
+    cout << endl;
+    
+    cars.pop();// Removes the front element 
+    cout << cars.front() << endl;
+    cout << endl; 
+    
+    cout << cars.size() << endl;
+    cout << endl;
+    
+    cout << cars.empty() << endl;// Returns 1 (true) if the queue is empty and 0 (false) otherwise
+}
+
+==================================================================================================================================================
+
+
   
