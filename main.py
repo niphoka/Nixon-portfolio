@@ -1071,3 +1071,23 @@ print(power)
 
 ==================================================================================================================================================
 
+print("***Math module***\n")
+
+import math
+
+square = math.sqrt(64)# Returns the square root of a number
+print(square)
+
+'''The math.ceil() method rounds a number upwards to its nearest integer, and the math.floor() method rounds a number downwards to its nearest integer, and returns the result'''
+
+ceiling = math.ceil(1.4)
+print(ceiling)
+
+floor = math.floor(1.4)
+print(floor)
+
+Pi = math.pi# returns the value of PI 
+print(Pi)
+
+==================================================================================================================================================
+
