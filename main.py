@@ -1053,5 +1053,21 @@ for i in (car,boat,plane):
 
 ==================================================================================================================================================
 
+print("***Bult-in math functions***\n")
 
+'''The min() and max() functions can be used to find the lowest or highest value in an iterable '''
+
+lowest = min(5,10,15)
+print(lowest)
+
+highest = max(5,10,15)
+print(highest)
+
+absolute = abs(-7.75)# returns the absolute (positive) value of the specified number
+print(absolute)
+
+power = pow(4,3)# Return the value of 4 to the power of 3 (same as 4 * 4 * 4)
+print(power)
+
+==================================================================================================================================================
 
