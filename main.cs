@@ -1670,6 +1670,76 @@ class Program
 }
 
 ==================================================================================================================================================
-
-
     
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+/* Elements in a Queue are added at the end and removed from the front. A deque (stands for double-ended queue) however, is more flexible, as elements can be added and removed from both ends (at the front and the back). You can also access elements by index numbers */
+
+int main()
+{
+    cout << "***Deque***\n\n";
+    deque<string> cars = {"Lamborghini","Ferrari","Rolls Royce","Alpha Romeo"};
+
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cout << cars[1] << endl;
+    cout << cars[2] << endl;
+    cout << endl;
+    
+    cout << cars.front() << endl;
+    cout << cars.back() << endl;
+    cout << endl;
+    
+    cout << cars.at(1);// Note: The .at() function is often preferred over square brackets [] because it throws an error message if the element is out of range
+    cout << endl;
+    
+    // cars[2] = "Aston Martin"; This does the same as below
+    cars.at(2) = "Aston Martin";
+    cout << cars.at(2) << endl;
+    cout << endl;
+    
+    cars.push_front("Jaguar");
+    cars.push_back("Volvo");
+    cout << cars.front() << endl;
+    cout << cars.back() << endl;
+    cout << endl;
+    
+    cars.pop_front();
+    cars.pop_back();
+    cout << cars.front() << endl;
+    cout << cars.back() << endl;
+    cout << endl;    
+    
+    cout << cars.size() << endl;
+    cout << cars.empty() << endl;// returns 1 (true) if the deque is empty and 0 (false) otherwise
+    cout << endl;
+    
+    for (int i = 0; i < cars.size(); i++)// Regular For loop to get items on Deque
+    {
+        cout << cars[i] << endl;
+    }
+    cout << endl;
+    
+    for (int i = 0; i < cars.size(); i++)// Regular For loop to get indexes on Deque
+    {
+        cout << i << endl;
+    }
+    cout << endl;
+    
+    for (string i : cars)// For-each loop to get items on Deque (faster)
+    {
+        cout << i << endl;
+    }
+    cout << endl;
+}
+
+==================================================================================================================================================
+
+
