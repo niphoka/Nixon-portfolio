@@ -1633,5 +1633,43 @@ Why And When To Use Interfaces?
     
 ==================================================================================================================================================
 
+using System;
+
+interface Dog
+{
+    void bark();
+}
+
+interface Cat
+{
+    void miau();
+}
+
+class Animal : Dog, Cat
+{
+    public void bark()
+    {
+        Console.WriteLine("Guau guau");
+    }
+    
+    public void miau()
+    {
+        Console.WriteLine("Miau miau");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("***Multiple interfaces***\n");
+        Animal animal = new Animal();
+        animal.bark();
+        animal.miau();
+    }
+}
+
+==================================================================================================================================================
+
 
     
