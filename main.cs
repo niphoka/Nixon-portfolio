@@ -1742,4 +1742,41 @@ int main()
 
 ==================================================================================================================================================
 
+using System;
 
+/* An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
+
+To create an enum, use the enum keyword (instead of class or interface), and separate the enum items with a comma */
+
+namespace otherApp
+{
+    enum Level
+    {
+        Low,
+        Medium,
+        High
+    }
+    
+    class Program
+    {
+        enum Level2
+        {
+            Low,
+            Medium,
+            High
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Enums****\n");
+            Level level = Level.Medium;// Outside class
+            Console.WriteLine(level);
+            
+            Level2 level2 = Level2.High;// Inside class
+            Console.WriteLine(level2);
+        }
+    }
+}
+
+==================================================================================================================================================
+
+    
