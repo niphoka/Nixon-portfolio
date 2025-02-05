@@ -1779,4 +1779,45 @@ namespace otherApp
 
 ==================================================================================================================================================
 
-    
+using System;
+
+/* By default, the first item of an enum has the value 0. The second has the value 1, and so on.
+
+To get the integer value from an item, you must explicitly convert the item to an int */
+
+namespace otherApp
+{
+    class Program
+    {
+        enum Months
+        {
+            January, // 0
+            February, // 1
+            March, // 2
+            April, // 3
+            May, // 4
+            June, // 5
+            July, // 6
+            August, // 7
+            September, // 8
+            October, // 9
+            November, // 10
+            December=12 // 11 You can also assign your own enum values, and the next items will update their numbers accordingly
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Enum values***\n");
+            int num = (int) Months.November;
+            Console.WriteLine(num);
+            
+            int num2 = (int) Months.December;
+            Console.WriteLine(num2);
+        }
+    }
+}
+
+==================================================================================================================================================
+
+
+
