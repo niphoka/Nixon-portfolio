@@ -1819,5 +1819,44 @@ namespace otherApp
 
 ==================================================================================================================================================
 
+using System;
+
+/* Enums are often used in switch statements to check for corresponding values */
+
+namespace otherApp
+{
+    class Program
+    {
+        enum Level
+        {
+            Low,
+            Medium,
+            High
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Enum in a switch statement***\n");
+            Level level = Level.Medium;
+            
+            switch(level)
+            {
+                case Level.Low:
+                Console.WriteLine("Low level");
+                break;
+                
+                case Level.Medium:
+                Console.WriteLine("Medium level");
+                break;
+                
+                case Level.High:
+                Console.WriteLine("High level");
+                break;
+            }
+        }
+    }
+}
+
+==================================================================================================================================================
+
 
 
