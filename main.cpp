@@ -2281,5 +2281,55 @@ int main()
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <set>
 
+using namespace std;
+
+/* A set stores unique elements where they:
+
+Are sorted automatically in ascending order.
+Are unique, meaning equal or duplicate values are ignored.
+Can be added or removed, but the value of an existing element cannot be changed.
+Cannot be accessed by index numbers, because the order is based on sorting and not indexing. */
+
+int main()
+{
+    cout << "***Sets***\n\n";
+    set<int> numbers = {3,2,1,6,5,4,8,7};
+    
+    for (int num : numbers)
+    {
+        cout << num << endl;
+    }
+    cout << endl;
+    
+    set<int, greater<int>> nums = {3,2,1,6,5,4,8,7};
+    /* By default, the elements in a set are sorted in ascending order. If you want to reverse the order, you can use the greater<type> functor inside the angle brackets
+    Note: The type specified in greater<type> must match the type of elements in the set (int in our example) */
+    for (int i : nums)
+    {
+        cout << i << endl;
+    }
+    cout << endl;
+    
+    set<string> cars = {"Ferrari","Lamborghini","BMW","BMW","BMW"};
+    //Elements in a set are unique, which means they cannot be duplicated or equal.
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    cars.insert("Volvo");
+    cars.erase("Volvo");
+    cout << cars.size();
+    cout << endl;
+    
+    cout << cars.empty();// Returns 1 (true) if the set is empty and 0 (false) otherwise
+}
+
+==================================================================================================================================================
+
+  
   
