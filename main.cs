@@ -1886,6 +1886,33 @@ namespace anotherApp
 
 ==================================================================================================================================================
 
+using System;
 
+/* If an error occurs, we can use try...catch to catch the error and execute some code to handle it.
 
+In the following example, we use the variable inside the catch block (e) together with the built-in Message property, which outputs a message that describes the exception */
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Try-Catch with custom message***\n");
+            try
+            {
+                int[] numbers = {1,2,3};
+                Console.WriteLine(numbers[10]);
+            }
+            catch(Exception error)
+            {
+                Console.WriteLine("Something went wrong");
+            }
+        }
+    }
+}
+
+==================================================================================================================================================
+
+    
 
