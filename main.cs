@@ -1914,5 +1914,32 @@ namespace anotherApp
 
 ==================================================================================================================================================
 
-    
+using System;
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Finally statement***\n");
+            try
+            {
+                int[] numbers = {1,2,3};
+                Console.WriteLine(numbers[10]);
+            }
+            catch(Exception error)
+            {
+                Console.WriteLine("Something went wrong");
+            }
+            //The finally statement lets you execute code, after try...catch, regardless of the result:
+            finally
+            {
+                Console.WriteLine("The try-catch is finished");
+            }
+        }
+    }
+}
+
+==================================================================================================================================================
 
