@@ -1943,3 +1943,37 @@ namespace anotherApp
 
 ==================================================================================================================================================
 
+using System;
+
+/* The throw statement allows you to create a custom error.
+
+The throw statement is used together with an exception class. There are many exception classes available in C#: ArithmeticException, FileNotFoundException, IndexOutOfRangeException, TimeOutException, etc */
+
+namespace anotherApp
+{
+    class Program
+    {
+        static void checkAge(int age)
+        {
+            if (age < 18)
+            {
+                throw new ArithmeticException("Access denied, you must be at least 18 years old");
+            }
+            //If age was 20, you would not get an exception
+            else
+            {
+                Console.WriteLine("Access granted, you are old enough");
+            }
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("***Throw keyword***\n");
+            checkAge(15);
+            
+        }
+    }
+}
+
+==================================================================================================================================================
+
+    
