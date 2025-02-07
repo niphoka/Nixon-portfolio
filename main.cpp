@@ -2330,6 +2330,62 @@ int main()
 }
 
 ==================================================================================================================================================
+  
+#include <iostream>
+#include <map>
 
-  
-  
+using namespace std;
+
+int main()
+{
+    cout << "***Maps***\n\n";
+    map<string, int> people = {{"Rob",45},{"Dean",30},{"Maya",22}};
+    
+    cout << "Rob is " << people["Rob"] << " years old" << endl;
+    //Note: The .at() function is often preferred over square brackets [] because it throws an error message if the element does not exist
+    cout << "Dean is " << people.at("Dean") << " years old" << endl;
+    cout << endl;
+    
+    people["Rob"] = 50;
+    cout << "Rob is " << people["Rob"] << " years old" << endl;
+    // It is safer to use the .at() function
+    people.at("Dean") = 40;
+    cout << "Dean is " << people.at("Dean") << " years old" << endl;
+    
+    people["Jenny"] = 28;// A map cannot have elements with equal keys
+    people.insert({"Jenny",22});// if we try to add "Jenny" two times to the map, it will only keep the first one
+    cout << endl;
+    
+    people.erase("Dean");
+    
+    cout << people.size();
+    cout << endl;
+    
+    cout << people.empty();// Returns 1 (true) if the map is empty and 0 (false) otherwise
+    cout << endl;
+    
+    cout << people.count("Rob");// Returns 1 (true) if the element exists and 0 (false) otherwise
+    cout << "\n\n";
+    
+    /* Loop Through a Map
+    You should use the auto keyword (introduced in C++ version 11) inside the for loop. This allows the compiler to automatically determine the correct data type for each key-value pair.
+Since map elements consist of both keys and values, you have to include .first to access the keys, and .second to access values in the loop.
+Elements in the map are sorted automatically in ascending order by their keys*/
+
+    for (auto person : people)
+    {
+        cout << person.first << " is " << person.second << " years old " << endl;// Ascending order by key
+    }
+    cout << endl;
+    
+    
+    map<string, int, greater<string>> people2 = {{"May",45},{"Fin",30},{"Luna",22}};
+    
+    for (auto person : people2)
+    {
+        cout << person.first << " is " << person.second << " years old " << endl;// Descending order by key
+    }
+}
+
+==================================================================================================================================================
+
