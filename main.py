@@ -1091,3 +1091,52 @@ print(Pi)
 
 ==================================================================================================================================================
 
+import re
+
+print("***Python RegEx***\n")
+
+txt = "The rain in Spain"
+
+search = re.search("^The.*Spain$",txt)# Check if the string starts with "The" and ends with "Spain"
+if search:
+    print("We have a match")
+else:
+    print("No match")
+print()    
+    
+findall = re.findall("ai",txt)# returns a list containing all matches 
+print(findall)
+
+findPortu = re.findall("Portugal",txt)# If no matches are found, an empty list is returned
+print(findPortu)
+print()
+
+searcSpace = re.search("\\s",txt)# Search for the first white-space character in the string
+print("The first white-space character is located in position",searcSpace.start())
+print()
+
+split = re.split("\\s",txt)# The split() function returns a list where the string has been split at each match. 
+print(split)
+
+split2 = re.split("\\s",txt,1)# You can control the number of occurrences by specifying the maxsplit parameter with a number
+print(split2)
+print()
+
+substitute = re.sub("\\s","9",txt)# Replaces all white-space characters with the the text of your choice, in this case, the digit "9"
+print(substitute)
+
+substitute2 = re.sub("\\s","9",txt,2)# You can control the number of replacements by specifying the count parameter
+print(substitute2)
+print()
+
+position = re.search(r"\bS\w+",txt)# Search for an upper case "S" character in the beginning of a word, and print its position. The "r" in the beginning is making sure that the string is being treated as a "raw string"
+print(position.span())
+
+sentence = re.search(r"\bS\w+",txt)# The string property returns the whole string
+print(sentence.string)
+
+word = re.search(r"\bS\w+",txt)# Search for an upper case "S" character in the beginning of a word, and print the word
+print(word.group())
+
+==================================================================================================================================================
+
