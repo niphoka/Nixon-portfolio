@@ -2420,4 +2420,68 @@ end() returns an iterator that points to one position after the last element. */
 
 ==================================================================================================================================================
 
-  
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    cout << "***Iterators - auto keyword***\n" << endl;
+    vector<string> cars = {"Ferrari","Lamborghini","Rolls Royce","Mercedez"};
+    vector<string> :: iterator iter;
+    
+    for (iter = cars.begin(); iter != cars.end(); ++iter)
+    {
+        cout << *iter << endl;
+    }
+    cout << endl;
+    
+    iter = cars.begin();// Points to the first element in the vector
+    cout << *iter << endl;
+    
+    iter = cars.begin() +1;// Points to the second element 
+    cout << *iter << endl;
+    
+    iter = cars.begin() +2;// Points to the third element 
+    cout << *iter << endl;
+    cout << endl;
+    
+    
+    iter = cars.end() -2;// Points to penultimate element
+    cout << *iter << endl;
+        /* Why do we say "point"?
+
+Iterators are like "pointers" in that they "point" to elements in a data structure rather than returning values from them. They refer to a specific position, providing a way to access and modify the value when needed, without making a copy of it*/
+    *iter = "Volvo";// Replaces penultimate element for Volvo
+    cout << *iter << endl;
+    cout << endl;
+
+    /* The auto Keyword
+In C++ 11 and later versions, you can use the auto keyword instead of explicitly declaring and specifying the type of the iterator.
+
+The auto keyword allows the compiler to automatically determine the correct data type, which simplifies the code and makes it more readable:
+
+Instead of this:
+
+vector<string>::iterator it = cars.begin();
+
+You can simply write this:
+
+auto it = cars.begin(); */
+
+    for (iter = cars.begin(); iter != cars.end(); ++iter)// This is larger
+    {
+        cout << *iter << endl;
+    }
+    cout << endl;
+    
+    for (auto it = cars.begin(); it != cars.end(); ++it)// This is shorter
+    {
+        cout << *it << endl;
+    }
+    cout << endl;
+}
+
+==================================================================================================================================================
+
