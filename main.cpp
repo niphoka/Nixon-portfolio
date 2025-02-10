@@ -2389,3 +2389,35 @@ Elements in the map are sorted automatically in ascending order by their keys*/
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+/* First we create a vector of strings to store the names of different car manufactures.
+Then we create a "vector iterator" called it, that we will use to loop through the vector.
+Next, we use a for loop to loop through the vector with the iterator. The iterator (it) points to the first element in the vector (cars.begin()) and the loop continues as long as it is not equal to cars.end().
+The increment operator (++it) moves the iterator to the next element in the vector.
+The dereference operator (*it) accesses the element the iterator points to. */
+
+int main()
+{
+    cout << "***Iterators***\n" << endl;
+    vector<string> cars = {"Ferrari","Lamborghini","Rolls Royce","Mercedez"};
+    vector<string> :: iterator iter;
+    
+    for (iter = cars.begin(); iter != cars.end(); ++iter)
+    {
+        cout << *iter << endl;
+    }
+}
+
+/* What is begin() and end()?
+begin() and end() are functions that belong to data structures, such as vectors and lists. They do not belong to the iterator itself. Instead, they are used with iterators to access and iterate through the elements of these data structures.
+
+begin() returns an iterator that points to the first element of the data structure.
+end() returns an iterator that points to one position after the last element. */
+
+==================================================================================================================================================
+
+  
