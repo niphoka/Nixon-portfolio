@@ -2485,3 +2485,70 @@ auto it = cars.begin(); */
 
 ==================================================================================================================================================
 
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+int main()
+{
+    cout << "***Iterator vs ForEach loop***\n" << endl;
+    vector<string> cars = {"Ferrari","Lamborghini","Rolls Royce","Mercedez"};
+    vector<string> :: iterator iter;
+    
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    /*When you are just reading the elements, and don't need to modify them, the for-each loop is much simpler and cleaner than iterators.
+
+However, when you need to add, modify, or remove elements during iteration, iterate in reverse, or skip elements, you should use iterators*/
+    for (auto iter = cars.begin(); iter != cars.end();)
+    {
+        if (*iter == "Mercedez")
+        {
+            iter = cars.erase(iter);
+        }
+        else
+        {
+            ++iter;
+        }
+    }
+    
+    for (const string& item : cars)
+    {
+        cout << item << endl;
+    }
+    cout << endl;
+    
+    
+    //To iterate in reverse order, you can use rbegin() and rend() instead of begin() and end()
+    for (auto it = cars.rbegin(); it != cars.rend(); ++it)
+    {
+        cout << *it << endl;
+    }
+    cout << endl;
+    
+    //Iterators are great for code reusability since you can use the same syntax for iterating through vectors, lists, deques, sets and maps (see below)
+    
+    map<string, int> people = { {"Maya", 32}, {"Luna", 45}, {"Bonete", 29} };
+    // Loop through the map with an iterator
+    for (auto it = people.begin(); it != people.end(); ++it) 
+    {
+      cout << it->first << " is " << it->second << " years old" << "\n";
+    }
+    cout << endl;
+    
+    for (auto it = people.rbegin(); it != people.rend(); ++it)// In reverse order
+    {
+      cout << it->first << " is " << it->second << " years old" << "\n";
+    }
+    
+    /*Iterator Support
+    The examples above shows how to iterate through different data structures that support iterators (vector, list, deque, map and set support iterators, while stacks and queues do not) */
+}    
+    
+==================================================================================================================================================
+
