@@ -1140,3 +1140,43 @@ print(word.group())
 
 ==================================================================================================================================================
 
+print("***Try-Except***\n")
+
+try:
+    print(x)
+except NameError:
+    print("Variable x is not defined")
+except:
+    print("Something else went wrong")
+else:
+    print("Nothing went wrong")
+finally:
+    print("Code execution finished")
+print()
+
+i = -1
+if i < 0:
+    raise Exception("Sorry, no numbers below 0")
+print()
+
+y = "Maya"
+if type(y) is not int:
+    raise TypeError("Only integers are allowed")
+
+==================================================================================================================================================
+
+print("***Try-Except - File***\n")
+
+try:
+    file = open("test.txt")
+    try:
+        file.write("dog")
+    except:
+        print("Could not write to file")
+    finally:
+        file.close()
+except:
+    print("Could not open file")
+
+==================================================================================================================================================
+
