@@ -2552,3 +2552,45 @@ However, when you need to add, modify, or remove elements during iteration, iter
     
 ==================================================================================================================================================
 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+/* Another important feature of iterators is that they are used with different algorithm functions, such as sort() and find() (found in the <algorithm> library), to sort and search for elements in a data structure.
+
+For example, the sort() function takes iterators (typically returned by begin() and end()) as parameters to sort elements in a data structure from the beginning to the end */
+
+int main()
+{
+    cout << "***Iterators and Algorithms***\n" << endl;
+    vector<string> cars = {"Ferrari","Lamborghini","Rolls Royce","Aston Martin"};
+    sort(cars.begin(), cars.end());//Sorts from A to Z
+    
+    for (string car : cars)
+    {
+        cout << car << endl;
+    }
+    cout << endl;
+    
+    vector<int> numbers = {55,22,99,11};// Sorts from lower to higher
+    
+    sort(numbers.begin(), numbers.end());
+    for (int num : numbers)
+    {
+        cout << num <<  endl;
+    }
+    cout << endl;
+    
+    sort(numbers.rbegin(), numbers.rend());// Sorts from higher to lower
+    for (int nu : numbers)
+    {
+        cout << nu << endl;
+    }
+}    
+
+==================================================================================================================================================
+
+
+    
