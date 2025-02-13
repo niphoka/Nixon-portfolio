@@ -1221,3 +1221,52 @@ print(mode)# This code works on certain IDEs, not sure why
 
 ==================================================================================================================================================
 
+print("***Standard Deviation***\n")
+
+''''What is Standard Deviation?
+
+Standard deviation is a number that describes how spread out the values are.
+
+A low standard deviation means that most of the numbers are close to the mean (average) value.
+
+A high standard deviation means that the values are spread out over a wider range.'''''
+
+import numpy
+
+speed = [86,87,88,86,87,85,86]
+deviation = numpy.std(speed)# Most of the values are within the range of 0.9 from the mean value, which is 86.4.
+print(deviation)
+print()
+
+speed2 = [32,111,138,28,59,77,97]
+deviation2 = numpy.std(speed2)# Most of the values are within the range of 37.85 from the mean value, which is 77.4
+print(deviation2)#As you can see, a higher standard deviation indicates that the values are spread out over a wider range.
+print()
+
+''' Variance is another number that indicates how spread out the values are.
+
+In fact, if you take the square root of the variance, you get the standard deviation!
+
+Or the other way around, if you multiply the standard deviation by itself, you get the variance!
+
+To calculate the variance manually you have to do as follows:
+
+1) Find the mean: Sum all the items and divide them by their total amount 
+2) For each value, find the difference from the mean: Substract each item by their total from past calculation 
+3) For each difference, find the square value: Square previous results
+4) The variance is the mean/average number of these squared differences
+
+Or we can use numpy to calculate variance '''
+
+speed3 = [32,111,138,28,59,77,97]
+variance = numpy.var(speed3)
+print(variance)
+
+''' Symbols
+Standard Deviation is often represented by the symbol Sigma: σ
+
+Variance is often represented by the symbol Sigma Squared: σ2 '''
+
+==================================================================================================================================================
+
+
