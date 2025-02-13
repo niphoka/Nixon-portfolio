@@ -1180,3 +1180,44 @@ except:
 
 ==================================================================================================================================================
 
+print("***Machine Learning - Mean/Median/Mode***\n")
+
+'''The mean value is the average value.
+
+To calculate the mean, find the sum of all values, and divide the sum by the number of values:
+    
+    (99+86+87+88+111+86+103+87+94+78+77+85+86) / 13 = 89.77 '''
+
+import numpy
+
+speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]# 13 numbers (1 on center, 6 on right and 6 on left)
+mean = numpy.mean(speed)#Use the NumPy mean() method to find the average speed
+print(mean)
+print()
+
+'''The median value is the value in the middle, after you have sorted all the values. It is important that the numbers are sorted before you can find the median.'''
+
+median = numpy.median(speed)
+print(median)
+print()
+
+#If there are two numbers in the middle, median divides the sum of the 2 most centered numbers by two and provides a result: (86 + 87) / 2 = 86.5
+
+speed2 = [99,86,87,88,111,86,87,94,78,77,85,86]# 12 numbers (2 on center, 5 on right and 5 on left)
+median2 = numpy.median(speed2)
+print(median2)
+print()
+
+
+''''The Mode value is the value that appears the most number of times'''''
+from scipy import stats
+
+speed3 = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+mode = stats.mode(speed3)
+print(mode)# This code works on certain IDEs, not sure why
+
+#The mode() method returns a ModeResult object that contains the mode number (86), and count (how many times the mode number appeared (3)).
+
+==================================================================================================================================================
+
