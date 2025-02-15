@@ -1269,4 +1269,31 @@ Variance is often represented by the symbol Sigma Squared: σ2 '''
 
 ==================================================================================================================================================
 
+import numpy
+
+print("***Percentile***\n")
+
+'''Algebra: Percentile is the percent of scores that fall below a certain value in a given data set'''
+
+ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]# Ages of every person living on a street
+
+''' What is the 75 percetile of the above array? Let us go through the manual process
+
+1) First we take 75 and divide it by 100, to then multiply it by the total amount of items in the array, like this: 75 / 100 * 21 = 15.75
+2) Now we round the result to the nearest whole number, in this case, 16
+3) Then, we sort the array in ascending order:
+
+x = sorted(ages)
+print(x)
+
+[2, 5, 6, 7, 8, 11, 15, 25, 27, 31, 31, 32, 36, 39, 41, 43, 48, 50, 61, 80, 82]
+
+4) Later, we go to the array to find the item in the 16th position (43 on this ocassion)
+5) Finally, we can say that 75% of the people in the street are younger than 43 years old '''
+
+percentile = numpy.percentile(ages, 75)# This is the semi-automated process   
+print(percentile)
+
+==================================================================================================================================================
+
 
