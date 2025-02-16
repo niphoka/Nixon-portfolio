@@ -1312,7 +1312,7 @@ dataSet = numpy.random.uniform(0.0, 5.0, 250)# Array containing 250 random float
 
 We will use the Python module Matplotlib to draw a histogram.'''
 
-plot.hist(dataSet, 5)
+plot.hist(dataSet, 5)# Historgram with 5 bars
 plot.show
 
 #Two  lines to make our compiler able to draw:
@@ -1349,9 +1349,9 @@ import sys
 import matplotlib
 matplotlib.use('Agg')
 
-dataSet = numpy.random.uniform(0.0, 5.0, 250)# Array containing 250 random floats between 0 and 5
+dataSet = numpy.random.uniform(0.0, 5.0, 100000)# Array containing 100.000 random floats between 0 and 5
 
-plot.hist(dataSet, 100)
+plot.hist(dataSet, 100)# Historgram with 100 bars
 plot.show
 
 #Two  lines to make our compiler able to draw:
