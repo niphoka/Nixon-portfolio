@@ -1368,3 +1368,34 @@ The second bar represents how many values are between 1 and 2 and so on '''
 
 ==================================================================================================================================================
 
+print("***Normal Data Distribution***\n")
+
+#Three lines to make our compiler able to draw:
+import sys
+import matplotlib
+matplotlib.use('Agg')
+
+import numpy
+import matplotlib.pyplot as plot 
+
+histogram = numpy.random.normal(5.0, 1.0, 100000)
+
+plot.hist(histogram, 100)
+plot.show()
+
+#Two  lines to make our compiler able to draw:
+plot.savefig(sys.stdout.buffer)
+sys.stdout.flush()
+
+'''Histogram Explained
+
+We use the array from the numpy.random.normal() method, with 100000 values,  to draw a histogram with 100 bars.
+
+We specify that the mean value is 5.0, and the standard deviation is 1.0.
+
+Meaning that the values should be concentrated around 5.0, and rarely further away than 1.0 from the mean.
+
+And as you can see from the histogram, most values are between 4.0 and 6.0, with a top at approximately 5.0.'''
+
+==================================================================================================================================================
+
