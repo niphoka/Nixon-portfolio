@@ -38,7 +38,7 @@ print(circle_circumference(my_circle))  # Output: 31.415927 (this is what the th
 Explanation:
 1) Import Math Module: The math module is imported to access the constant pi.
 2) Function Definition: The circle_circumference function takes a circle object as an argument.
-3) Calculate Circumference: The circumference is calculated using the formula (2 \times \pi \times \text{radius}).
+3) Calculate Circumference: The circumference is calculated using the formula (2*pi*radius or pi*diameter).
 4) Rounding: The result is rounded to 6 decimal places using the round() function.
 Example Classes: Example Point and Circle classes are provided to demonstrate how the function can be used.
 '''
